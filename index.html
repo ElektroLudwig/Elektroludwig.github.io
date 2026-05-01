@@ -13,38 +13,35 @@
       font-family: Arial;
     }
 
-    .header {
+    /* 🔝 HORNÝ MALÝ PÁS (ikonky) */
+    .topbar {
       display: flex;
       justify-content: space-between;
-      align-items: center;
-      padding: 20px 40px;
-      background: white;
-      color: black;
-      border-bottom: 1px solid #ddd;
+      padding: 8px 40px;
+      background: #f5f5f5;
+      font-size: 14px;
     }
 
-    .left, .right {
-      width: 33%;
-    }
-
-    .left {
+    .topbar-left {
       display: flex;
       gap: 15px;
     }
 
-    .center {
-      width: 33%;
-      text-align: center;
+    .topbar-right {
+      text-align: right;
     }
 
-    .right {
-      text-align: right;
+    /* 🔲 HLAVNÝ HEADER */
+    .header {
+      text-align: center;
+      padding: 20px 0;
+      background: white;
+      border-bottom: 1px solid #ddd;
     }
 
     a {
       color: black;
       text-decoration: none;
-      font-size: 16px;
       transition: 0.3s;
     }
 
@@ -52,34 +49,33 @@
       opacity: 0.6;
     }
 
+    /* LOGO */
     .logo {
       max-width: 400px;
       height: auto;
     }
+
   </style>
 </head>
 
 <body>
 
-  <div class="header">
-    
-    <!-- ĽAVÁ STRANA -->
-    <div class="left">
+  <!-- 🔝 TOPBAR -->
+  <div class="topbar">
+    <div class="topbar-left">
       <a href="#"><i class="fab fa-facebook-f"></i></a>
       <a href="#"><i class="fab fa-instagram"></i></a>
       <a href="mailto:info@elektroludwig.sk"><i class="fas fa-envelope"></i></a>
     </div>
 
-    <!-- STRED -->
-    <div class="center">
-      <img src="logo.png" alt="logo" class="logo">
-    </div>
-
-    <!-- PRAVÁ STRANA -->
-    <div class="right">
+    <div class="topbar-right">
       <a href="tel:+421000000000">📞</a>
     </div>
+  </div>
 
+  <!-- 🔲 HEADER -->
+  <div class="header">
+    <img src="logo.png" alt="Elektroludwig logo" class="logo">
   </div>
 
 </body>
