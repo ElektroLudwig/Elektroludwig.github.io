@@ -21,7 +21,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 4px 40px;
+      padding: 2px 40px 1px 40px; /* 🔥 minimum dole */
       background: #f5f5f5;
     }
 
@@ -55,28 +55,27 @@
     .whatsapp:hover { background: #25d366; }
     .phone:hover { background: #6fcf97; }
 
-    /* 🔲 HEADER – dotlačené hore */
+    /* 🔲 HEADER – úplne natlačený */
     .header {
       text-align: center;
-      padding: 0; /* 🔥 úplne minimum */
+      padding: 0; /* 🔥 nič */
+      margin: 0;
       background: white;
     }
 
     .logo {
       max-width: 420px;
       height: auto;
-      margin-top: -6px; /* 🔥 posun hore */
       display: block;
-      margin-left: auto;
-      margin-right: auto;
+      margin: 0 auto; /* 🔥 bez medzery */
     }
 
-    /* 🔽 MENU – ešte bližšie */
+    /* 🔽 MENU */
     .menu {
       display: flex;
       justify-content: center;
       gap: 28px;
-      margin-top: -22px; /* 🔥 ešte bližšie */
+      margin-top: -10px; /* jemné pritiahnutie */
       background: white;
     }
 
