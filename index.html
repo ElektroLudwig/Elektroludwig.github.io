@@ -35,16 +35,28 @@
       text-align: right;
     }
 
+    a {
+      color: black;
+      text-decoration: none;
+    }
+
+    .topbar a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.18s ease;
+      transform-origin: center;
+    }
+
+    .topbar a:hover {
+      transform: scale(1.55);
+    }
+
     .header {
       text-align: center;
       padding: 12px 0;
       background: white;
       border-bottom: 1px solid #ddd;
-    }
-
-    a {
-      color: black;
-      text-decoration: none;
     }
 
     .logo {
@@ -54,18 +66,62 @@
       margin: 0 auto;
     }
 
-    /* 🔥 VÝRAZNEJŠÍ HOVER PRE VRCHNÉ IKONY */
-    .topbar a {
-      display: inline-flex;
-      align-items: center;
+    /* 🔽 HLAVNÉ MENU */
+    .menu {
+      background: #111;
+      display: flex;
       justify-content: center;
-      transition: transform 0.18s ease, opacity 0.18s ease;
-      transform-origin: center;
+      gap: 0;
+      position: relative;
+      z-index: 1000;
     }
 
-    .topbar a:hover {
-      transform: scale(1.55);
-      opacity: 1;
+    .menu-item {
+      position: relative;
+    }
+
+    .menu-item > a {
+      display: block;
+      color: white;
+      padding: 16px 28px;
+      font-size: 15px;
+      font-weight: bold;
+      transition: 0.25s;
+    }
+
+    .menu-item > a:hover {
+      background: #d60000;
+    }
+
+    /* 🔽 ROZBAĽOVACIE MOŽNOSTI */
+    .dropdown {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      min-width: 220px;
+      background: white;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+      border-top: 3px solid #d60000;
+    }
+
+    .dropdown a {
+      display: block;
+      padding: 13px 18px;
+      color: #111;
+      font-size: 14px;
+      border-bottom: 1px solid #eee;
+      transition: 0.25s;
+    }
+
+    .dropdown a:hover {
+      background: #d60000;
+      color: white;
+      padding-left: 25px;
+    }
+
+    .menu-item:hover .dropdown {
+      display: block;
     }
 
     /* 🔴 ZVISLÝ BOČNÝ PANEL */
@@ -105,7 +161,6 @@
 
   <div class="topbar">
     <div class="topbar-left">
-
       <a href="https://www.facebook.com/profile.php?id=100074785427859" target="_blank">
         <i class="fab fa-facebook-f"></i>
       </a>
@@ -121,7 +176,6 @@
       <a href="https://wa.me/421940860363" target="_blank">
         <i class="fab fa-whatsapp"></i>
       </a>
-
     </div>
 
     <div class="topbar-right">
@@ -135,8 +189,57 @@
     <img src="logo.png" alt="Elektroludwig logo" class="logo">
   </div>
 
-  <div class="fixed-contact">
+  <!-- MENU S 5 MOŽNOSŤAMI -->
+  <nav class="menu">
 
+    <div class="menu-item">
+      <a href="#">1</a>
+      <div class="dropdown">
+        <a href="#">1.1 možnosť</a>
+        <a href="#">1.2 možnosť</a>
+        <a href="#">1.3 možnosť</a>
+      </div>
+    </div>
+
+    <div class="menu-item">
+      <a href="#">2</a>
+      <div class="dropdown">
+        <a href="#">2.1 možnosť</a>
+        <a href="#">2.2 možnosť</a>
+        <a href="#">2.3 možnosť</a>
+      </div>
+    </div>
+
+    <div class="menu-item">
+      <a href="#">3</a>
+      <div class="dropdown">
+        <a href="#">3.1 možnosť</a>
+        <a href="#">3.2 možnosť</a>
+        <a href="#">3.3 možnosť</a>
+      </div>
+    </div>
+
+    <div class="menu-item">
+      <a href="#">4</a>
+      <div class="dropdown">
+        <a href="#">4.1 možnosť</a>
+        <a href="#">4.2 možnosť</a>
+        <a href="#">4.3 možnosť</a>
+      </div>
+    </div>
+
+    <div class="menu-item">
+      <a href="#">5</a>
+      <div class="dropdown">
+        <a href="#">5.1 možnosť</a>
+        <a href="#">5.2 možnosť</a>
+        <a href="#">5.3 možnosť</a>
+      </div>
+    </div>
+
+  </nav>
+
+  <div class="fixed-contact">
     <a href="https://wa.me/421940860363" target="_blank">
       <i class="fab fa-whatsapp"></i>
     </a>
@@ -148,7 +251,6 @@
     <a href="mailto:hudakludo@gmail.com">
       <i class="fas fa-envelope"></i>
     </a>
-
   </div>
 
 </body>
