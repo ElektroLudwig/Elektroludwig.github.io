@@ -67,28 +67,25 @@
     .fixed-contact {
       position: fixed;
       right: 0;
-      bottom: 80px;
+      bottom: 70px;
       z-index: 9999;
       display: flex;
       flex-direction: column;
-      background: #d60000; /* jeden celok */
+      background: #d60000;
       border-radius: 6px 0 0 6px;
       overflow: hidden;
     }
 
     .fixed-contact a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       color: white;
-      padding: 10px;
-      font-size: 16px;
-      text-align: center;
-      width: 36px;
-      border-bottom: 1px solid rgba(255,255,255,0.3);
+      padding: 8px;
+      font-size: 15px;
+      width: 32px;
+      height: 32px;
       transition: 0.3s;
-    }
-
-    /* odstráni čiaru poslednému */
-    .fixed-contact a:last-child {
-      border-bottom: none;
     }
 
     .fixed-contact a:hover {
@@ -134,6 +131,11 @@
   <!-- 🔴 BOČNÁ LIŠTA -->
   <div class="fixed-contact">
 
+    <!-- 🟢 WHATSAPP -->
+    <a href="https://wa.me/421940860363" target="_blank">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+
     <!-- 📞 TELEFÓN -->
     <a href="tel:+421940860363">
       <i class="fas fa-phone"></i>
@@ -142,11 +144,6 @@
     <!-- ✉️ EMAIL -->
     <a href="mailto:hudakludo@gmail.com">
       <i class="fas fa-envelope"></i>
-    </a>
-
-    <!-- 🟢 WHATSAPP -->
-    <a href="https://wa.me/421940860363" target="_blank">
-      <i class="fab fa-whatsapp"></i>
     </a>
 
   </div>
