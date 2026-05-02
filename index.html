@@ -45,36 +45,38 @@
     /* 🔲 HEADER */
     .header {
       text-align: center;
-      padding: 15px 0 0 0;
+      padding: 12px 0 0 0; /* menej priestoru */
       background: white;
     }
 
     .logo {
       max-width: 420px;
       height: auto;
+      display: block;
+      margin: 0 auto;
     }
 
-    /* 🔽 MENU */
+    /* 🔽 MENU – blízko loga */
     .menu {
-      background: white;
       display: flex;
       justify-content: center;
-      gap: 30px;
-      padding: 2px 0 10px 0;
-      margin-top: -10px;
+      gap: 40px;
+      padding: 6px 0 10px 0;
+      margin-top: -5px; /* pritiahne bližšie */
+      background: white;
     }
 
     .menu a {
       color: black;
       font-weight: bold;
       font-size: 15px;
-      text-decoration: underline;
+      text-decoration: none; /* ❌ bez podčiarknutia */
       transition: 0.2s;
     }
 
     .menu a:hover {
       color: #d60000;
-      transform: scale(1.3);
+      transform: scale(1.25);
     }
 
     /* 🔴 BOČNÝ PANEL */
@@ -144,8 +146,8 @@
   <!-- MENU -->
   <nav class="menu">
     <a href="kto-sme.html">Kto sme</a>
-    <a href="#">2</a>
-    <a href="#">3</a>
+    <a href="#">Čo robíme</a>
+    <a href="#">Kde sme pracovali</a>
     <a href="#">4</a>
     <a href="#">5</a>
   </nav>
