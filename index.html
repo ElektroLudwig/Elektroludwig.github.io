@@ -62,6 +62,32 @@
       display: block;
       margin: 0 auto;
     }
+
+    /* 🔴 FIXNÁ BOČNÁ LIŠTA */
+    .fixed-contact {
+      position: fixed;
+      right: 0;
+      top: 40%;
+      transform: translateY(-50%);
+      z-index: 9999;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .fixed-contact a {
+      background: #d60000;
+      color: white;
+      padding: 16px;
+      font-size: 20px;
+      text-align: center;
+      border-bottom: 1px solid rgba(255,255,255,0.3);
+      transition: 0.3s;
+    }
+
+    .fixed-contact a:hover {
+      background: #a80000;
+    }
+
   </style>
 </head>
 
@@ -96,6 +122,16 @@
   <!-- HEADER -->
   <div class="header">
     <img src="logo.png" alt="Elektroludwig logo" class="logo">
+  </div>
+
+  <!-- 🔴 BOČNÁ LIŠTA -->
+  <div class="fixed-contact">
+    <a href="tel:+421940860363">
+      <i class="fas fa-phone"></i>
+    </a>
+    <a href="mailto:hudakludo@gmail.com">
+      <i class="fas fa-envelope"></i>
+    </a>
   </div>
 
 </body>
