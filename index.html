@@ -18,6 +18,7 @@
       font-family: Arial;
     }
 
+    /* 🔝 HORNÝ PÁS */
     .topbar {
       display: flex;
       justify-content: space-between;
@@ -36,6 +37,7 @@
       text-align: right;
     }
 
+    /* 🔲 HEADER */
     .header {
       text-align: center;
       padding: 12px 0;
@@ -53,8 +55,9 @@
       opacity: 0.6;
     }
 
+    /* LOGO */
     .logo {
-      max-width: 400px;
+      max-width: 340px;
       height: auto;
       display: block;
       margin: 0 auto;
@@ -64,18 +67,28 @@
 
 <body>
 
+  <!-- TOPBAR -->
   <div class="topbar">
     <div class="topbar-left">
-      <a href="Ľudo Vít"><i class="fab fa-facebook-f"></i></a>
-      <a href="vmendel88"><i class="fab fa-instagram"></i></a>
-      <a href="mailto:hudakludo@gmail.com"><i class="fas fa-envelope"></i></a>
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+
+      <!-- ✅ INSTAGRAM FUNKČNÝ -->
+      <a href="https://www.instagram.com/vmendel88/" target="_blank">
+        <i class="fab fa-instagram"></i>
+      </a>
+
+      <!-- EMAIL -->
+      <a href="mailto:info@elektroludwig.sk">
+        <i class="fas fa-envelope"></i>
+      </a>
     </div>
 
     <div class="topbar-right">
-      <a href="tel:+421940860363">📞</a>
+      <a href="tel:+421000000000">📞</a>
     </div>
   </div>
 
+  <!-- HEADER -->
   <div class="header">
     <img src="logo.png" alt="Elektroludwig logo" class="logo">
   </div>
