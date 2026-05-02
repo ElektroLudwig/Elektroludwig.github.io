@@ -4,12 +4,10 @@
   <meta charset="UTF-8">
   <title>Elektroludwig | Elektroinštalácie</title>
 
-  <!-- 🔴 FAVICON -->
   <link rel="icon" type="image/png" href="./zalozka.png?v=2">
   <link rel="shortcut icon" type="image/png" href="./zalozka.png?v=2">
   <link rel="apple-touch-icon" href="./zalozka.png?v=2">
 
-  <!-- ikonky -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
@@ -18,7 +16,6 @@
       font-family: Arial;
     }
 
-    /* 🔝 HORNÝ PÁS */
     .topbar {
       display: flex;
       justify-content: space-between;
@@ -31,13 +28,13 @@
     .topbar-left {
       display: flex;
       gap: 15px;
+      align-items: center;
     }
 
     .topbar-right {
       text-align: right;
     }
 
-    /* 🔲 HEADER */
     .header {
       text-align: center;
       padding: 12px 0;
@@ -50,18 +47,6 @@
       text-decoration: none;
     }
 
-    /* 🔥 HOVER ANIMÁCIA PRE VŠETKY IKONY */
-    .topbar a,
-    .fixed-contact a {
-      transition: transform 0.2s ease;
-    }
-
-    .topbar a:hover,
-    .fixed-contact a:hover {
-      transform: scale(1.2);
-    }
-
-    /* LOGO */
     .logo {
       max-width: 340px;
       height: auto;
@@ -69,17 +54,31 @@
       margin: 0 auto;
     }
 
-    /* 🔴 FIXNÁ BOČNÁ LIŠTA */
+    /* 🔥 VÝRAZNEJŠÍ HOVER PRE VRCHNÉ IKONY */
+    .topbar a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.18s ease, opacity 0.18s ease;
+      transform-origin: center;
+    }
+
+    .topbar a:hover {
+      transform: scale(1.55);
+      opacity: 1;
+    }
+
+    /* 🔴 ZVISLÝ BOČNÝ PANEL */
     .fixed-contact {
       position: fixed;
       right: 0;
       bottom: 70px;
       z-index: 9999;
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       background: #d60000;
       border-radius: 6px 0 0 6px;
-      overflow: hidden;
+      overflow: visible;
     }
 
     .fixed-contact a {
@@ -87,66 +86,65 @@
       align-items: center;
       justify-content: center;
       color: white;
-      padding: 8px;
+      width: 34px;
+      height: 34px;
       font-size: 15px;
-      width: 32px;
-      height: 32px;
+      transition: transform 0.18s ease, background 0.18s ease;
+      transform-origin: right center;
     }
 
     .fixed-contact a:hover {
       background: #a80000;
+      transform: scale(1.45);
+      border-radius: 6px 0 0 6px;
     }
-
   </style>
 </head>
 
 <body>
 
-  <!-- TOPBAR -->
   <div class="topbar">
     <div class="topbar-left">
 
-      <!-- 🔵 FACEBOOK -->
       <a href="https://www.facebook.com/profile.php?id=100074785427859" target="_blank">
         <i class="fab fa-facebook-f"></i>
       </a>
 
-      <!-- 📸 INSTAGRAM -->
       <a href="https://www.instagram.com/vmendel88/" target="_blank">
         <i class="fab fa-instagram"></i>
       </a>
 
-      <!-- ✉️ EMAIL -->
       <a href="mailto:hudakludo@gmail.com">
         <i class="fas fa-envelope"></i>
+      </a>
+
+      <a href="https://wa.me/421940860363" target="_blank">
+        <i class="fab fa-whatsapp"></i>
       </a>
 
     </div>
 
     <div class="topbar-right">
-      <a href="tel:+421940860363">📞</a>
+      <a href="tel:+421940860363">
+        <i class="fas fa-phone"></i>
+      </a>
     </div>
   </div>
 
-  <!-- HEADER -->
   <div class="header">
     <img src="logo.png" alt="Elektroludwig logo" class="logo">
   </div>
 
-  <!-- 🔴 BOČNÁ LIŠTA -->
   <div class="fixed-contact">
 
-    <!-- 🟢 WHATSAPP -->
     <a href="https://wa.me/421940860363" target="_blank">
       <i class="fab fa-whatsapp"></i>
     </a>
 
-    <!-- 📞 TELEFÓN -->
     <a href="tel:+421940860363">
       <i class="fas fa-phone"></i>
     </a>
 
-    <!-- ✉️ EMAIL -->
     <a href="mailto:hudakludo@gmail.com">
       <i class="fas fa-envelope"></i>
     </a>
