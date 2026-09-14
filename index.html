@@ -158,7 +158,7 @@
 
 
     /* ==================================================
-       HLAVIČKA + LOGO
+       LOGO
     ================================================== */
 
     .header {
@@ -197,12 +197,14 @@
     .menu {
       display: flex;
       justify-content: center;
+      align-items: center;
       gap: 28px;
       margin: 0;
       padding: 12px 20px 15px 20px;
     }
 
-    .menu a {
+    .menu > a,
+    .menu-main-link {
       font-weight: bold;
       font-size: 15px;
       color: black;
@@ -212,16 +214,19 @@
       position: relative;
     }
 
-    .menu a:hover {
+    .menu > a:hover,
+    .menu-main-link:hover {
       color: #d60000;
       transform: translateY(-1px);
     }
 
-    .menu a.active {
+    .menu > a.active,
+    .menu-main-link.active {
       color: #d60000;
     }
 
-    .menu a.active::after {
+    .menu > a.active::after,
+    .menu-main-link.active::after {
       content: "";
       position: absolute;
       left: 0;
@@ -236,6 +241,114 @@
       height: 1px;
       background: #d60000;
       margin: 0;
+    }
+
+
+    /* ==================================================
+       ROZBAĽOVACIE MENU - OBLASTI REALIZÁCIE
+    ================================================== */
+
+    .menu-dropdown {
+      position: relative;
+    }
+
+    .menu-dropdown-top {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .menu-main-link {
+      display: inline-block;
+    }
+
+    .dropdown-toggle {
+      border: 0;
+      background: transparent;
+      color: #111;
+      padding: 0;
+      cursor: pointer;
+      font-size: 11px;
+      transition: 0.2s;
+    }
+
+    .dropdown-toggle:hover {
+      color: #d60000;
+    }
+
+    .menu-dropdown:hover .dropdown-toggle {
+      color: #d60000;
+    }
+
+    .dropdown-toggle i {
+      transition: transform 0.25s ease;
+    }
+
+    .menu-dropdown:hover .dropdown-toggle i {
+      transform: rotate(180deg);
+    }
+
+    .dropdown-menu {
+      position: absolute;
+      top: calc(100% + 14px);
+      left: 50%;
+      transform: translateX(-50%) translateY(10px);
+      min-width: 265px;
+      background: white;
+      border-top: 3px solid #d60000;
+      border-radius: 0 0 6px 6px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.16);
+      padding: 8px 0;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition:
+        opacity 0.2s ease,
+        transform 0.2s ease,
+        visibility 0.2s ease;
+      z-index: 9999;
+    }
+
+    .dropdown-menu::before {
+      content: "";
+      position: absolute;
+      top: -17px;
+      left: 0;
+      width: 100%;
+      height: 17px;
+    }
+
+    .menu-dropdown:hover .dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    .dropdown-menu a {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      padding: 13px 18px;
+      color: #222;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      white-space: nowrap;
+      transition: 0.2s;
+    }
+
+    .dropdown-menu a i {
+      width: 17px;
+      color: #d60000;
+      text-align: center;
+      font-size: 13px;
+    }
+
+    .dropdown-menu a:hover {
+      background: #f5f5f5;
+      color: #d60000;
+      padding-left: 22px;
     }
 
 
@@ -942,9 +1055,72 @@
         padding: 12px 15px 15px 15px;
       }
 
-      .menu a.active::after {
+      .menu > a.active::after,
+      .menu-main-link.active::after {
         display: none;
       }
+
+
+      /* MOBILNÉ PODMENU */
+
+      .menu-dropdown {
+        position: relative;
+      }
+
+      .menu-dropdown-top {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .dropdown-toggle {
+        padding: 5px;
+        font-size: 12px;
+      }
+
+      .menu-dropdown:hover .dropdown-menu {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+      }
+
+      .menu-dropdown.mobile-open .dropdown-menu {
+        display: block;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: none;
+      }
+
+      .menu-dropdown.mobile-open .dropdown-toggle i {
+        transform: rotate(180deg);
+      }
+
+      .dropdown-menu {
+        display: none;
+        position: absolute;
+        top: calc(100% + 10px);
+        left: 50%;
+        transform: translateX(-50%);
+        min-width: 260px;
+        padding: 7px 0;
+        z-index: 9999;
+      }
+
+      .menu-dropdown.mobile-open .dropdown-menu {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .dropdown-menu::before {
+        display: none;
+      }
+
+      .dropdown-menu a {
+        padding: 13px 17px;
+        font-size: 14px;
+      }
+
 
       .section-shell,
       .details-section {
@@ -1160,25 +1336,77 @@
 
     <nav class="menu">
 
+
       <a href="#onas" data-section="onas">
         Niečo o nás
       </a>
 
-      <a href="#oblasti-realizacie" data-section="oblasti-realizacie">
-        Oblasti realizácie
-      </a>
+
+      <!-- ================================================
+           OBLASTI REALIZÁCIE + PODMENU
+      ================================================= -->
+
+      <div class="menu-dropdown" id="realizationsDropdown">
+
+        <div class="menu-dropdown-top">
+
+          <a
+            href="#oblasti-realizacie"
+            class="menu-main-link"
+            data-section="oblasti-realizacie"
+          >
+            Oblasti realizácie
+          </a>
+
+          <button
+            class="dropdown-toggle"
+            id="dropdownToggle"
+            type="button"
+            aria-label="Zobraziť podmenu"
+            aria-expanded="false"
+          >
+            <i class="fas fa-chevron-down"></i>
+          </button>
+
+        </div>
+
+
+        <div class="dropdown-menu">
+
+          <a href="#detail-elektroinstalacie">
+            <i class="fas fa-bolt"></i>
+            Elektroinštalácie
+          </a>
+
+          <a href="#detail-priemysel">
+            <i class="fas fa-gears"></i>
+            Priemysel a automatizácia
+          </a>
+
+          <a href="#detail-haly">
+            <i class="fas fa-industry"></i>
+            Výrobné a priemyselné haly
+          </a>
+
+        </div>
+
+      </div>
+
 
       <a href="#projekty" data-section="projekty">
         Kde sme pracovali
       </a>
 
+
       <a href="#kontakt" data-section="kontakt">
         Kontakt
       </a>
 
+
       <a href="#">
         5
       </a>
+
 
     </nav>
 
@@ -1311,8 +1539,6 @@
       <div class="realizations-grid">
 
 
-        <!-- 1. ELEKTROINŠTALÁCIE -->
-
         <div class="realization-card reveal reveal-delay-1">
 
           <div class="realization-image">
@@ -1349,8 +1575,6 @@
         </div>
 
 
-        <!-- 2. PRIEMYSEL -->
-
         <div class="realization-card reveal reveal-delay-2">
 
           <div class="realization-image">
@@ -1385,8 +1609,6 @@
 
         </div>
 
-
-        <!-- 3. HALY -->
 
         <div class="realization-card reveal reveal-delay-3">
 
@@ -1768,7 +1990,6 @@
 
         <div class="contact-info">
 
-
           <img
             src="logo.png"
             class="contact-logo"
@@ -2002,6 +2223,11 @@
 
   <script>
 
+
+    /* ==================================================
+       ANIMÁCIE PRI SCROLLOVANÍ
+    ================================================== */
+
     const revealElements =
       document.querySelectorAll(".reveal");
 
@@ -2034,6 +2260,10 @@
     });
 
 
+    /* ==================================================
+       AKTÍVNA POLOŽKA MENU
+    ================================================== */
+
     const sections = [
       document.getElementById("onas"),
       document.getElementById("oblasti-realizacie"),
@@ -2043,7 +2273,7 @@
 
 
     const menuLinks =
-      document.querySelectorAll(".menu a[data-section]");
+      document.querySelectorAll(".menu [data-section]");
 
 
     function updateActiveMenu() {
@@ -2096,6 +2326,105 @@
 
 
     updateActiveMenu();
+
+
+    /* ==================================================
+       MOBILNÉ ROZBAĽOVACIE MENU
+    ================================================== */
+
+    const realizationsDropdown =
+      document.getElementById("realizationsDropdown");
+
+    const dropdownToggle =
+      document.getElementById("dropdownToggle");
+
+
+    dropdownToggle.addEventListener(
+      "click",
+      function(event) {
+
+        event.preventDefault();
+
+        event.stopPropagation();
+
+
+        realizationsDropdown.classList.toggle(
+          "mobile-open"
+        );
+
+
+        const isOpen =
+          realizationsDropdown.classList.contains(
+            "mobile-open"
+          );
+
+
+        dropdownToggle.setAttribute(
+          "aria-expanded",
+          isOpen
+        );
+
+      }
+    );
+
+
+    /* ==================================================
+       ZATVORENIE PODMENU PO KLIKNUTÍ NA ODKAZ
+    ================================================== */
+
+    const dropdownLinks =
+      document.querySelectorAll(
+        ".dropdown-menu a"
+      );
+
+
+    dropdownLinks.forEach(function(link) {
+
+      link.addEventListener(
+        "click",
+        function() {
+
+          realizationsDropdown.classList.remove(
+            "mobile-open"
+          );
+
+          dropdownToggle.setAttribute(
+            "aria-expanded",
+            "false"
+          );
+
+        }
+      );
+
+    });
+
+
+    /* ==================================================
+       ZATVORENIE MOBILNÉHO PODMENU MIMO MENU
+    ================================================== */
+
+    document.addEventListener(
+      "click",
+      function(event) {
+
+        if (
+          !realizationsDropdown.contains(event.target)
+        ) {
+
+          realizationsDropdown.classList.remove(
+            "mobile-open"
+          );
+
+          dropdownToggle.setAttribute(
+            "aria-expanded",
+            "false"
+          );
+
+        }
+
+      }
+    );
+
 
   </script>
 
