@@ -153,6 +153,16 @@
       margin: 0;
     }
 
+    /*
+      Celé logo je odkaz na domovskú stránku.
+    */
+
+    .home-logo-link {
+      display: inline-block;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
     .logo {
       display: block;
       max-width: 420px;
@@ -656,16 +666,24 @@
 
 
   <!-- =========================
-       LOGO
+       HLAVNÉ KLIKATEĽNÉ LOGO
   ========================= -->
 
   <div class="header">
 
-    <img
-      src="logo.png"
-      class="logo"
-      alt="Elektro Ludwig"
+    <a
+      href="index.html"
+      class="home-logo-link"
+      title="Domov"
     >
+
+      <img
+        src="logo.png"
+        class="logo"
+        alt="Elektro Ludwig"
+      >
+
+    </a>
 
   </div>
 
