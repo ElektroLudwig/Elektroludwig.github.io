@@ -20,10 +20,19 @@
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
       color: #111;
+      background: white;
+    }
+
+    section {
+      scroll-margin-top: 120px;
     }
 
 
@@ -148,13 +157,14 @@
 
 
     /* ==================================================
-       HLAVNÉ LOGO
+       HLAVIČKA + LOGO
     ================================================== */
 
     .header {
       text-align: center;
       padding: 0;
       margin: 0;
+      background: white;
     }
 
     .home-logo-link {
@@ -172,15 +182,23 @@
 
 
     /* ==================================================
-       MENU
+       STICKY MENU
     ================================================== */
+
+    .navigation-wrapper {
+      position: sticky;
+      top: 0;
+      z-index: 900;
+      background: white;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+    }
 
     .menu {
       display: flex;
       justify-content: center;
       gap: 28px;
-      margin-top: -8px;
-      padding-bottom: 15px;
+      margin: 0;
+      padding: 12px 20px 15px 20px;
     }
 
     .menu a {
@@ -190,21 +208,27 @@
       text-decoration: none;
       transition: 0.2s;
       cursor: pointer;
+      position: relative;
     }
 
     .menu a:hover {
       color: #d60000;
-      transform: scale(1.25);
+      transform: translateY(-1px);
     }
 
     .menu a.active {
       color: #d60000;
     }
 
-
-    /* ==================================================
-       ČERVENÁ ČIARA
-    ================================================== */
+    .menu a.active::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -8px;
+      height: 2px;
+      background: #d60000;
+    }
 
     .menu-divider {
       width: 100%;
@@ -215,7 +239,7 @@
 
 
     /* ==================================================
-       DOMOVSKÁ FOTKA
+       DOMOVSKÁ OBRAZOVKA
     ================================================== */
 
     .home-hero {
@@ -235,70 +259,84 @@
 
 
     /* ==================================================
+       SPOLOČNÉ SEKČNÉ PRVKY
+    ================================================== */
+
+    .section-shell {
+      padding: 95px 25px;
+    }
+
+    .section-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-size: 13px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #d60000;
+      font-weight: bold;
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      margin: 0;
+      font-size: 38px;
+      line-height: 1.2;
+      color: #111;
+    }
+
+    .section-title span {
+      color: #d60000;
+    }
+
+    .section-line {
+      width: 70px;
+      height: 3px;
+      background: #d60000;
+      margin-top: 20px;
+      margin-bottom: 40px;
+    }
+
+
+    /* ==================================================
        O NÁS
     ================================================== */
 
     .about-section {
-      max-height: 0;
-      opacity: 0;
-      overflow: hidden;
-
-      transition:
-        max-height 0.8s ease,
-        opacity 0.5s ease,
-        padding 0.5s ease;
-
-      background: #f7f7f7;
-      padding: 0 20px;
+      background: white;
     }
 
-    .about-section.show {
-      max-height: 2700px;
-      opacity: 1;
-      padding: 55px 20px 50px 20px;
+    .about-layout {
+      display: grid;
+      grid-template-columns: 0.8fr 1.6fr;
+      gap: 75px;
+      align-items: start;
     }
 
-    .about-container {
-      max-width: 1100px;
-      margin: 0 auto;
+    .about-heading-side {
+      position: sticky;
+      top: 145px;
     }
 
-    .about-container h1 {
-      margin-top: 0;
-      margin-bottom: 20px;
-      font-size: 34px;
-      color: #d60000;
-    }
-
-    .about-divider {
-      width: 100%;
-      height: 1px;
-      background: #d60000;
-      margin-bottom: 35px;
-    }
-
-    .about-container p {
+    .about-text-side p {
       font-size: 17px;
-      line-height: 1.8;
-      margin-bottom: 22px;
+      line-height: 1.85;
+      margin-top: 0;
+      margin-bottom: 23px;
+      color: #333;
       text-align: justify;
     }
 
     .final-text {
-      margin-top: 35px;
-      padding: 25px 30px;
+      margin-top: 38px;
+      padding: 27px 30px;
       border-left: 4px solid #d60000;
-      background: white;
+      background: #f7f7f7;
       font-size: 19px;
       line-height: 1.7;
-      box-shadow: 0 3px 12px rgba(0,0,0,0.06);
-    }
-
-    .about-bottom-divider {
-      width: 100%;
-      height: 1px;
-      background: #d60000;
-      margin-top: 45px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.05);
     }
 
 
@@ -307,64 +345,26 @@
     ================================================== */
 
     .realizations-section {
-      display: none;
-      background: #f7f7f7;
-      padding: 55px 25px 70px 25px;
+      background: #f4f4f4;
     }
 
-    .realizations-section.show {
-      display: block;
-      animation: fadeRealizations 0.5s ease;
-    }
-
-    @keyframes fadeRealizations {
-
-      from {
-        opacity: 0;
-      }
-
-      to {
-        opacity: 1;
-      }
-
-    }
-
-    .realizations-container {
-      max-width: 1250px;
-      margin: 0 auto;
-    }
-
-    .realizations-heading {
+    .realizations-header {
+      max-width: 850px;
+      margin: 0 auto 50px auto;
       text-align: center;
-      margin: 0 0 15px 0;
-      font-size: 36px;
-      color: #111;
     }
 
-    .realizations-heading span {
-      color: #d60000;
-    }
-
-    .realizations-divider {
-      width: 70px;
-      height: 3px;
-      margin: 0 auto 40px auto;
-      background: #d60000;
+    .realizations-header .section-line {
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .realizations-intro {
-      max-width: 850px;
-      margin: 0 auto 45px auto;
-      text-align: center;
       font-size: 17px;
-      line-height: 1.7;
+      line-height: 1.75;
       color: #555;
+      margin: 0;
     }
-
-
-    /* ==================================================
-       TRI OBLASTI REALIZÁCIE
-    ================================================== */
 
     .realizations-grid {
       display: grid;
@@ -376,30 +376,17 @@
     .realization-card {
       background: white;
       overflow: hidden;
-      border-radius: 4px;
-
-      box-shadow:
-        0 4px 18px rgba(0,0,0,0.10);
-
+      border-radius: 6px;
       display: flex;
       flex-direction: column;
-
-      transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.09);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
     }
 
     .realization-card:hover {
       transform: translateY(-7px);
-
-      box-shadow:
-        0 10px 28px rgba(0,0,0,0.16);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.15);
     }
-
-
-    /* ==================================================
-       FOTKY OBLASTÍ REALIZÁCIE
-    ================================================== */
 
     .realization-image {
       width: 100%;
@@ -418,13 +405,8 @@
     }
 
     .realization-card:hover .realization-image img {
-      transform: scale(1.035);
+      transform: scale(1.04);
     }
-
-
-    /* ==================================================
-       TEXT KARTY
-    ================================================== */
 
     .realization-content {
       padding: 28px 27px 30px 27px;
@@ -448,32 +430,20 @@
       flex: 1;
     }
 
-
-    /* ==================================================
-       ČERVENÉ TLAČIDLÁ
-    ================================================== */
-
     .realization-button {
       display: inline-flex;
       align-items: center;
       justify-content: center;
       align-self: flex-start;
-
       min-width: 150px;
       padding: 12px 20px;
-
       background: #d60000;
       color: white;
-
       text-decoration: none;
       font-size: 14px;
       font-weight: bold;
-
       border-radius: 3px;
-
-      transition:
-        background 0.2s ease,
-        transform 0.2s ease;
+      transition: background 0.2s ease, transform 0.2s ease;
     }
 
     .realization-button i {
@@ -488,36 +458,95 @@
 
 
     /* ==================================================
+       KDE SME PRACOVALI
+    ================================================== */
+
+    .projects-section {
+      background: white;
+    }
+
+    .projects-header {
+      max-width: 760px;
+      margin-bottom: 50px;
+    }
+
+    .projects-intro {
+      font-size: 17px;
+      line-height: 1.75;
+      color: #555;
+      margin: 0;
+    }
+
+    .projects-placeholder {
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 45px;
+      background: #f7f7f7;
+      padding: 45px;
+      border-left: 4px solid #d60000;
+      align-items: center;
+    }
+
+    .projects-placeholder h2 {
+      margin-top: 0;
+      margin-bottom: 15px;
+      font-size: 28px;
+    }
+
+    .projects-placeholder p {
+      margin: 0;
+      font-size: 16px;
+      line-height: 1.75;
+      color: #555;
+    }
+
+    .projects-stat {
+      text-align: center;
+      padding: 30px;
+    }
+
+    .projects-stat i {
+      font-size: 42px;
+      color: #d60000;
+      margin-bottom: 15px;
+    }
+
+    .projects-stat strong {
+      display: block;
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+
+    .projects-stat span {
+      color: #666;
+      font-size: 15px;
+    }
+
+
+    /* ==================================================
        KONTAKT
     ================================================== */
 
     .contact-section {
-      max-height: 0;
-      opacity: 0;
-      overflow: hidden;
-
-      transition:
-        max-height 0.7s ease,
-        opacity 0.5s ease,
-        padding 0.5s ease;
-
-      background: #f7f7f7;
-      padding: 0 20px;
+      background: #f4f4f4;
     }
 
-    .contact-section.show {
-      max-height: 1800px;
-      opacity: 1;
-      padding: 55px 20px;
+    .contact-header {
+      max-width: 800px;
+      margin: 0 auto 50px auto;
+      text-align: center;
+    }
+
+    .contact-header .section-line {
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .contact-container {
       max-width: 1200px;
       margin: 0 auto;
-
       display: grid;
       grid-template-columns: 1fr 1.6fr;
-
       gap: 50px;
       align-items: center;
     }
@@ -557,11 +586,6 @@
       text-align: center;
     }
 
-
-    /* ==================================================
-       MAPA
-    ================================================== */
-
     .contact-map {
       width: 100%;
     }
@@ -575,45 +599,27 @@
       box-shadow: 0 5px 20px rgba(0,0,0,0.15);
     }
 
-
-    /* ==================================================
-       ČIARA POD MAPOU
-    ================================================== */
-
     .contact-divider {
       max-width: 1200px;
       height: 1px;
       background: #d60000;
       border: 0;
-      margin: 45px auto 40px auto;
+      margin: 50px auto 40px auto;
     }
-
-
-    /* ==================================================
-       KONTAKTNÉ OSOBY
-    ================================================== */
 
     .contact-people {
       max-width: 1200px;
       margin: 0 auto;
-
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-
       gap: 45px;
       align-items: start;
     }
 
     .person {
       padding: 10px 25px;
-
       display: grid;
-
-      grid-template-rows:
-        32px
-        32px
-        46px
-        32px;
+      grid-template-rows: 32px 32px 46px 32px;
     }
 
     .person h3 {
@@ -658,6 +664,36 @@
 
 
     /* ==================================================
+       SCROLL ANIMÁCIE
+    ================================================== */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(35px);
+      transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .reveal-delay-1 {
+      transition-delay: 0.08s;
+    }
+
+    .reveal-delay-2 {
+      transition-delay: 0.16s;
+    }
+
+    .reveal-delay-3 {
+      transition-delay: 0.24s;
+    }
+
+
+    /* ==================================================
        BOČNÝ KONTAKT
     ================================================== */
 
@@ -665,29 +701,21 @@
       position: fixed;
       right: 0;
       bottom: 70px;
-
       display: flex;
       flex-direction: column;
-
       background: #d60000;
-
       border-radius: 6px 0 0 6px;
-
       z-index: 999;
     }
 
     .fixed-contact a {
       color: white;
-
       width: 32px;
       height: 32px;
-
       display: flex;
       align-items: center;
       justify-content: center;
-
       text-decoration: none;
-
       transition: 0.2s;
     }
 
@@ -701,7 +729,16 @@
        TABLET
     ================================================== */
 
-    @media (max-width: 900px) {
+    @media (max-width: 950px) {
+
+      .about-layout {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .about-heading-side {
+        position: static;
+      }
 
       .realizations-grid {
         grid-template-columns: 1fr;
@@ -711,6 +748,10 @@
 
       .realization-image {
         height: 320px;
+      }
+
+      .projects-placeholder {
+        grid-template-columns: 1fr;
       }
 
     }
@@ -730,38 +771,36 @@
         max-width: 350px;
       }
 
+      .navigation-wrapper {
+        position: relative;
+      }
+
       .menu {
         gap: 15px;
         flex-wrap: wrap;
-        padding: 0 15px 15px;
+        padding: 12px 15px 15px 15px;
       }
 
-      .home-hero img {
-        width: 100%;
-        height: auto;
+      .menu a.active::after {
+        display: none;
       }
 
-      .about-section.show,
-      .contact-section.show {
-        padding: 35px 15px;
+      .section-shell {
+        padding: 65px 16px;
       }
 
-      .about-container p {
+      .section-title {
+        font-size: 31px;
+      }
+
+      .about-text-side p {
         font-size: 16px;
         text-align: left;
       }
 
-      .realizations-section {
-        padding: 40px 15px 55px 15px;
-      }
-
-      .realizations-heading {
-        font-size: 30px;
-      }
-
-      .realizations-intro {
+      .realizations-intro,
+      .projects-intro {
         font-size: 16px;
-        margin-bottom: 30px;
       }
 
       .realization-image {
@@ -774,6 +813,10 @@
 
       .realization-content h2 {
         font-size: 22px;
+      }
+
+      .projects-placeholder {
+        padding: 30px 22px;
       }
 
       .contact-container {
@@ -888,17 +931,9 @@
 
         <div class="language-menu">
 
-          <a href="#">
-            Slovenčina
-          </a>
-
-          <a href="#">
-            Deutsch
-          </a>
-
-          <a href="#">
-            English
-          </a>
+          <a href="#">Slovenčina</a>
+          <a href="#">Deutsch</a>
+          <a href="#">English</a>
 
         </div>
 
@@ -913,10 +948,10 @@
        LOGO
   ================================================== -->
 
-  <div class="header">
+  <div class="header" id="domov">
 
     <a
-      href="index.html"
+      href="#domov"
       class="home-logo-link"
       title="Domov"
     >
@@ -936,55 +971,42 @@
        MENU
   ================================================== -->
 
-  <nav class="menu">
+  <div class="navigation-wrapper">
 
-    <a
-      href="#onas"
-      id="aboutButton"
-    >
-      Niečo o nás
-    </a>
+    <nav class="menu">
 
+      <a href="#onas" data-section="onas">
+        Niečo o nás
+      </a>
 
-    <a
-      href="#oblasti-realizacie"
-      id="realizationsButton"
-    >
-      Oblasti realizácie
-    </a>
+      <a href="#oblasti-realizacie" data-section="oblasti-realizacie">
+        Oblasti realizácie
+      </a>
 
+      <a href="#projekty" data-section="projekty">
+        Kde sme pracovali
+      </a>
 
-    <a href="#">
-      Kde sme pracovali
-    </a>
+      <a href="#kontakt" data-section="kontakt">
+        Kontakt
+      </a>
 
+      <a href="#">
+        5
+      </a>
 
-    <a
-      href="#kontakt"
-      id="contactButton"
-    >
-      Kontakt
-    </a>
+    </nav>
 
+    <div class="menu-divider"></div>
 
-    <a href="#">
-      5
-    </a>
-
-  </nav>
-
-
-  <div class="menu-divider"></div>
+  </div>
 
 
   <!-- ==================================================
        DOMOVSKÁ FOTKA
   ================================================== -->
 
-  <div
-    class="home-hero"
-    id="homeHero"
-  >
+  <div class="home-hero">
 
     <img
       src="Domovska.png"
@@ -999,65 +1021,68 @@
   ================================================== -->
 
   <section
-    class="about-section"
+    class="about-section section-shell"
     id="onas"
   >
 
-    <div class="about-container">
-
-      <h1>
-        O nás
-      </h1>
-
-      <div class="about-divider"></div>
+    <div class="section-container about-layout">
 
 
-      <p>
-        <strong>Elektro Ludwig s.r.o.</strong>
-        je slovenská elektroinštalačná spoločnosť pôsobiaca najmä na projektoch doma aj v zahraničí. Hoci spoločnosť v dnešnej právnej forme funguje od svojho založenia ako s.r.o., naše skúsenosti siahajú podstatne ďalej.
-      </p>
+      <div class="about-heading-side reveal">
 
+        <div class="section-label">
+          Elektro Ludwig
+        </div>
 
-      <p>
-        Ešte pred vznikom spoločnosti Elektro Ludwig s.r.o. sme realizovali elektroinštalačné práce pod živnosťou <strong>Ľudovíta Hudáka</strong>, ktorý je dnes konateľom spoločnosti. Naša história preto nezačína dátumom zápisu s.r.o. do obchodného registra, ale rokmi praktických skúseností priamo na stavbách a pri realizácii rozsiahlych elektroinštalačných projektov.
-      </p>
+        <h1 class="section-title">
+          Niečo <span>o nás</span>
+        </h1>
 
-
-      <p>
-        Za ten čas sme pracovali na rôznych typoch objektov – od <strong>škôl a administratívnych budov, cez výrobné a priemyselné haly až po automatizované výrobné linky a logistické centrá</strong>.
-      </p>
-
-
-      <p>
-        Naše skúsenosti zahŕňajú kompletné elektroinštalácie budov vrátane silnoprúdových a slaboprúdových rozvodov, osvetlenia, núdzového osvetlenia, zabezpečovacích systémov, rozvádzačov, napájania jednotlivých technológií, vonkajšieho osvetlenia, parkovacích plôch a ďalších systémov potrebných pre bezpečné a spoľahlivé fungovanie objektu.
-      </p>
-
-
-      <p>
-        Pri priemyselných projektoch realizujeme elektroinštalácie výrobných hál, prívody a napájanie strojov a technologických zariadení, káblové trasy, rozvádzače, ovládacie a signalizačné prvky či kompletné zapojenie jednotlivých technológií.
-      </p>
-
-
-      <p>
-        Samostatnou oblasťou našich skúseností je <strong>priemyselná automatizácia</strong>. Podieľali sme sa na realizácii automatizovaných výrobných a logistických systémov, kde sme zabezpečovali kompletnú elektroinštaláciu potrebnú pre chod automatizácie – od káblových trás a kabeláže až po pripojenie senzorov, motorov, rozvádzačov a jednotlivých prvkov technológie.
-      </p>
-
-
-      <p>
-        Vďaka skúsenostiam z rôznych typov stavieb dokážeme zabezpečiť práce od bežnej elektroinštalácie až po rozsiahle priemyselné a automatizačné projekty.
-      </p>
-
-
-      <div class="final-text">
-
-        <strong>
-          Jednoducho – tam, kde je potrebná elektrická energia, kabeláž, riadenie alebo technológia, vieme nájsť riešenie.
-        </strong>
+        <div class="section-line"></div>
 
       </div>
 
 
-      <div class="about-bottom-divider"></div>
+      <div class="about-text-side reveal reveal-delay-1">
+
+        <p>
+          <strong>Elektro Ludwig s.r.o.</strong>
+          je slovenská elektroinštalačná spoločnosť pôsobiaca najmä na projektoch doma aj v zahraničí. Hoci spoločnosť v dnešnej právnej forme funguje od svojho založenia ako s.r.o., naše skúsenosti siahajú podstatne ďalej.
+        </p>
+
+        <p>
+          Ešte pred vznikom spoločnosti Elektro Ludwig s.r.o. sme realizovali elektroinštalačné práce pod živnosťou <strong>Ľudovíta Hudáka</strong>, ktorý je dnes konateľom spoločnosti. Naša história preto nezačína dátumom zápisu s.r.o. do obchodného registra, ale rokmi praktických skúseností priamo na stavbách a pri realizácii rozsiahlych elektroinštalačných projektov.
+        </p>
+
+        <p>
+          Za ten čas sme pracovali na rôznych typoch objektov – od <strong>škôl a administratívnych budov, cez výrobné a priemyselné haly až po automatizované výrobné linky a logistické centrá</strong>.
+        </p>
+
+        <p>
+          Naše skúsenosti zahŕňajú kompletné elektroinštalácie budov vrátane silnoprúdových a slaboprúdových rozvodov, osvetlenia, núdzového osvetlenia, zabezpečovacích systémov, rozvádzačov, napájania jednotlivých technológií, vonkajšieho osvetlenia, parkovacích plôch a ďalších systémov potrebných pre bezpečné a spoľahlivé fungovanie objektu.
+        </p>
+
+        <p>
+          Pri priemyselných projektoch realizujeme elektroinštalácie výrobných hál, prívody a napájanie strojov a technologických zariadení, káblové trasy, rozvádzače, ovládacie a signalizačné prvky či kompletné zapojenie jednotlivých technológií.
+        </p>
+
+        <p>
+          Samostatnou oblasťou našich skúseností je <strong>priemyselná automatizácia</strong>. Podieľali sme sa na realizácii automatizovaných výrobných a logistických systémov, kde sme zabezpečovali kompletnú elektroinštaláciu potrebnú pre chod automatizácie – od káblových trás a kabeláže až po pripojenie senzorov, motorov, rozvádzačov a jednotlivých prvkov technológie.
+        </p>
+
+        <p>
+          Vďaka skúsenostiam z rôznych typov stavieb dokážeme zabezpečiť práce od bežnej elektroinštalácie až po rozsiahle priemyselné a automatizačné projekty.
+        </p>
+
+        <div class="final-text">
+
+          <strong>
+            Jednoducho – tam, kde je potrebná elektrická energia, kabeláž, riadenie alebo technológia, vieme nájsť riešenie.
+          </strong>
+
+        </div>
+
+      </div>
 
     </div>
 
@@ -1069,42 +1094,41 @@
   ================================================== -->
 
   <section
-    class="realizations-section"
+    class="realizations-section section-shell"
     id="oblasti-realizacie"
   >
 
-    <div class="realizations-container">
+    <div class="section-container">
 
 
-      <h1 class="realizations-heading">
+      <div class="realizations-header reveal">
 
-        Oblasti <span>realizácie</span>
+        <div class="section-label">
+          Naše kompetencie
+        </div>
 
-      </h1>
+        <h1 class="section-title">
+          Oblasti <span>realizácie</span>
+        </h1>
 
+        <div class="section-line"></div>
 
-      <div class="realizations-divider"></div>
+        <p class="realizations-intro">
 
+          Od elektroinštalácií budov až po rozsiahle priemyselné
+          a automatizačné projekty. Realizujeme elektroinštalácie,
+          kabeláž a technologické systémy pre rôzne typy objektov,
+          výrobných prevádzok a logistických zariadení.
 
-      <p class="realizations-intro">
+        </p>
 
-        Od elektroinštalácií budov až po rozsiahle priemyselné
-        a automatizačné projekty. Realizujeme elektroinštalácie,
-        kabeláž a technologické systémy pre rôzne typy objektov,
-        výrobných prevádzok a logistických zariadení.
-
-      </p>
+      </div>
 
 
       <div class="realizations-grid">
 
 
-        <!-- ============================================
-             1. ELEKTROINŠTALÁCIE
-        ============================================ -->
-
-        <div class="realization-card">
-
+        <div class="realization-card reveal reveal-delay-1">
 
           <div class="realization-image">
 
@@ -1115,34 +1139,23 @@
 
           </div>
 
-
           <div class="realization-content">
 
             <h2>
               Elektroinštalácie
             </h2>
 
-
             <p>
-
               Realizujeme kompletné elektroinštalácie budov a objektov –
               od káblových trás a rozvodov až po osvetlenie,
               rozvádzače, zásuvkové a technologické okruhy.
               Zabezpečujeme silnoprúdové aj slaboprúdové inštalácie
               podľa požiadaviek konkrétneho projektu.
-
             </p>
 
-
-            <a
-              href="#"
-              class="realization-button"
-            >
-
+            <a href="#" class="realization-button">
               Viac informácií
-
               <i class="fas fa-arrow-right"></i>
-
             </a>
 
           </div>
@@ -1150,12 +1163,7 @@
         </div>
 
 
-        <!-- ============================================
-             2. PRIEMYSEL A AUTOMATIZÁCIA
-        ============================================ -->
-
-        <div class="realization-card">
-
+        <div class="realization-card reveal reveal-delay-2">
 
           <div class="realization-image">
 
@@ -1166,34 +1174,23 @@
 
           </div>
 
-
           <div class="realization-content">
 
             <h2>
               Priemysel a automatizácia
             </h2>
 
-
             <p>
-
               Podieľame sa na realizácii priemyselných a automatizovaných
               systémov. Montujeme káblové trasy, kabeláž,
               rozvádzače, senzory, motory, ovládacie prvky
               a ďalšie technológie potrebné pre spoľahlivý chod
               výrobných a logistických zariadení.
-
             </p>
 
-
-            <a
-              href="#"
-              class="realization-button"
-            >
-
+            <a href="#" class="realization-button">
               Viac informácií
-
               <i class="fas fa-arrow-right"></i>
-
             </a>
 
           </div>
@@ -1201,12 +1198,7 @@
         </div>
 
 
-        <!-- ============================================
-             3. VÝROBNÉ A PRIEMYSELNÉ HALY
-        ============================================ -->
-
-        <div class="realization-card">
-
+        <div class="realization-card reveal reveal-delay-3">
 
           <div class="realization-image">
 
@@ -1217,41 +1209,102 @@
 
           </div>
 
-
           <div class="realization-content">
 
             <h2>
               Výrobné a priemyselné haly
             </h2>
 
-
             <p>
-
               Realizujeme elektroinštalácie výrobných,
               skladových a logistických hál.
               Zabezpečujeme napájanie technológií,
               hlavné a vedľajšie káblové trasy,
               osvetlenie, rozvádzače a kompletné elektrické
               rozvody potrebné pre fungovanie celého objektu.
-
             </p>
 
-
-            <a
-              href="#"
-              class="realization-button"
-            >
-
+            <a href="#" class="realization-button">
               Viac informácií
-
               <i class="fas fa-arrow-right"></i>
-
             </a>
 
           </div>
 
         </div>
 
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ==================================================
+       KDE SME PRACOVALI
+  ================================================== -->
+
+  <section
+    class="projects-section section-shell"
+    id="projekty"
+  >
+
+    <div class="section-container">
+
+
+      <div class="projects-header reveal">
+
+        <div class="section-label">
+          Referencie
+        </div>
+
+        <h1 class="section-title">
+          Kde sme <span>pracovali</span>
+        </h1>
+
+        <div class="section-line"></div>
+
+        <p class="projects-intro">
+          Naše skúsenosti vznikali priamo na realizáciách rôzneho rozsahu –
+          od budov a škôl až po výrobné, priemyselné a logistické projekty.
+        </p>
+
+      </div>
+
+
+      <div class="projects-placeholder reveal reveal-delay-1">
+
+        <div>
+
+          <h2>
+            Projekty a realizácie
+          </h2>
+
+          <p>
+            Túto časť doplníme konkrétnymi stavbami, fotografiami,
+            lokalitou a rozsahom vykonaných elektroinštalačných prác.
+            Vďaka tomu bude možné ukázať nielen to, čo realizujeme,
+            ale aj konkrétne skúsenosti z už dokončených alebo
+            prebiehajúcich projektov.
+          </p>
+
+        </div>
+
+
+        <div class="projects-stat">
+
+          <i class="fas fa-industry"></i>
+
+          <strong>
+            Reálne projekty
+          </strong>
+
+          <span>
+            doma aj v zahraničí
+          </span>
+
+        </div>
 
       </div>
 
@@ -1265,202 +1318,223 @@
   ================================================== -->
 
   <section
-    class="contact-section"
+    class="contact-section section-shell"
     id="kontakt"
   >
 
-    <div class="contact-container">
+    <div class="section-container">
 
 
-      <div class="contact-info">
+      <div class="contact-header reveal">
+
+        <div class="section-label">
+          Kontaktujte nás
+        </div>
+
+        <h1 class="section-title">
+          Sme vám <span>k dispozícii</span>
+        </h1>
+
+        <div class="section-line"></div>
+
+      </div>
 
 
-        <img
-          src="logo.png"
-          class="contact-logo"
-          alt="Elektro Ludwig"
-        >
+      <div class="contact-container reveal reveal-delay-1">
 
 
-        <h2>
-          Elektro Ludwig s. r. o.
-        </h2>
+        <div class="contact-info">
 
 
-        <div class="contact-line">
+          <img
+            src="logo.png"
+            class="contact-logo"
+            alt="Elektro Ludwig"
+          >
 
-          <i class="fas fa-location-dot"></i>
 
-          <div>
+          <h2>
+            Elektro Ludwig s. r. o.
+          </h2>
 
-            <strong>
-              Sídlo spoločnosti
-            </strong>
 
-            <br>
+          <div class="contact-line">
 
-            Kochanovce 84
+            <i class="fas fa-location-dot"></i>
 
-            <br>
+            <div>
 
-            066 01 Kochanovce
+              <strong>
+                Sídlo spoločnosti
+              </strong>
 
-            <br>
+              <br>
 
-            Slovenská republika
+              Kochanovce 84
+
+              <br>
+
+              066 01 Kochanovce
+
+              <br>
+
+              Slovenská republika
+
+            </div>
+
+          </div>
+
+
+          <div class="contact-line">
+
+            <i class="fas fa-building"></i>
+
+            <div>
+
+              <strong>
+                IČO
+              </strong>
+
+              <br>
+
+              55 110 088
+
+            </div>
 
           </div>
 
         </div>
 
 
-        <div class="contact-line">
+        <div class="contact-map">
 
-          <i class="fas fa-building"></i>
+          <iframe
+            src="https://www.google.com/maps?q=Kochanovce%2084%2C%20066%2001%20Kochanovce%2C%20Slovakia&output=embed"
+            loading="lazy"
+            allowfullscreen=""
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Elektro Ludwig - Kochanovce 84"
+          ></iframe>
 
-          <div>
+        </div>
 
-            <strong>
-              IČO
-            </strong>
+      </div>
 
-            <br>
 
-            55 110 088
+      <div class="contact-divider"></div>
+
+
+      <div class="contact-people reveal reveal-delay-2">
+
+
+        <div class="person">
+
+          <h3>
+            Konateľ firmy
+          </h3>
+
+          <div class="person-name">
+            Ľudovít Hudák
+          </div>
+
+
+          <div class="person-detail">
+
+            <i class="fas fa-envelope"></i>
+
+            <a
+              href="mailto:ludovit.hudak.elektroludwig@gmail.com"
+            >
+              ludovit.hudak.elektroludwig@gmail.com
+            </a>
+
+          </div>
+
+
+          <div class="person-detail">
+
+            <i class="fas fa-phone"></i>
+
+            <a href="tel:+421940860363">
+              +421 940 860 363
+            </a>
 
           </div>
 
         </div>
 
-      </div>
+
+        <div class="person">
+
+          <h3>
+            Elektromajster
+          </h3>
+
+          <div class="person-name">
+            Vladimír Mendel
+          </div>
 
 
-      <div class="contact-map">
+          <div class="person-detail">
 
-        <iframe
-          src="https://www.google.com/maps?q=Kochanovce%2084%2C%20066%2001%20Kochanovce%2C%20Slovakia&output=embed"
-          loading="lazy"
-          allowfullscreen=""
-          referrerpolicy="no-referrer-when-downgrade"
-          title="Elektro Ludwig - Kochanovce 84"
-        ></iframe>
+            <i class="fas fa-envelope"></i>
 
-      </div>
+            <a
+              href="mailto:vladimir.mendel.elektroludwig@gmail.com"
+            >
+              vladimir.mendel.elektroludwig@gmail.com
+            </a>
 
-    </div>
+          </div>
 
 
-    <div class="contact-divider"></div>
+          <div class="person-detail">
 
+            <i class="fas fa-phone"></i>
 
-    <div class="contact-people">
+            <a href="tel:+421904162593">
+              +421 904 162 593
+            </a>
 
-
-      <div class="person">
-
-        <h3>
-          Konateľ firmy
-        </h3>
-
-        <div class="person-name">
-          Ľudovít Hudák
-        </div>
-
-
-        <div class="person-detail">
-
-          <i class="fas fa-envelope"></i>
-
-          <a
-            href="mailto:ludovit.hudak.elektroludwig@gmail.com"
-          >
-            ludovit.hudak.elektroludwig@gmail.com
-          </a>
+          </div>
 
         </div>
 
 
-        <div class="person-detail">
+        <div class="person">
 
-          <i class="fas fa-phone"></i>
+          <h3>
+            Ekonomické oddelenie
+          </h3>
 
-          <a href="tel:+421940860363">
-            +421 940 860 363
-          </a>
-
-        </div>
-
-      </div>
+          <div class="person-name empty">
+            &nbsp;
+          </div>
 
 
-      <div class="person">
+          <div class="person-detail">
 
-        <h3>
-          Elektromajster
-        </h3>
+            <i class="fas fa-envelope"></i>
 
-        <div class="person-name">
-          Vladimír Mendel
-        </div>
+            <a href="mailto:faktury.hudak@gmail.com">
+              faktury.hudak@gmail.com
+            </a>
+
+          </div>
 
 
-        <div class="person-detail">
+          <div class="person-detail">
 
-          <i class="fas fa-envelope"></i>
+            <i class="fas fa-phone"></i>
 
-          <a
-            href="mailto:vladimir.mendel.elektroludwig@gmail.com"
-          >
-            vladimir.mendel.elektroludwig@gmail.com
-          </a>
+            <a href="tel:+421940860363">
+              +421 940 860 363
+            </a>
+
+          </div>
 
         </div>
 
-
-        <div class="person-detail">
-
-          <i class="fas fa-phone"></i>
-
-          <a href="tel:+421904162593">
-            +421 904 162 593
-          </a>
-
-        </div>
-
-      </div>
-
-
-      <div class="person">
-
-        <h3>
-          Ekonomické oddelenie
-        </h3>
-
-        <div class="person-name empty">
-          &nbsp;
-        </div>
-
-
-        <div class="person-detail">
-
-          <i class="fas fa-envelope"></i>
-
-          <a href="mailto:faktury.hudak@gmail.com">
-            faktury.hudak@gmail.com
-          </a>
-
-        </div>
-
-
-        <div class="person-detail">
-
-          <i class="fas fa-phone"></i>
-
-          <a href="tel:+421940860363">
-            +421 940 860 363
-          </a>
-
-        </div>
 
       </div>
 
@@ -1475,14 +1549,12 @@
 
   <div class="fixed-contact">
 
-
     <a
       href="https://wa.me/421940860363"
       title="WhatsApp"
     >
       <i class="fab fa-whatsapp"></i>
     </a>
-
 
     <a
       href="tel:+421940860363"
@@ -1491,14 +1563,12 @@
       <i class="fas fa-phone"></i>
     </a>
 
-
     <a
       href="mailto:ludovit.hudak.elektroludwig@gmail.com"
       title="E-mail"
     >
       <i class="fas fa-envelope"></i>
     </a>
-
 
   </div>
 
@@ -1509,218 +1579,98 @@
 
   <script>
 
-
-    const aboutButton =
-      document.getElementById("aboutButton");
-
-
-    const realizationsButton =
-      document.getElementById("realizationsButton");
+    const revealElements =
+      document.querySelectorAll(".reveal");
 
 
-    const contactButton =
-      document.getElementById("contactButton");
+    const revealObserver =
+      new IntersectionObserver(
+        function(entries) {
+
+          entries.forEach(function(entry) {
+
+            if (entry.isIntersecting) {
+
+              entry.target.classList.add("visible");
+
+            }
+
+          });
+
+        },
+        {
+          threshold: 0.12
+        }
+      );
 
 
-    const aboutSection =
-      document.getElementById("onas");
+    revealElements.forEach(function(element) {
+
+      revealObserver.observe(element);
+
+    });
 
 
-    const realizationsSection =
-      document.getElementById("oblasti-realizacie");
+    const sections = [
+      document.getElementById("onas"),
+      document.getElementById("oblasti-realizacie"),
+      document.getElementById("projekty"),
+      document.getElementById("kontakt")
+    ];
 
 
-    const contactSection =
-      document.getElementById("kontakt");
+    const menuLinks =
+      document.querySelectorAll(".menu a[data-section]");
 
 
-    const homeHero =
-      document.getElementById("homeHero");
+    function updateActiveMenu() {
+
+      let currentSection = "";
+
+      sections.forEach(function(section) {
+
+        const rect =
+          section.getBoundingClientRect();
+
+        if (
+          rect.top <= 220 &&
+          rect.bottom >= 220
+        ) {
+
+          currentSection =
+            section.id;
+
+        }
+
+      });
 
 
-    /* ==================================================
-       ZATVORÍ VŠETKY SEKCIE
-    ================================================== */
+      menuLinks.forEach(function(link) {
 
-    function closeAllSections() {
-
-      aboutSection.classList.remove("show");
-
-      realizationsSection.classList.remove("show");
-
-      contactSection.classList.remove("show");
+        link.classList.remove("active");
 
 
-      aboutButton.classList.remove("active");
+        if (
+          link.dataset.section ===
+          currentSection
+        ) {
 
-      realizationsButton.classList.remove("active");
+          link.classList.add("active");
 
-      contactButton.classList.remove("active");
+        }
+
+      });
 
     }
 
 
-    /* ==================================================
-       O NÁS
-    ================================================== */
-
-    aboutButton.addEventListener(
-      "click",
-      function(event) {
-
-        event.preventDefault();
-
-
-        const wasOpen =
-          aboutSection.classList.contains("show");
-
-
-        closeAllSections();
-
-
-        if (wasOpen) {
-
-          homeHero.style.display =
-            "block";
-
-        }
-
-        else {
-
-          homeHero.style.display =
-            "none";
-
-
-          aboutSection.classList.add("show");
-
-          aboutButton.classList.add("active");
-
-
-          setTimeout(function() {
-
-            aboutSection.scrollIntoView({
-
-              behavior: "smooth",
-
-              block: "start"
-
-            });
-
-          }, 150);
-
-        }
-
-      }
+    window.addEventListener(
+      "scroll",
+      updateActiveMenu
     );
 
 
-    /* ==================================================
-       OBLASTI REALIZÁCIE
-    ================================================== */
-
-    realizationsButton.addEventListener(
-      "click",
-      function(event) {
-
-        event.preventDefault();
-
-
-        const wasOpen =
-          realizationsSection.classList.contains("show");
-
-
-        closeAllSections();
-
-
-        if (wasOpen) {
-
-          homeHero.style.display =
-            "block";
-
-        }
-
-        else {
-
-          homeHero.style.display =
-            "none";
-
-
-          realizationsSection.classList.add("show");
-
-          realizationsButton.classList.add("active");
-
-
-          setTimeout(function() {
-
-            realizationsSection.scrollIntoView({
-
-              behavior: "smooth",
-
-              block: "start"
-
-            });
-
-          }, 100);
-
-        }
-
-      }
-    );
-
-
-    /* ==================================================
-       KONTAKT
-    ================================================== */
-
-    contactButton.addEventListener(
-      "click",
-      function(event) {
-
-        event.preventDefault();
-
-
-        const wasOpen =
-          contactSection.classList.contains("show");
-
-
-        closeAllSections();
-
-
-        if (wasOpen) {
-
-          homeHero.style.display =
-            "block";
-
-        }
-
-        else {
-
-          homeHero.style.display =
-            "none";
-
-
-          contactSection.classList.add("show");
-
-          contactButton.classList.add("active");
-
-
-          setTimeout(function() {
-
-            contactSection.scrollIntoView({
-
-              behavior: "smooth",
-
-              block: "start"
-
-            });
-
-          }, 150);
-
-        }
-
-      }
-    );
-
+    updateActiveMenu();
 
   </script>
 
