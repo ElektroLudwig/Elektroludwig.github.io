@@ -303,21 +303,22 @@
 
 
     /* ==================================================
-       ČO ROBÍME
+       OBLASTI REALIZÁCIE
     ================================================== */
 
-    .services-section {
+    .realizations-section {
       display: none;
       background: #f7f7f7;
       padding: 55px 25px 70px 25px;
     }
 
-    .services-section.show {
+    .realizations-section.show {
       display: block;
-      animation: fadeServices 0.5s ease;
+      animation: fadeRealizations 0.5s ease;
     }
 
-    @keyframes fadeServices {
+    @keyframes fadeRealizations {
+
       from {
         opacity: 0;
       }
@@ -325,32 +326,33 @@
       to {
         opacity: 1;
       }
+
     }
 
-    .services-container {
+    .realizations-container {
       max-width: 1250px;
       margin: 0 auto;
     }
 
-    .services-heading {
+    .realizations-heading {
       text-align: center;
       margin: 0 0 15px 0;
       font-size: 36px;
       color: #111;
     }
 
-    .services-heading span {
+    .realizations-heading span {
       color: #d60000;
     }
 
-    .services-divider {
+    .realizations-divider {
       width: 70px;
       height: 3px;
       margin: 0 auto 40px auto;
       background: #d60000;
     }
 
-    .services-intro {
+    .realizations-intro {
       max-width: 850px;
       margin: 0 auto 45px auto;
       text-align: center;
@@ -361,17 +363,17 @@
 
 
     /* ==================================================
-       TRI KARTY
+       TRI OBLASTI REALIZÁCIE
     ================================================== */
 
-    .services-grid {
+    .realizations-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 28px;
       align-items: stretch;
     }
 
-    .service-card {
+    .realization-card {
       background: white;
       overflow: hidden;
       border-radius: 4px;
@@ -387,7 +389,7 @@
         box-shadow 0.25s ease;
     }
 
-    .service-card:hover {
+    .realization-card:hover {
       transform: translateY(-7px);
 
       box-shadow:
@@ -396,29 +398,26 @@
 
 
     /* ==================================================
-       FOTKY V KARTÁCH
-       VŠETKY MAJÚ ROVNAKÝ ROZMER
+       FOTKY OBLASTÍ REALIZÁCIE
     ================================================== */
 
-    .service-image {
+    .realization-image {
       width: 100%;
       height: 270px;
       overflow: hidden;
       background: #ddd;
     }
 
-    .service-image img {
+    .realization-image img {
       display: block;
       width: 100%;
       height: 100%;
-
       object-fit: cover;
       object-position: center;
-
       transition: transform 0.45s ease;
     }
 
-    .service-card:hover .service-image img {
+    .realization-card:hover .realization-image img {
       transform: scale(1.035);
     }
 
@@ -427,23 +426,21 @@
        TEXT KARTY
     ================================================== */
 
-    .service-content {
+    .realization-content {
       padding: 28px 27px 30px 27px;
-
       display: flex;
       flex-direction: column;
-
       flex: 1;
     }
 
-    .service-content h2 {
+    .realization-content h2 {
       margin: 0 0 17px 0;
       font-size: 24px;
       line-height: 1.25;
       color: #111;
     }
 
-    .service-content p {
+    .realization-content p {
       margin: 0 0 25px 0;
       font-size: 16px;
       line-height: 1.7;
@@ -456,21 +453,19 @@
        ČERVENÉ TLAČIDLÁ
     ================================================== */
 
-    .service-button {
+    .realization-button {
       display: inline-flex;
       align-items: center;
       justify-content: center;
       align-self: flex-start;
 
       min-width: 150px;
-
       padding: 12px 20px;
 
       background: #d60000;
       color: white;
 
       text-decoration: none;
-
       font-size: 14px;
       font-weight: bold;
 
@@ -481,12 +476,12 @@
         transform 0.2s ease;
     }
 
-    .service-button i {
+    .realization-button i {
       margin-left: 9px;
       font-size: 12px;
     }
 
-    .service-button:hover {
+    .realization-button:hover {
       background: #a80000;
       transform: translateX(3px);
     }
@@ -708,13 +703,13 @@
 
     @media (max-width: 900px) {
 
-      .services-grid {
+      .realizations-grid {
         grid-template-columns: 1fr;
         max-width: 650px;
         margin: 0 auto;
       }
 
-      .service-image {
+      .realization-image {
         height: 320px;
       }
 
@@ -732,7 +727,7 @@
       }
 
       .logo {
-        max-width: 320px;
+        max-width: 350px;
       }
 
       .menu {
@@ -756,28 +751,28 @@
         text-align: left;
       }
 
-      .services-section {
+      .realizations-section {
         padding: 40px 15px 55px 15px;
       }
 
-      .services-heading {
+      .realizations-heading {
         font-size: 30px;
       }
 
-      .services-intro {
+      .realizations-intro {
         font-size: 16px;
         margin-bottom: 30px;
       }
 
-      .service-image {
+      .realization-image {
         height: 250px;
       }
 
-      .service-content {
+      .realization-content {
         padding: 24px 22px 27px 22px;
       }
 
-      .service-content h2 {
+      .realization-content h2 {
         font-size: 22px;
       }
 
@@ -825,7 +820,7 @@
 
     @media (max-width: 500px) {
 
-      .service-image {
+      .realization-image {
         height: 210px;
       }
 
@@ -952,10 +947,10 @@
 
 
     <a
-      href="#sluzby"
-      id="servicesButton"
+      href="#oblasti-realizacie"
+      id="realizationsButton"
     >
-      Čo robíme
+      Oblasti realizácie
     </a>
 
 
@@ -1070,48 +1065,48 @@
 
 
   <!-- ==================================================
-       ČO ROBÍME
+       OBLASTI REALIZÁCIE
   ================================================== -->
 
   <section
-    class="services-section"
-    id="sluzby"
+    class="realizations-section"
+    id="oblasti-realizacie"
   >
 
-    <div class="services-container">
+    <div class="realizations-container">
 
 
-      <h1 class="services-heading">
+      <h1 class="realizations-heading">
 
-        Čo <span>robíme</span>
+        Oblasti <span>realizácie</span>
 
       </h1>
 
 
-      <div class="services-divider"></div>
+      <div class="realizations-divider"></div>
 
 
-      <p class="services-intro">
+      <p class="realizations-intro">
 
-        Od bežných elektroinštalácií až po rozsiahle priemyselné projekty.
-        Naše skúsenosti nám umožňujú realizovať elektroinštalácie,
-        kabeláž a technologické systémy pre rôzne typy objektov
-        a prevádzok.
+        Od elektroinštalácií budov až po rozsiahle priemyselné
+        a automatizačné projekty. Realizujeme elektroinštalácie,
+        kabeláž a technologické systémy pre rôzne typy objektov,
+        výrobných prevádzok a logistických zariadení.
 
       </p>
 
 
-      <div class="services-grid">
+      <div class="realizations-grid">
 
 
         <!-- ============================================
              1. ELEKTROINŠTALÁCIE
         ============================================ -->
 
-        <div class="service-card">
+        <div class="realization-card">
 
 
-          <div class="service-image">
+          <div class="realization-image">
 
             <img
               src="domovska2.png"
@@ -1121,7 +1116,7 @@
           </div>
 
 
-          <div class="service-content">
+          <div class="realization-content">
 
             <h2>
               Elektroinštalácie
@@ -1141,7 +1136,7 @@
 
             <a
               href="#"
-              class="service-button"
+              class="realization-button"
             >
 
               Viac informácií
@@ -1159,10 +1154,10 @@
              2. PRIEMYSEL A AUTOMATIZÁCIA
         ============================================ -->
 
-        <div class="service-card">
+        <div class="realization-card">
 
 
-          <div class="service-image">
+          <div class="realization-image">
 
             <img
               src="domovska3.png"
@@ -1172,7 +1167,7 @@
           </div>
 
 
-          <div class="service-content">
+          <div class="realization-content">
 
             <h2>
               Priemysel a automatizácia
@@ -1192,7 +1187,7 @@
 
             <a
               href="#"
-              class="service-button"
+              class="realization-button"
             >
 
               Viac informácií
@@ -1210,10 +1205,10 @@
              3. VÝROBNÉ A PRIEMYSELNÉ HALY
         ============================================ -->
 
-        <div class="service-card">
+        <div class="realization-card">
 
 
-          <div class="service-image">
+          <div class="realization-image">
 
             <img
               src="domovska4.png"
@@ -1223,7 +1218,7 @@
           </div>
 
 
-          <div class="service-content">
+          <div class="realization-content">
 
             <h2>
               Výrobné a priemyselné haly
@@ -1244,7 +1239,7 @@
 
             <a
               href="#"
-              class="service-button"
+              class="realization-button"
             >
 
               Viac informácií
@@ -1340,8 +1335,6 @@
       </div>
 
 
-      <!-- MAPA -->
-
       <div class="contact-map">
 
         <iframe
@@ -1360,12 +1353,8 @@
     <div class="contact-divider"></div>
 
 
-    <!-- KONTAKTNÉ OSOBY -->
-
     <div class="contact-people">
 
-
-      <!-- KONATEĽ -->
 
       <div class="person">
 
@@ -1404,8 +1393,6 @@
       </div>
 
 
-      <!-- ELEKTROMAJSTER -->
-
       <div class="person">
 
         <h3>
@@ -1442,8 +1429,6 @@
 
       </div>
 
-
-      <!-- EKONOMICKÉ ODDELENIE -->
 
       <div class="person">
 
@@ -1529,8 +1514,8 @@
       document.getElementById("aboutButton");
 
 
-    const servicesButton =
-      document.getElementById("servicesButton");
+    const realizationsButton =
+      document.getElementById("realizationsButton");
 
 
     const contactButton =
@@ -1541,8 +1526,8 @@
       document.getElementById("onas");
 
 
-    const servicesSection =
-      document.getElementById("sluzby");
+    const realizationsSection =
+      document.getElementById("oblasti-realizacie");
 
 
     const contactSection =
@@ -1561,14 +1546,14 @@
 
       aboutSection.classList.remove("show");
 
-      servicesSection.classList.remove("show");
+      realizationsSection.classList.remove("show");
 
       contactSection.classList.remove("show");
 
 
       aboutButton.classList.remove("active");
 
-      servicesButton.classList.remove("active");
+      realizationsButton.classList.remove("active");
 
       contactButton.classList.remove("active");
 
@@ -1630,10 +1615,10 @@
 
 
     /* ==================================================
-       ČO ROBÍME
+       OBLASTI REALIZÁCIE
     ================================================== */
 
-    servicesButton.addEventListener(
+    realizationsButton.addEventListener(
       "click",
       function(event) {
 
@@ -1641,7 +1626,7 @@
 
 
         const wasOpen =
-          servicesSection.classList.contains("show");
+          realizationsSection.classList.contains("show");
 
 
         closeAllSections();
@@ -1660,14 +1645,14 @@
             "none";
 
 
-          servicesSection.classList.add("show");
+          realizationsSection.classList.add("show");
 
-          servicesButton.classList.add("active");
+          realizationsButton.classList.add("active");
 
 
           setTimeout(function() {
 
-            servicesSection.scrollIntoView({
+            realizationsSection.scrollIntoView({
 
               behavior: "smooth",
 
