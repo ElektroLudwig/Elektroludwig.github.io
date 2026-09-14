@@ -16,20 +16,13 @@
 
   <style>
 
-    /* =========================
-       ZÁKLAD STRÁNKY
-    ========================= */
-
     body {
       margin: 0;
       font-family: Arial, sans-serif;
       color: #111;
     }
 
-
-    /* =========================
-       TOPBAR
-    ========================= */
+    /* TOPBAR */
 
     .topbar {
       display: flex;
@@ -63,20 +56,12 @@
       color: white;
     }
 
-
-    /* HOVER FARBY */
-
     .facebook:hover {
       background: #1877f2;
     }
 
     .instagram:hover {
-      background: linear-gradient(
-        45deg,
-        #f58529,
-        #dd2a7b,
-        #8134af
-      );
+      background: linear-gradient(45deg,#f58529,#dd2a7b,#8134af);
     }
 
     .email:hover {
@@ -91,10 +76,7 @@
       background: #6fcf97;
     }
 
-
-    /* =========================
-       LANGUAGE SWITCHER
-    ========================= */
+    /* JAZYKY */
 
     .language-switcher {
       position: relative;
@@ -134,7 +116,6 @@
       width: auto;
       height: auto;
       padding: 10px;
-      text-decoration: none;
       color: black;
       font-size: 14px;
       border-radius: 0;
@@ -150,10 +131,7 @@
       display: block;
     }
 
-
-    /* =========================
-       LOGO
-    ========================= */
+    /* HLAVNÉ LOGO */
 
     .header {
       text-align: center;
@@ -168,10 +146,7 @@
       margin: 0 auto;
     }
 
-
-    /* =========================
-       MENU
-    ========================= */
+    /* MENU */
 
     .menu {
       display: flex;
@@ -199,15 +174,9 @@
       color: #d60000;
     }
 
-
-    /* =========================
-       KONTAKT
-    ========================= */
+    /* KONTAKT */
 
     .contact-section {
-
-      /* SKRYTÉ POKIAĽ SA NEKLIKNE NA KONTAKT */
-
       max-height: 0;
       opacity: 0;
       overflow: hidden;
@@ -221,15 +190,11 @@
       padding: 0 20px;
     }
 
-
-    /* PO KLIKNUTÍ SA ZOBRAZÍ */
-
     .contact-section.show {
-      max-height: 1000px;
+      max-height: 1200px;
       opacity: 1;
       padding: 55px 20px;
     }
-
 
     .contact-container {
       max-width: 1200px;
@@ -242,8 +207,7 @@
       align-items: center;
     }
 
-
-    /* ĽAVÁ STRANA */
+    /* ĽAVÁ STRANA KONTAKTU */
 
     .contact-info {
       padding: 20px 25px;
@@ -289,7 +253,6 @@
       color: #d60000;
     }
 
-
     /* MAPA */
 
     .contact-map {
@@ -302,15 +265,10 @@
       height: 430px;
       border: 0;
       border-radius: 10px;
-
-      box-shadow:
-        0 5px 20px rgba(0,0,0,0.15);
+      box-shadow: 0 5px 20px rgba(0,0,0,0.15);
     }
 
-
-    /* =========================
-       BOČNÝ PANEL
-    ========================= */
+    /* BOČNÝ PANEL */
 
     .fixed-contact {
       position: fixed;
@@ -328,7 +286,6 @@
 
     .fixed-contact a {
       color: white;
-
       width: 32px;
       height: 32px;
 
@@ -345,10 +302,7 @@
       background: #a80000;
     }
 
-
-    /* =========================
-       MOBIL
-    ========================= */
+    /* MOBIL */
 
     @media (max-width: 800px) {
 
@@ -369,7 +323,6 @@
       .menu a {
         font-size: 14px;
       }
-
 
       .contact-section.show {
         padding: 35px 15px;
@@ -395,89 +348,51 @@
     }
 
   </style>
-
 </head>
 
 
 <body>
 
 
-  <!-- =========================
-       TOPBAR
-  ========================== -->
+  <!-- TOPBAR -->
 
   <div class="topbar">
 
     <div class="topbar-left">
 
-      <a
-        href="#"
-        class="facebook"
-        title="Facebook"
-      >
+      <a href="#" class="facebook" title="Facebook">
         <i class="fab fa-facebook-f"></i>
       </a>
 
-
-      <a
-        href="#"
-        class="instagram"
-        title="Instagram"
-      >
+      <a href="#" class="instagram" title="Instagram">
         <i class="fab fa-instagram"></i>
       </a>
 
-
-      <a
-        href="#"
-        class="email"
-        title="E-mail"
-      >
+      <a href="mailto:ludovit.hudak.elektroludwig@gmail.com"
+         class="email"
+         title="E-mail">
         <i class="fas fa-envelope"></i>
       </a>
 
-
-      <a
-        href="#"
-        class="whatsapp"
-        title="WhatsApp"
-      >
+      <a href="#" class="whatsapp" title="WhatsApp">
         <i class="fab fa-whatsapp"></i>
       </a>
 
     </div>
 
 
+    <div style="display:flex; gap:10px; align-items:center;">
 
-    <div
-      style="
-        display:flex;
-        gap:10px;
-        align-items:center;
-      "
-    >
-
-      <a
-        href="#"
-        class="phone"
-        title="Telefón"
-      >
+      <a href="#" class="phone" title="Telefón">
         <i class="fas fa-phone"></i>
       </a>
 
 
-      <!-- JAZYK -->
-
       <div class="language-switcher">
 
         <div class="language-current">
-
-          <i class="fas fa-globe"></i>
-
-          &nbsp;SK
-
+          <i class="fas fa-globe"></i>&nbsp;SK
         </div>
-
 
         <div class="language-menu">
 
@@ -502,10 +417,7 @@
   </div>
 
 
-
-  <!-- =========================
-       HLAVNÉ LOGO
-  ========================== -->
+  <!-- HLAVNÉ LOGO -->
 
   <div class="header">
 
@@ -518,10 +430,7 @@
   </div>
 
 
-
-  <!-- =========================
-       MENU
-  ========================== -->
+  <!-- MENU -->
 
   <nav class="menu">
 
@@ -537,12 +446,7 @@
       Kde sme pracovali
     </a>
 
-    <!-- TU BOLA PÔVODNE 4 -->
-
-    <a
-      href="#kontakt"
-      id="contactButton"
-    >
+    <a href="#kontakt" id="contactButton">
       Kontakt
     </a>
 
@@ -553,15 +457,9 @@
   </nav>
 
 
+  <!-- KONTAKT -->
 
-  <!-- =========================
-       KONTAKT
-  ========================== -->
-
-  <section
-    class="contact-section"
-    id="kontakt"
-  >
+  <section class="contact-section" id="kontakt">
 
     <div class="contact-container">
 
@@ -571,8 +469,6 @@
       <div class="contact-info">
 
 
-        <!-- LOGO -->
-
         <img
           src="logo.png"
           class="contact-logo"
@@ -580,12 +476,9 @@
         >
 
 
-        <!-- NÁZOV FIRMY -->
-
         <h2>
           Elektro Ludwig s. r. o.
         </h2>
-
 
 
         <!-- ADRESA -->
@@ -597,47 +490,45 @@
           <div>
 
             <strong>
-              Adresa
+              Sídlo spoločnosti
             </strong>
 
             <br>
 
-            SEM DÁME ULICU A ČÍSLO
+            Kochanovce 84
 
             <br>
 
-            SEM DÁME PSČ A MESTO
+            066 01 Kochanovce
+
+            <br>
+
+            Slovenská republika
 
           </div>
 
         </div>
 
 
-
-        <!-- TELEFÓN -->
+        <!-- KONATEĽ -->
 
         <div class="contact-line">
 
-          <i class="fas fa-phone"></i>
+          <i class="fas fa-user-tie"></i>
 
           <div>
 
             <strong>
-              Telefón
+              Konateľ firmy
             </strong>
 
             <br>
 
-            <a href="tel:+421900000000">
-
-              +421 900 000 000
-
-            </a>
+            Ľudovít Hudák
 
           </div>
 
         </div>
-
 
 
         <!-- EMAIL -->
@@ -654,16 +545,13 @@
 
             <br>
 
-            <a href="mailto:info@elektroludwig.sk">
-
-              info@elektroludwig.sk
-
+            <a href="mailto:ludovit.hudak.elektroludwig@gmail.com">
+              ludovit.hudak.elektroludwig@gmail.com
             </a>
 
           </div>
 
         </div>
-
 
 
         <!-- IČO -->
@@ -680,7 +568,7 @@
 
             <br>
 
-            SEM DÁME IČO
+            55 110 088
 
           </div>
 
@@ -690,25 +578,16 @@
       </div>
 
 
-
-      <!-- =========================
-           GOOGLE MAPA
-      ========================== -->
+      <!-- GOOGLE MAPA -->
 
       <div class="contact-map">
 
         <iframe
-
-          src="https://www.google.com/maps?q=Slovakia&output=embed"
-
+          src="https://www.google.com/maps?q=Kochanovce%2084%2C%20066%2001%20Kochanovce%2C%20Slovakia&output=embed"
           loading="lazy"
-
           allowfullscreen=""
-
           referrerpolicy="no-referrer-when-downgrade"
-
-          title="Elektro Ludwig - mapa"
-
+          title="Elektro Ludwig - Kochanovce 84"
         ></iframe>
 
       </div>
@@ -719,31 +598,20 @@
   </section>
 
 
-
-  <!-- =========================
-       BOČNÝ KONTAKTNÝ PANEL
-  ========================== -->
+  <!-- BOČNÝ KONTAKT -->
 
   <div class="fixed-contact">
 
-    <a
-      href="#"
-      title="WhatsApp"
-    >
+    <a href="#" title="WhatsApp">
       <i class="fab fa-whatsapp"></i>
     </a>
 
-
-    <a
-      href="#"
-      title="Telefón"
-    >
+    <a href="#" title="Telefón">
       <i class="fas fa-phone"></i>
     </a>
 
-
     <a
-      href="#"
+      href="mailto:ludovit.hudak.elektroludwig@gmail.com"
       title="E-mail"
     >
       <i class="fas fa-envelope"></i>
@@ -752,10 +620,7 @@
   </div>
 
 
-
-  <!-- =========================
-       OTVÁRANIE KONTAKTU
-  ========================== -->
+  <!-- OTVÁRANIE KONTAKTU -->
 
   <script>
 
@@ -772,15 +637,11 @@
 
         event.preventDefault();
 
-
         contactSection.classList.toggle("show");
-
         contactButton.classList.toggle("active");
 
 
-        if (
-          contactSection.classList.contains("show")
-        ) {
+        if (contactSection.classList.contains("show")) {
 
           setTimeout(function() {
 
@@ -800,5 +661,4 @@
 
 
 </body>
-
 </html>
