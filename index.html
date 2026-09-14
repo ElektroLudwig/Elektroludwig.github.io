@@ -2,29 +2,17 @@
 <html lang="sk">
 
 <head>
-
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
+  <title>Elektroludwig | Elektroinštalácie</title>
 
-  <title>
-    Elektroludwig | Elektroinštalácie
-  </title>
-
-  <link
-    rel="icon"
-    type="image/png"
-    href="./zalozka.png?v=2"
-  >
+  <link rel="icon" type="image/png" href="zalozka.png?v=2">
 
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
   >
-
 
   <style>
 
@@ -44,88 +32,60 @@
     ================================================== */
 
     .topbar {
-
       display: flex;
       justify-content: space-between;
       align-items: center;
-
       padding: 2px 40px;
-
       background: #f5f5f5;
-
     }
 
     .topbar-left {
-
       display: flex;
       gap: 14px;
       align-items: center;
-
     }
 
     .topbar a {
-
       width: 28px;
       height: 28px;
-
       font-size: 15px;
-
       display: flex;
       align-items: center;
       justify-content: center;
-
       border-radius: 5px;
-
       color: black;
-
       text-decoration: none;
-
       transition: 0.2s;
-
     }
 
     .topbar a:hover {
-
       transform: scale(1.3);
-
       color: white;
-
     }
 
     .facebook:hover {
-
       background: #1877f2;
-
     }
 
     .instagram:hover {
-
-      background:
-        linear-gradient(
-          45deg,
-          #f58529,
-          #dd2a7b,
-          #8134af
-        );
-
+      background: linear-gradient(
+        45deg,
+        #f58529,
+        #dd2a7b,
+        #8134af
+      );
     }
 
     .email:hover {
-
       background: #8b5a2b;
-
     }
 
     .whatsapp:hover {
-
       background: #25d366;
-
     }
 
     .phone:hover {
-
       background: #6fcf97;
-
     }
 
 
@@ -134,92 +94,56 @@
     ================================================== */
 
     .language-switcher {
-
       position: relative;
-
     }
 
     .language-current {
-
       display: flex;
       align-items: center;
       justify-content: center;
-
       width: 60px;
       height: 28px;
-
       font-size: 14px;
-
       border-radius: 5px;
-
       cursor: pointer;
-
       transition: 0.2s;
-
     }
 
     .language-current:hover {
-
       background: #d60000;
-
       color: white;
-
       transform: scale(1.1);
-
     }
 
     .language-menu {
-
       display: none;
-
       position: absolute;
-
       top: 35px;
       right: 0;
-
       background: white;
-
       min-width: 120px;
-
-      box-shadow:
-        0 6px 15px rgba(0,0,0,0.15);
-
+      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
       z-index: 9999;
-
     }
 
     .language-menu a {
-
       display: block;
-
       width: auto;
       height: auto;
-
       padding: 10px;
-
       color: black;
-
       font-size: 14px;
-
       border-radius: 0;
-
     }
 
     .language-menu a:hover {
-
       background: #d60000;
-
       color: white;
-
       transform: none;
-
     }
 
-    .language-switcher:hover
-    .language-menu {
-
+    .language-switcher:hover .language-menu {
       display: block;
-
     }
 
 
@@ -228,35 +152,22 @@
     ================================================== */
 
     .header {
-
       text-align: center;
-
       padding: 0;
-
       margin: 0;
-
     }
 
     .home-logo-link {
-
       display: inline-block;
-
       text-decoration: none;
-
       cursor: pointer;
-
     }
 
     .logo {
-
       display: block;
-
       max-width: 420px;
-
       width: 90%;
-
       margin: 0 auto;
-
     }
 
 
@@ -265,64 +176,41 @@
     ================================================== */
 
     .menu {
-
       display: flex;
-
       justify-content: center;
-
       gap: 28px;
-
       margin-top: -8px;
-
       padding-bottom: 15px;
-
     }
 
     .menu a {
-
       font-weight: bold;
-
       font-size: 15px;
-
       color: black;
-
       text-decoration: none;
-
       transition: 0.2s;
-
       cursor: pointer;
-
     }
 
     .menu a:hover {
-
       color: #d60000;
-
       transform: scale(1.25);
-
     }
 
     .menu a.active {
-
       color: #d60000;
-
     }
 
 
     /* ==================================================
-       ČERVENÁ ČIARA POD MENU
+       ČERVENÁ ČIARA
     ================================================== */
 
     .menu-divider {
-
       width: 100%;
-
       height: 1px;
-
       background: #d60000;
-
       margin: 0;
-
     }
 
 
@@ -331,29 +219,18 @@
     ================================================== */
 
     .home-hero {
-
       width: 100%;
-
       margin: 0;
-
       padding: 0;
-
       overflow: hidden;
-
       background: #000;
-
     }
 
     .home-hero img {
-
       display: block;
-
       width: 100%;
-
       height: auto;
-
       margin: 0;
-
     }
 
 
@@ -362,11 +239,8 @@
     ================================================== */
 
     .about-section {
-
       max-height: 0;
-
       opacity: 0;
-
       overflow: hidden;
 
       transition:
@@ -375,96 +249,56 @@
         padding 0.5s ease;
 
       background: #f7f7f7;
-
       padding: 0 20px;
-
     }
 
     .about-section.show {
-
       max-height: 2700px;
-
       opacity: 1;
-
-      padding:
-        55px 20px 50px 20px;
-
+      padding: 55px 20px 50px 20px;
     }
 
     .about-container {
-
       max-width: 1100px;
-
       margin: 0 auto;
-
     }
 
     .about-container h1 {
-
       margin-top: 0;
-
       margin-bottom: 20px;
-
       font-size: 34px;
-
       color: #d60000;
-
     }
 
     .about-divider {
-
       width: 100%;
-
       height: 1px;
-
       background: #d60000;
-
       margin-bottom: 35px;
-
     }
 
     .about-container p {
-
       font-size: 17px;
-
       line-height: 1.8;
-
       margin-bottom: 22px;
-
       text-align: justify;
-
     }
 
     .final-text {
-
       margin-top: 35px;
-
       padding: 25px 30px;
-
-      border-left:
-        4px solid #d60000;
-
+      border-left: 4px solid #d60000;
       background: white;
-
       font-size: 19px;
-
       line-height: 1.7;
-
-      box-shadow:
-        0 3px 12px rgba(0,0,0,0.06);
-
+      box-shadow: 0 3px 12px rgba(0,0,0,0.06);
     }
 
     .about-bottom-divider {
-
       width: 100%;
-
       height: 1px;
-
       background: #d60000;
-
       margin-top: 45px;
-
     }
 
 
@@ -473,256 +307,171 @@
     ================================================== */
 
     .services-section {
-
       display: none;
-
       background: #f7f7f7;
-
       padding: 55px 25px 70px 25px;
-
     }
 
     .services-section.show {
-
       display: block;
-
-      animation:
-        fadeServices 0.5s ease;
-
+      animation: fadeServices 0.5s ease;
     }
 
     @keyframes fadeServices {
-
       from {
-
         opacity: 0;
-
       }
 
       to {
-
         opacity: 1;
-
       }
-
     }
 
     .services-container {
-
       max-width: 1250px;
-
       margin: 0 auto;
-
     }
 
     .services-heading {
-
       text-align: center;
-
-      margin-bottom: 15px;
-
+      margin: 0 0 15px 0;
       font-size: 36px;
-
       color: #111;
-
     }
 
     .services-heading span {
-
       color: #d60000;
-
-    }
-
-    .services-intro {
-
-      max-width: 850px;
-
-      margin:
-        0 auto 45px auto;
-
-      text-align: center;
-
-      font-size: 17px;
-
-      line-height: 1.7;
-
-      color: #555;
-
     }
 
     .services-divider {
-
       width: 70px;
-
       height: 3px;
-
-      margin:
-        0 auto 45px auto;
-
+      margin: 0 auto 40px auto;
       background: #d60000;
+    }
 
+    .services-intro {
+      max-width: 850px;
+      margin: 0 auto 45px auto;
+      text-align: center;
+      font-size: 17px;
+      line-height: 1.7;
+      color: #555;
     }
 
 
-    /* TRI BLOKY */
+    /* ==================================================
+       TRI KARTY
+    ================================================== */
 
     .services-grid {
-
       display: grid;
-
-      grid-template-columns:
-        repeat(3, 1fr);
-
+      grid-template-columns: repeat(3, 1fr);
       gap: 28px;
-
       align-items: stretch;
-
     }
 
-
-    /* JEDNA KARTA */
-
     .service-card {
-
       background: white;
-
-      border-radius: 4px;
-
       overflow: hidden;
+      border-radius: 4px;
 
       box-shadow:
         0 4px 18px rgba(0,0,0,0.10);
 
       display: flex;
-
       flex-direction: column;
 
       transition:
         transform 0.25s ease,
         box-shadow 0.25s ease;
-
     }
 
     .service-card:hover {
-
-      transform:
-        translateY(-7px);
+      transform: translateY(-7px);
 
       box-shadow:
         0 10px 28px rgba(0,0,0,0.16);
-
     }
 
 
-    /* FOTKY - VŠETKY ROVNAKÉ */
+    /* ==================================================
+       FOTKY V KARTÁCH
+       VŠETKY MAJÚ ROVNAKÝ ROZMER
+    ================================================== */
 
     .service-image {
-
       width: 100%;
-
       height: 270px;
-
       overflow: hidden;
-
       background: #ddd;
-
     }
 
     .service-image img {
-
+      display: block;
       width: 100%;
-
       height: 100%;
 
-      display: block;
-
       object-fit: cover;
-
       object-position: center;
 
-      transition:
-        transform 0.45s ease;
-
+      transition: transform 0.45s ease;
     }
 
-    .service-card:hover
-    .service-image img {
-
-      transform:
-        scale(1.035);
-
+    .service-card:hover .service-image img {
+      transform: scale(1.035);
     }
 
 
-    /* TEXT V KARTE */
+    /* ==================================================
+       TEXT KARTY
+    ================================================== */
 
     .service-content {
-
-      padding:
-        28px 27px 30px 27px;
+      padding: 28px 27px 30px 27px;
 
       display: flex;
-
       flex-direction: column;
 
       flex: 1;
-
     }
 
     .service-content h2 {
-
-      margin:
-        0 0 17px 0;
-
+      margin: 0 0 17px 0;
       font-size: 24px;
-
       line-height: 1.25;
-
       color: #111;
-
     }
 
     .service-content p {
-
-      margin:
-        0 0 25px 0;
-
+      margin: 0 0 25px 0;
       font-size: 16px;
-
       line-height: 1.7;
-
       color: #555;
-
       flex: 1;
-
     }
 
 
-    /* ČERVENÉ TLAČIDLO */
+    /* ==================================================
+       ČERVENÉ TLAČIDLÁ
+    ================================================== */
 
     .service-button {
-
       display: inline-flex;
-
       align-items: center;
-
       justify-content: center;
-
       align-self: flex-start;
 
       min-width: 150px;
 
-      padding:
-        12px 20px;
+      padding: 12px 20px;
 
       background: #d60000;
-
       color: white;
 
       text-decoration: none;
 
       font-size: 14px;
-
       font-weight: bold;
 
       border-radius: 3px;
@@ -730,24 +479,16 @@
       transition:
         background 0.2s ease,
         transform 0.2s ease;
-
     }
 
     .service-button i {
-
       margin-left: 9px;
-
       font-size: 12px;
-
     }
 
     .service-button:hover {
-
       background: #a80000;
-
-      transform:
-        translateX(3px);
-
+      transform: translateX(3px);
     }
 
 
@@ -756,11 +497,8 @@
     ================================================== */
 
     .contact-section {
-
       max-height: 0;
-
       opacity: 0;
-
       overflow: hidden;
 
       transition:
@@ -769,96 +507,59 @@
         padding 0.5s ease;
 
       background: #f7f7f7;
-
       padding: 0 20px;
-
     }
 
     .contact-section.show {
-
       max-height: 1800px;
-
       opacity: 1;
-
       padding: 55px 20px;
-
     }
 
     .contact-container {
-
       max-width: 1200px;
-
       margin: 0 auto;
 
       display: grid;
-
-      grid-template-columns:
-        1fr 1.6fr;
+      grid-template-columns: 1fr 1.6fr;
 
       gap: 50px;
-
       align-items: center;
-
     }
 
     .contact-info {
-
       padding: 20px 25px;
-
     }
 
     .contact-logo {
-
       display: block;
-
       max-width: 260px;
-
       width: 100%;
-
       height: auto;
-
       margin-bottom: 25px;
-
     }
 
     .contact-info h2 {
-
       font-size: 27px;
-
       margin-top: 0;
-
       margin-bottom: 25px;
-
     }
 
     .contact-line {
-
       display: flex;
-
       align-items: flex-start;
-
       gap: 15px;
-
       margin-bottom: 21px;
-
       font-size: 16px;
-
       line-height: 1.6;
-
     }
 
     .contact-line i {
-
       width: 22px;
-
       margin-top: 4px;
-
       color: #d60000;
-
       font-size: 19px;
-
       text-align: center;
-
     }
 
 
@@ -867,26 +568,16 @@
     ================================================== */
 
     .contact-map {
-
       width: 100%;
-
     }
 
     .contact-map iframe {
-
       display: block;
-
       width: 100%;
-
       height: 430px;
-
       border: 0;
-
       border-radius: 10px;
-
-      box-shadow:
-        0 5px 20px rgba(0,0,0,0.15);
-
+      box-shadow: 0 5px 20px rgba(0,0,0,0.15);
     }
 
 
@@ -895,18 +586,11 @@
     ================================================== */
 
     .contact-divider {
-
       max-width: 1200px;
-
       height: 1px;
-
       background: #d60000;
-
       border: 0;
-
-      margin:
-        45px auto 40px auto;
-
+      margin: 45px auto 40px auto;
     }
 
 
@@ -915,24 +599,17 @@
     ================================================== */
 
     .contact-people {
-
       max-width: 1200px;
-
       margin: 0 auto;
 
       display: grid;
-
-      grid-template-columns:
-        repeat(3, 1fr);
+      grid-template-columns: repeat(3, 1fr);
 
       gap: 45px;
-
       align-items: start;
-
     }
 
     .person {
-
       padding: 10px 25px;
 
       display: grid;
@@ -942,73 +619,46 @@
         32px
         46px
         32px;
-
     }
 
     .person h3 {
-
       margin: 0;
-
       font-size: 21px;
-
       color: #d60000;
-
     }
 
     .person-name {
-
       font-size: 18px;
-
       font-weight: bold;
-
     }
 
     .person-name.empty {
-
       visibility: hidden;
-
     }
 
     .person-detail {
-
       display: flex;
-
       align-items: flex-start;
-
       gap: 12px;
-
       font-size: 15px;
-
       line-height: 1.5;
-
     }
 
     .person-detail i {
-
       width: 20px;
-
       color: #d60000;
-
       font-size: 17px;
-
       margin-top: 3px;
-
     }
 
     .person-detail a {
-
       color: #111;
-
       text-decoration: none;
-
       word-break: break-word;
-
     }
 
     .person-detail a:hover {
-
       color: #d60000;
-
     }
 
 
@@ -1017,51 +667,56 @@
     ================================================== */
 
     .fixed-contact {
-
       position: fixed;
-
       right: 0;
-
       bottom: 70px;
 
       display: flex;
-
       flex-direction: column;
 
       background: #d60000;
 
-      border-radius:
-        6px 0 0 6px;
+      border-radius: 6px 0 0 6px;
 
       z-index: 999;
-
     }
 
     .fixed-contact a {
-
       color: white;
 
       width: 32px;
-
       height: 32px;
 
       display: flex;
-
       align-items: center;
-
       justify-content: center;
 
       text-decoration: none;
 
       transition: 0.2s;
-
     }
 
     .fixed-contact a:hover {
-
       transform: scale(1.5);
-
       background: #a80000;
+    }
+
+
+    /* ==================================================
+       TABLET
+    ================================================== */
+
+    @media (max-width: 900px) {
+
+      .services-grid {
+        grid-template-columns: 1fr;
+        max-width: 650px;
+        margin: 0 auto;
+      }
+
+      .service-image {
+        height: 320px;
+      }
 
     }
 
@@ -1070,174 +725,99 @@
        MOBIL
     ================================================== */
 
-    @media (max-width: 900px) {
-
-      .services-grid {
-
-        grid-template-columns: 1fr;
-
-        max-width: 650px;
-
-        margin: 0 auto;
-
-      }
-
-      .service-image {
-
-        height: 320px;
-
-      }
-
-    }
-
-
     @media (max-width: 800px) {
 
       .topbar {
-
         padding: 3px 15px;
-
       }
 
       .logo {
-
         max-width: 320px;
-
       }
 
       .menu {
-
         gap: 15px;
-
         flex-wrap: wrap;
-
-        padding:
-          0 15px 15px;
-
+        padding: 0 15px 15px;
       }
 
       .home-hero img {
-
         width: 100%;
-
         height: auto;
-
       }
 
       .about-section.show,
       .contact-section.show {
-
-        padding:
-          35px 15px;
-
+        padding: 35px 15px;
       }
 
       .about-container p {
-
         font-size: 16px;
-
         text-align: left;
-
       }
 
       .services-section {
-
-        padding:
-          40px 15px 55px 15px;
-
+        padding: 40px 15px 55px 15px;
       }
 
       .services-heading {
-
         font-size: 30px;
-
       }
 
       .services-intro {
-
         font-size: 16px;
-
         margin-bottom: 30px;
-
       }
 
       .service-image {
-
         height: 250px;
-
       }
 
       .service-content {
-
-        padding:
-          24px 22px 27px 22px;
-
+        padding: 24px 22px 27px 22px;
       }
 
       .service-content h2 {
-
         font-size: 22px;
-
       }
 
       .contact-container {
-
         grid-template-columns: 1fr;
-
         gap: 25px;
-
       }
 
       .contact-info {
-
         padding: 10px;
-
       }
 
       .contact-map iframe {
-
         height: 350px;
-
       }
 
       .contact-people {
-
         grid-template-columns: 1fr;
-
         gap: 30px;
-
       }
 
       .person {
-
         display: block;
-
         padding: 10px;
-
       }
 
       .person h3 {
-
         margin-bottom: 12px;
-
       }
 
       .person-name {
-
         margin-bottom: 15px;
-
       }
 
       .person-name.empty {
-
         display: none;
-
       }
 
       .person-detail {
-
         margin-bottom: 12px;
-
       }
 
     }
@@ -1246,9 +826,7 @@
     @media (max-width: 500px) {
 
       .service-image {
-
         height: 210px;
-
       }
 
     }
@@ -1256,7 +834,6 @@
   </style>
 
 </head>
-
 
 
 <body>
@@ -1270,81 +847,49 @@
 
     <div class="topbar-left">
 
-      <a
-        href="#"
-        class="facebook"
-        title="Facebook"
-      >
-
+      <a href="#" class="facebook" title="Facebook">
         <i class="fab fa-facebook-f"></i>
-
       </a>
 
-
-      <a
-        href="#"
-        class="instagram"
-        title="Instagram"
-      >
-
+      <a href="#" class="instagram" title="Instagram">
         <i class="fab fa-instagram"></i>
-
       </a>
-
 
       <a
         href="mailto:ludovit.hudak.elektroludwig@gmail.com"
         class="email"
         title="E-mail"
       >
-
         <i class="fas fa-envelope"></i>
-
       </a>
-
 
       <a
         href="https://wa.me/421940860363"
         class="whatsapp"
         title="WhatsApp"
       >
-
         <i class="fab fa-whatsapp"></i>
-
       </a>
 
     </div>
 
 
-    <div
-      style="
-        display:flex;
-        gap:10px;
-        align-items:center;
-      "
-    >
+    <div style="display:flex; gap:10px; align-items:center;">
 
       <a
         href="tel:+421940860363"
         class="phone"
         title="Telefón"
       >
-
         <i class="fas fa-phone"></i>
-
       </a>
 
 
       <div class="language-switcher">
 
         <div class="language-current">
-
-          <i class="fas fa-globe"></i>
-
-          &nbsp;SK
-
+          <i class="fas fa-globe"></i>&nbsp;SK
         </div>
-
 
         <div class="language-menu">
 
@@ -1369,9 +914,8 @@
   </div>
 
 
-
   <!-- ==================================================
-       HLAVNÉ LOGO
+       LOGO
   ================================================== -->
 
   <div class="header">
@@ -1393,21 +937,17 @@
   </div>
 
 
-
   <!-- ==================================================
        MENU
   ================================================== -->
 
   <nav class="menu">
 
-
     <a
       href="#onas"
       id="aboutButton"
     >
-
       Niečo o nás
-
     </a>
 
 
@@ -1415,16 +955,12 @@
       href="#sluzby"
       id="servicesButton"
     >
-
       Čo robíme
-
     </a>
 
 
     <a href="#">
-
       Kde sme pracovali
-
     </a>
 
 
@@ -1432,25 +968,18 @@
       href="#kontakt"
       id="contactButton"
     >
-
       Kontakt
-
     </a>
 
 
     <a href="#">
-
       5
-
     </a>
-
 
   </nav>
 
 
-
   <div class="menu-divider"></div>
-
 
 
   <!-- ==================================================
@@ -1463,12 +992,11 @@
   >
 
     <img
-      src="./Domovska.png"
+      src="Domovska.png"
       alt="Elektro Ludwig - Viac než len elektrina"
     >
 
   </div>
-
 
 
   <!-- ==================================================
@@ -1482,92 +1010,53 @@
 
     <div class="about-container">
 
-
       <h1>
         O nás
       </h1>
-
 
       <div class="about-divider"></div>
 
 
       <p>
-
-        <strong>
-          Elektro Ludwig s.r.o.
-        </strong>
-
+        <strong>Elektro Ludwig s.r.o.</strong>
         je slovenská elektroinštalačná spoločnosť pôsobiaca najmä na projektoch doma aj v zahraničí. Hoci spoločnosť v dnešnej právnej forme funguje od svojho založenia ako s.r.o., naše skúsenosti siahajú podstatne ďalej.
-
       </p>
 
 
       <p>
-
-        Ešte pred vznikom spoločnosti Elektro Ludwig s.r.o. sme realizovali elektroinštalačné práce pod živnosťou
-
-        <strong>
-          Ľudovíta Hudáka
-        </strong>,
-
-        ktorý je dnes konateľom spoločnosti. Naša história preto nezačína dátumom zápisu s.r.o. do obchodného registra, ale rokmi praktických skúseností priamo na stavbách a pri realizácii rozsiahlych elektroinštalačných projektov.
-
+        Ešte pred vznikom spoločnosti Elektro Ludwig s.r.o. sme realizovali elektroinštalačné práce pod živnosťou <strong>Ľudovíta Hudáka</strong>, ktorý je dnes konateľom spoločnosti. Naša história preto nezačína dátumom zápisu s.r.o. do obchodného registra, ale rokmi praktických skúseností priamo na stavbách a pri realizácii rozsiahlych elektroinštalačných projektov.
       </p>
 
 
       <p>
-
-        Za ten čas sme pracovali na rôznych typoch objektov – od
-
-        <strong>
-
-          škôl a administratívnych budov, cez výrobné a priemyselné haly až po automatizované výrobné linky a logistické centrá
-
-        </strong>.
-
+        Za ten čas sme pracovali na rôznych typoch objektov – od <strong>škôl a administratívnych budov, cez výrobné a priemyselné haly až po automatizované výrobné linky a logistické centrá</strong>.
       </p>
 
 
       <p>
-
         Naše skúsenosti zahŕňajú kompletné elektroinštalácie budov vrátane silnoprúdových a slaboprúdových rozvodov, osvetlenia, núdzového osvetlenia, zabezpečovacích systémov, rozvádzačov, napájania jednotlivých technológií, vonkajšieho osvetlenia, parkovacích plôch a ďalších systémov potrebných pre bezpečné a spoľahlivé fungovanie objektu.
-
       </p>
 
 
       <p>
-
         Pri priemyselných projektoch realizujeme elektroinštalácie výrobných hál, prívody a napájanie strojov a technologických zariadení, káblové trasy, rozvádzače, ovládacie a signalizačné prvky či kompletné zapojenie jednotlivých technológií.
-
       </p>
 
 
       <p>
-
-        Samostatnou oblasťou našich skúseností je
-
-        <strong>
-          priemyselná automatizácia
-        </strong>.
-
-        Podieľali sme sa na realizácii automatizovaných výrobných a logistických systémov, kde sme zabezpečovali kompletnú elektroinštaláciu potrebnú pre chod automatizácie – od káblových trás a kabeláže až po pripojenie senzorov, motorov, rozvádzačov a jednotlivých prvkov technológie.
-
+        Samostatnou oblasťou našich skúseností je <strong>priemyselná automatizácia</strong>. Podieľali sme sa na realizácii automatizovaných výrobných a logistických systémov, kde sme zabezpečovali kompletnú elektroinštaláciu potrebnú pre chod automatizácie – od káblových trás a kabeláže až po pripojenie senzorov, motorov, rozvádzačov a jednotlivých prvkov technológie.
       </p>
 
 
       <p>
-
         Vďaka skúsenostiam z rôznych typov stavieb dokážeme zabezpečiť práce od bežnej elektroinštalácie až po rozsiahle priemyselné a automatizačné projekty.
-
       </p>
 
 
       <div class="final-text">
 
         <strong>
-
           Jednoducho – tam, kde je potrebná elektrická energia, kabeláž, riadenie alebo technológia, vieme nájsť riešenie.
-
         </strong>
 
       </div>
@@ -1575,11 +1064,9 @@
 
       <div class="about-bottom-divider"></div>
 
-
     </div>
 
   </section>
-
 
 
   <!-- ==================================================
@@ -1591,17 +1078,12 @@
     id="sluzby"
   >
 
-
     <div class="services-container">
 
 
       <h1 class="services-heading">
 
-        Čo
-
-        <span>
-          robíme
-        </span>
+        Čo <span>robíme</span>
 
       </h1>
 
@@ -1619,7 +1101,6 @@
       </p>
 
 
-
       <div class="services-grid">
 
 
@@ -1633,7 +1114,7 @@
           <div class="service-image">
 
             <img
-              src="./domovska2.jpeg"
+              src="domovska2.png"
               alt="Elektroinštalácie Elektro Ludwig"
             >
 
@@ -1642,11 +1123,8 @@
 
           <div class="service-content">
 
-
             <h2>
-
               Elektroinštalácie
-
             </h2>
 
 
@@ -1672,12 +1150,9 @@
 
             </a>
 
-
           </div>
 
-
         </div>
-
 
 
         <!-- ============================================
@@ -1690,7 +1165,7 @@
           <div class="service-image">
 
             <img
-              src="./domovska3.jpeg"
+              src="domovska3.png"
               alt="Priemyselné elektroinštalácie a automatizácia"
             >
 
@@ -1699,11 +1174,8 @@
 
           <div class="service-content">
 
-
             <h2>
-
               Priemysel a automatizácia
-
             </h2>
 
 
@@ -1729,16 +1201,13 @@
 
             </a>
 
-
           </div>
-
 
         </div>
 
 
-
         <!-- ============================================
-             3. PRIEMYSELNÉ HALY
+             3. VÝROBNÉ A PRIEMYSELNÉ HALY
         ============================================ -->
 
         <div class="service-card">
@@ -1747,7 +1216,7 @@
           <div class="service-image">
 
             <img
-              src="./domovska4.jpeg"
+              src="domovska4.png"
               alt="Elektroinštalácie výrobných a priemyselných hál"
             >
 
@@ -1756,11 +1225,8 @@
 
           <div class="service-content">
 
-
             <h2>
-
               Výrobné a priemyselné haly
-
             </h2>
 
 
@@ -1787,21 +1253,16 @@
 
             </a>
 
-
           </div>
-
 
         </div>
 
 
       </div>
 
-
     </div>
 
-
   </section>
-
 
 
   <!-- ==================================================
@@ -1812,7 +1273,6 @@
     class="contact-section"
     id="kontakt"
   >
-
 
     <div class="contact-container">
 
@@ -1828,17 +1288,13 @@
 
 
         <h2>
-
           Elektro Ludwig s. r. o.
-
         </h2>
 
 
         <div class="contact-line">
 
-
           <i class="fas fa-location-dot"></i>
-
 
           <div>
 
@@ -1860,16 +1316,12 @@
 
           </div>
 
-
         </div>
-
 
 
         <div class="contact-line">
 
-
           <i class="fas fa-building"></i>
-
 
           <div>
 
@@ -1883,222 +1335,153 @@
 
           </div>
 
-
         </div>
 
-
       </div>
-
 
 
       <!-- MAPA -->
 
       <div class="contact-map">
 
-
         <iframe
-
           src="https://www.google.com/maps?q=Kochanovce%2084%2C%20066%2001%20Kochanovce%2C%20Slovakia&output=embed"
-
           loading="lazy"
-
           allowfullscreen=""
-
           referrerpolicy="no-referrer-when-downgrade"
-
           title="Elektro Ludwig - Kochanovce 84"
-
         ></iframe>
-
 
       </div>
 
-
     </div>
-
 
 
     <div class="contact-divider"></div>
 
 
+    <!-- KONTAKTNÉ OSOBY -->
 
     <div class="contact-people">
-
 
 
       <!-- KONATEĽ -->
 
       <div class="person">
 
-
         <h3>
-
           Konateľ firmy
-
         </h3>
 
-
         <div class="person-name">
-
           Ľudovít Hudák
-
         </div>
 
 
         <div class="person-detail">
 
-
           <i class="fas fa-envelope"></i>
-
 
           <a
             href="mailto:ludovit.hudak.elektroludwig@gmail.com"
           >
-
             ludovit.hudak.elektroludwig@gmail.com
-
           </a>
-
 
         </div>
 
 
         <div class="person-detail">
 
-
           <i class="fas fa-phone"></i>
 
-
           <a href="tel:+421940860363">
-
             +421 940 860 363
-
           </a>
-
 
         </div>
 
-
       </div>
-
 
 
       <!-- ELEKTROMAJSTER -->
 
       <div class="person">
 
-
         <h3>
-
           Elektromajster
-
         </h3>
 
-
         <div class="person-name">
-
           Vladimír Mendel
-
         </div>
 
 
         <div class="person-detail">
 
-
           <i class="fas fa-envelope"></i>
-
 
           <a
             href="mailto:vladimir.mendel.elektroludwig@gmail.com"
           >
-
             vladimir.mendel.elektroludwig@gmail.com
-
           </a>
-
 
         </div>
 
 
         <div class="person-detail">
 
-
           <i class="fas fa-phone"></i>
 
-
           <a href="tel:+421904162593">
-
             +421 904 162 593
-
           </a>
-
 
         </div>
 
-
       </div>
-
 
 
       <!-- EKONOMICKÉ ODDELENIE -->
 
       <div class="person">
 
-
         <h3>
-
           Ekonomické oddelenie
-
         </h3>
 
-
         <div class="person-name empty">
-
           &nbsp;
-
         </div>
 
 
         <div class="person-detail">
-
 
           <i class="fas fa-envelope"></i>
 
-
           <a href="mailto:faktury.hudak@gmail.com">
-
             faktury.hudak@gmail.com
-
           </a>
-
 
         </div>
 
 
         <div class="person-detail">
 
-
           <i class="fas fa-phone"></i>
 
-
           <a href="tel:+421940860363">
-
             +421 940 860 363
-
           </a>
-
 
         </div>
 
-
       </div>
-
 
     </div>
 
-
   </section>
-
 
 
   <!-- ==================================================
@@ -2112,9 +1495,7 @@
       href="https://wa.me/421940860363"
       title="WhatsApp"
     >
-
       <i class="fab fa-whatsapp"></i>
-
     </a>
 
 
@@ -2122,9 +1503,7 @@
       href="tel:+421940860363"
       title="Telefón"
     >
-
       <i class="fas fa-phone"></i>
-
     </a>
 
 
@@ -2132,14 +1511,11 @@
       href="mailto:ludovit.hudak.elektroludwig@gmail.com"
       title="E-mail"
     >
-
       <i class="fas fa-envelope"></i>
-
     </a>
 
 
   </div>
-
 
 
   <!-- ==================================================
@@ -2177,13 +1553,11 @@
       document.getElementById("homeHero");
 
 
-
     /* ==================================================
-       FUNKCIA - ZATVORÍ VŠETKY SEKCIE
+       ZATVORÍ VŠETKY SEKCIE
     ================================================== */
 
     function closeAllSections() {
-
 
       aboutSection.classList.remove("show");
 
@@ -2198,9 +1572,7 @@
 
       contactButton.classList.remove("active");
 
-
     }
-
 
 
     /* ==================================================
@@ -2210,7 +1582,6 @@
     aboutButton.addEventListener(
       "click",
       function(event) {
-
 
         event.preventDefault();
 
@@ -2224,13 +1595,12 @@
 
         if (wasOpen) {
 
-
           homeHero.style.display =
             "block";
 
+        }
 
-        } else {
-
+        else {
 
           homeHero.style.display =
             "none";
@@ -2243,7 +1613,6 @@
 
           setTimeout(function() {
 
-
             aboutSection.scrollIntoView({
 
               behavior: "smooth",
@@ -2252,16 +1621,12 @@
 
             });
 
-
           }, 150);
-
 
         }
 
-
       }
     );
-
 
 
     /* ==================================================
@@ -2271,7 +1636,6 @@
     servicesButton.addEventListener(
       "click",
       function(event) {
-
 
         event.preventDefault();
 
@@ -2285,13 +1649,12 @@
 
         if (wasOpen) {
 
-
           homeHero.style.display =
             "block";
 
+        }
 
-        } else {
-
+        else {
 
           homeHero.style.display =
             "none";
@@ -2304,7 +1667,6 @@
 
           setTimeout(function() {
 
-
             servicesSection.scrollIntoView({
 
               behavior: "smooth",
@@ -2313,16 +1675,12 @@
 
             });
 
-
           }, 100);
-
 
         }
 
-
       }
     );
-
 
 
     /* ==================================================
@@ -2332,7 +1690,6 @@
     contactButton.addEventListener(
       "click",
       function(event) {
-
 
         event.preventDefault();
 
@@ -2346,13 +1703,12 @@
 
         if (wasOpen) {
 
-
           homeHero.style.display =
             "block";
 
+        }
 
-        } else {
-
+        else {
 
           homeHero.style.display =
             "none";
@@ -2365,7 +1721,6 @@
 
           setTimeout(function() {
 
-
             contactSection.scrollIntoView({
 
               behavior: "smooth",
@@ -2374,12 +1729,9 @@
 
             });
 
-
           }, 150);
 
-
         }
-
 
       }
     );
