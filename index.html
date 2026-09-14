@@ -23,9 +23,7 @@
     }
 
 
-    /* =========================
-       TOPBAR
-    ========================= */
+    /* TOPBAR */
 
     .topbar {
       display: flex;
@@ -85,9 +83,7 @@
     }
 
 
-    /* =========================
-       JAZYKY
-    ========================= */
+    /* JAZYKY */
 
     .language-switcher {
       position: relative;
@@ -143,19 +139,13 @@
     }
 
 
-    /* =========================
-       LOGO
-    ========================= */
+    /* HLAVNÉ LOGO */
 
     .header {
       text-align: center;
       padding: 0;
       margin: 0;
     }
-
-    /*
-      Celé logo je odkaz na domovskú stránku.
-    */
 
     .home-logo-link {
       display: inline-block;
@@ -171,9 +161,7 @@
     }
 
 
-    /* =========================
-       MENU
-    ========================= */
+    /* MENU */
 
     .menu {
       display: flex;
@@ -202,10 +190,7 @@
     }
 
 
-    /* =========================
-       ČERVENÁ ČIARA POD MENU
-       CEZ CELÚ STRÁNKU
-    ========================= */
+    /* ČERVENÁ ČIARA POD MENU */
 
     .menu-divider {
       width: 100%;
@@ -216,8 +201,26 @@
 
 
     /* =========================
-       O NÁS
+       DOMOVSKÁ FOTKA
     ========================= */
+
+    .home-hero {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background: #000;
+    }
+
+    .home-hero img {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin: 0;
+    }
+
+
+    /* O NÁS */
 
     .about-section {
       max-height: 0;
@@ -275,11 +278,6 @@
       box-shadow: 0 3px 12px rgba(0,0,0,0.06);
     }
 
-
-    /* =========================
-       ČIARA NA KONCI O NÁS
-    ========================= */
-
     .about-bottom-divider {
       width: 100%;
       height: 1px;
@@ -288,9 +286,7 @@
     }
 
 
-    /* =========================
-       KONTAKT
-    ========================= */
+    /* KONTAKT */
 
     .contact-section {
       max-height: 0;
@@ -322,11 +318,6 @@
       gap: 50px;
       align-items: center;
     }
-
-
-    /* =========================
-       INFORMÁCIE FIRMY
-    ========================= */
 
     .contact-info {
       padding: 20px 25px;
@@ -364,9 +355,7 @@
     }
 
 
-    /* =========================
-       MAPA
-    ========================= */
+    /* MAPA */
 
     .contact-map {
       width: 100%;
@@ -382,9 +371,7 @@
     }
 
 
-    /* =========================
-       ČIARA POD MAPOU
-    ========================= */
+    /* ČIARA POD MAPOU */
 
     .contact-divider {
       max-width: 1200px;
@@ -395,9 +382,7 @@
     }
 
 
-    /* =========================
-       KONTAKTNÉ OSOBY
-    ========================= */
+    /* KONTAKTNÉ OSOBY */
 
     .contact-people {
       max-width: 1200px;
@@ -463,9 +448,7 @@
     }
 
 
-    /* =========================
-       BOČNÝ KONTAKT
-    ========================= */
+    /* BOČNÝ KONTAKT */
 
     .fixed-contact {
       position: fixed;
@@ -476,7 +459,6 @@
       flex-direction: column;
 
       background: #d60000;
-
       border-radius: 6px 0 0 6px;
 
       z-index: 999;
@@ -484,7 +466,6 @@
 
     .fixed-contact a {
       color: white;
-
       width: 32px;
       height: 32px;
 
@@ -493,7 +474,6 @@
       justify-content: center;
 
       text-decoration: none;
-
       transition: 0.2s;
     }
 
@@ -503,9 +483,7 @@
     }
 
 
-    /* =========================
-       MOBIL
-    ========================= */
+    /* MOBIL */
 
     @media (max-width: 800px) {
 
@@ -582,27 +560,17 @@
 <body>
 
 
-  <!-- =========================
-       TOPBAR
-  ========================= -->
+  <!-- TOPBAR -->
 
   <div class="topbar">
 
     <div class="topbar-left">
 
-      <a
-        href="#"
-        class="facebook"
-        title="Facebook"
-      >
+      <a href="#" class="facebook" title="Facebook">
         <i class="fab fa-facebook-f"></i>
       </a>
 
-      <a
-        href="#"
-        class="instagram"
-        title="Instagram"
-      >
+      <a href="#" class="instagram" title="Instagram">
         <i class="fab fa-instagram"></i>
       </a>
 
@@ -635,7 +603,6 @@
         <i class="fas fa-phone"></i>
       </a>
 
-
       <div class="language-switcher">
 
         <div class="language-current">
@@ -644,17 +611,9 @@
 
         <div class="language-menu">
 
-          <a href="#">
-            Slovenčina
-          </a>
-
-          <a href="#">
-            Deutsch
-          </a>
-
-          <a href="#">
-            English
-          </a>
+          <a href="#">Slovenčina</a>
+          <a href="#">Deutsch</a>
+          <a href="#">English</a>
 
         </div>
 
@@ -665,9 +624,7 @@
   </div>
 
 
-  <!-- =========================
-       HLAVNÉ KLIKATEĽNÉ LOGO
-  ========================= -->
+  <!-- HLAVNÉ KLIKATEĽNÉ LOGO -->
 
   <div class="header">
 
@@ -688,9 +645,7 @@
   </div>
 
 
-  <!-- =========================
-       MENU
-  ========================= -->
+  <!-- MENU -->
 
   <nav class="menu">
 
@@ -723,9 +678,26 @@
   </nav>
 
 
-  <!-- ČERVENÁ ČIARA CEZ CELÚ ŠÍRKU -->
+  <!-- ČERVENÁ ČIARA -->
 
   <div class="menu-divider"></div>
+
+
+  <!-- =========================
+       DOMOVSKÁ FOTKA
+  ========================= -->
+
+  <div
+    class="home-hero"
+    id="homeHero"
+  >
+
+    <img
+      src="domovska.jpeg"
+      alt="Elektro Ludwig - Viac než len elektrina"
+    >
+
+  </div>
 
 
   <!-- =========================
@@ -739,9 +711,7 @@
 
     <div class="about-container">
 
-      <h1>
-        O nás
-      </h1>
+      <h1>O nás</h1>
 
       <div class="about-divider"></div>
 
@@ -773,7 +743,6 @@
         Vďaka skúsenostiam z rôznych typov stavieb dokážeme zabezpečiť práce od bežnej elektroinštalácie až po rozsiahle priemyselné a automatizačné projekty.
       </p>
 
-
       <div class="final-text">
 
         <strong>
@@ -781,7 +750,6 @@
         </strong>
 
       </div>
-
 
       <div class="about-bottom-divider"></div>
 
@@ -801,9 +769,6 @@
 
     <div class="contact-container">
 
-
-      <!-- FIRMA -->
-
       <div class="contact-info">
 
         <img
@@ -816,56 +781,32 @@
           Elektro Ludwig s. r. o.
         </h2>
 
-
         <div class="contact-line">
 
           <i class="fas fa-location-dot"></i>
 
           <div>
-
-            <strong>
-              Sídlo spoločnosti
-            </strong>
-
-            <br>
-
-            Kochanovce 84
-
-            <br>
-
-            066 01 Kochanovce
-
-            <br>
-
+            <strong>Sídlo spoločnosti</strong><br>
+            Kochanovce 84<br>
+            066 01 Kochanovce<br>
             Slovenská republika
-
           </div>
 
         </div>
-
 
         <div class="contact-line">
 
           <i class="fas fa-building"></i>
 
           <div>
-
-            <strong>
-              IČO
-            </strong>
-
-            <br>
-
+            <strong>IČO</strong><br>
             55 110 088
-
           </div>
 
         </div>
 
       </div>
 
-
-      <!-- MAPA -->
 
       <div class="contact-map">
 
@@ -882,23 +823,15 @@
     </div>
 
 
-    <!-- ČIARA POD MAPOU -->
-
     <div class="contact-divider"></div>
 
-
-    <!-- KONTAKTNÉ OSOBY -->
 
     <div class="contact-people">
 
 
-      <!-- KONATEĽ -->
-
       <div class="person">
 
-        <h3>
-          Konateľ firmy
-        </h3>
+        <h3>Konateľ firmy</h3>
 
         <div class="person-name">
           Ľudovít Hudák
@@ -927,13 +860,9 @@
       </div>
 
 
-      <!-- ELEKTROMAJSTER -->
-
       <div class="person">
 
-        <h3>
-          Elektromajster
-        </h3>
+        <h3>Elektromajster</h3>
 
         <div class="person-name">
           Vladimír Mendel
@@ -962,13 +891,9 @@
       </div>
 
 
-      <!-- EKONOMICKÉ ODDELENIE -->
-
       <div class="person">
 
-        <h3>
-          Ekonomické oddelenie
-        </h3>
+        <h3>Ekonomické oddelenie</h3>
 
         <div class="person-name empty">
           &nbsp;
@@ -1001,9 +926,7 @@
   </section>
 
 
-  <!-- =========================
-       BOČNÝ KONTAKT
-  ========================= -->
+  <!-- BOČNÝ KONTAKT -->
 
   <div class="fixed-contact">
 
@@ -1031,9 +954,7 @@
   </div>
 
 
-  <!-- =========================
-       OTVÁRANIE SEKCIÍ
-  ========================= -->
+  <!-- OTVÁRANIE SEKCIÍ -->
 
   <script>
 
@@ -1043,12 +964,14 @@
     const aboutSection =
       document.getElementById("onas");
 
-
     const contactButton =
       document.getElementById("contactButton");
 
     const contactSection =
       document.getElementById("kontakt");
+
+    const homeHero =
+      document.getElementById("homeHero");
 
 
     /* O NÁS */
@@ -1069,6 +992,8 @@
           aboutSection.classList.contains("show")
         ) {
 
+          homeHero.style.display = "none";
+
           setTimeout(function() {
 
             aboutSection.scrollIntoView({
@@ -1077,6 +1002,10 @@
             });
 
           }, 200);
+
+        } else {
+
+          homeHero.style.display = "block";
 
         }
 
@@ -1102,6 +1031,8 @@
           contactSection.classList.contains("show")
         ) {
 
+          homeHero.style.display = "none";
+
           setTimeout(function() {
 
             contactSection.scrollIntoView({
@@ -1110,6 +1041,10 @@
             });
 
           }, 200);
+
+        } else {
+
+          homeHero.style.display = "block";
 
         }
 
