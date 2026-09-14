@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Niečo o nás | Elektro Ludwig</title>
+  <title>Elektroludwig | Elektroinštalácie</title>
 
   <link rel="icon" type="image/png" href="./zalozka.png?v=2">
 
@@ -20,10 +20,7 @@
       margin: 0;
       font-family: Arial, sans-serif;
       color: #111;
-      background: white;
     }
-
-    /* TOPBAR */
 
     .topbar {
       display: flex;
@@ -62,12 +59,7 @@
     }
 
     .instagram:hover {
-      background: linear-gradient(
-        45deg,
-        #f58529,
-        #dd2a7b,
-        #8134af
-      );
+      background: linear-gradient(45deg,#f58529,#dd2a7b,#8134af);
     }
 
     .email:hover {
@@ -81,8 +73,6 @@
     .phone:hover {
       background: #6fcf97;
     }
-
-    /* JAZYKY */
 
     .language-switcher {
       position: relative;
@@ -137,8 +127,6 @@
       display: block;
     }
 
-    /* LOGO */
-
     .header {
       text-align: center;
       padding: 0;
@@ -151,8 +139,6 @@
       width: 90%;
       margin: 0 auto;
     }
-
-    /* MENU */
 
     .menu {
       display: flex;
@@ -168,6 +154,7 @@
       color: black;
       text-decoration: none;
       transition: 0.2s;
+      cursor: pointer;
     }
 
     .menu a:hover {
@@ -179,10 +166,25 @@
       color: #d60000;
     }
 
-    /* OBSAH */
+    /* O NÁS */
 
     .about-section {
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+
+      transition:
+        max-height 0.8s ease,
+        opacity 0.5s ease,
+        padding 0.5s ease;
+
       background: #f7f7f7;
+      padding: 0 20px;
+    }
+
+    .about-section.show {
+      max-height: 2500px;
+      opacity: 1;
       padding: 55px 20px 70px 20px;
     }
 
@@ -193,7 +195,7 @@
 
     .about-container h1 {
       margin-top: 0;
-      margin-bottom: 25px;
+      margin-bottom: 20px;
       font-size: 34px;
       color: #d60000;
     }
@@ -212,10 +214,6 @@
       text-align: justify;
     }
 
-    .about-container strong {
-      font-weight: 700;
-    }
-
     .final-text {
       margin-top: 35px;
       padding: 25px 30px;
@@ -226,7 +224,143 @@
       box-shadow: 0 3px 12px rgba(0,0,0,0.06);
     }
 
-    /* BOČNÝ PANEL */
+    /* KONTAKT */
+
+    .contact-section {
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+
+      transition:
+        max-height 0.7s ease,
+        opacity 0.5s ease,
+        padding 0.5s ease;
+
+      background: #f7f7f7;
+      padding: 0 20px;
+    }
+
+    .contact-section.show {
+      max-height: 1800px;
+      opacity: 1;
+      padding: 55px 20px;
+    }
+
+    .contact-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1.6fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .contact-info {
+      padding: 20px 25px;
+    }
+
+    .contact-logo {
+      display: block;
+      max-width: 260px;
+      width: 100%;
+      height: auto;
+      margin-bottom: 25px;
+    }
+
+    .contact-info h2 {
+      font-size: 27px;
+      margin-top: 0;
+      margin-bottom: 25px;
+    }
+
+    .contact-line {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      margin-bottom: 21px;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .contact-line i {
+      width: 22px;
+      margin-top: 4px;
+      color: #d60000;
+      font-size: 19px;
+      text-align: center;
+    }
+
+    .contact-map iframe {
+      display: block;
+      width: 100%;
+      height: 430px;
+      border: 0;
+      border-radius: 10px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+    }
+
+    .contact-divider {
+      max-width: 1200px;
+      height: 1px;
+      background: #d60000;
+      border: 0;
+      margin: 45px auto 40px auto;
+    }
+
+    .contact-people {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 45px;
+      align-items: start;
+    }
+
+    .person {
+      padding: 10px 25px;
+      display: grid;
+      grid-template-rows: 32px 32px 46px 32px;
+    }
+
+    .person h3 {
+      margin: 0;
+      font-size: 21px;
+      color: #d60000;
+    }
+
+    .person-name {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .person-name.empty {
+      visibility: hidden;
+    }
+
+    .person-detail {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .person-detail i {
+      width: 20px;
+      color: #d60000;
+      font-size: 17px;
+      margin-top: 3px;
+    }
+
+    .person-detail a {
+      color: #111;
+      text-decoration: none;
+      word-break: break-word;
+    }
+
+    .person-detail a:hover {
+      color: #d60000;
+    }
 
     .fixed-contact {
       position: fixed;
@@ -255,8 +389,6 @@
       background: #a80000;
     }
 
-    /* MOBIL */
-
     @media (max-width: 800px) {
 
       .topbar {
@@ -273,16 +405,9 @@
         padding: 0 15px 15px;
       }
 
-      .menu a {
-        font-size: 14px;
-      }
-
-      .about-section {
-        padding: 35px 18px 50px 18px;
-      }
-
-      .about-container h1 {
-        font-size: 29px;
+      .about-section.show,
+      .contact-section.show {
+        padding: 35px 15px;
       }
 
       .about-container p {
@@ -290,9 +415,34 @@
         text-align: left;
       }
 
-      .final-text {
-        padding: 20px;
-        font-size: 17px;
+      .contact-container {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+
+      .contact-map iframe {
+        height: 350px;
+      }
+
+      .contact-people {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .person {
+        display: block;
+      }
+
+      .person-name {
+        margin-bottom: 15px;
+      }
+
+      .person-name.empty {
+        display: none;
+      }
+
+      .person-detail {
+        margin-bottom: 12px;
       }
 
     }
@@ -301,36 +451,25 @@
 
 </head>
 
-
 <body>
-
-  <!-- TOPBAR -->
 
   <div class="topbar">
 
     <div class="topbar-left">
 
-      <a href="#" class="facebook" title="Facebook">
+      <a href="#" class="facebook">
         <i class="fab fa-facebook-f"></i>
       </a>
 
-      <a href="#" class="instagram" title="Instagram">
+      <a href="#" class="instagram">
         <i class="fab fa-instagram"></i>
       </a>
 
-      <a
-        href="mailto:ludovit.hudak.elektroludwig@gmail.com"
-        class="email"
-        title="E-mail"
-      >
+      <a href="mailto:ludovit.hudak.elektroludwig@gmail.com" class="email">
         <i class="fas fa-envelope"></i>
       </a>
 
-      <a
-        href="https://wa.me/421940860363"
-        class="whatsapp"
-        title="WhatsApp"
-      >
+      <a href="https://wa.me/421940860363" class="whatsapp">
         <i class="fab fa-whatsapp"></i>
       </a>
 
@@ -338,11 +477,7 @@
 
     <div style="display:flex; gap:10px; align-items:center;">
 
-      <a
-        href="tel:+421940860363"
-        class="phone"
-        title="Telefón"
-      >
+      <a href="tel:+421940860363" class="phone">
         <i class="fas fa-phone"></i>
       </a>
 
@@ -353,19 +488,9 @@
         </div>
 
         <div class="language-menu">
-
-          <a href="#">
-            Slovenčina
-          </a>
-
-          <a href="#">
-            Deutsch
-          </a>
-
-          <a href="#">
-            English
-          </a>
-
+          <a href="#">Slovenčina</a>
+          <a href="#">Deutsch</a>
+          <a href="#">English</a>
         </div>
 
       </div>
@@ -374,25 +499,13 @@
 
   </div>
 
-  <!-- LOGO -->
-
   <div class="header">
-
-    <a href="index.html">
-      <img
-        src="logo.png"
-        class="logo"
-        alt="Elektro Ludwig"
-      >
-    </a>
-
+    <img src="logo.png" class="logo" alt="Elektro Ludwig">
   </div>
-
-  <!-- MENU -->
 
   <nav class="menu">
 
-    <a href="nieco-o-nas.html" class="active">
+    <a href="#onas" id="aboutButton">
       Niečo o nás
     </a>
 
@@ -404,7 +517,7 @@
       Kde sme pracovali
     </a>
 
-    <a href="index.html#kontakt">
+    <a href="#kontakt" id="contactButton">
       Kontakt
     </a>
 
@@ -416,7 +529,7 @@
 
   <!-- O NÁS -->
 
-  <section class="about-section">
+  <section class="about-section" id="onas">
 
     <div class="about-container">
 
@@ -462,32 +575,214 @@
 
   </section>
 
-  <!-- BOČNÝ KONTAKT -->
+  <!-- KONTAKT -->
+
+  <section class="contact-section" id="kontakt">
+
+    <div class="contact-container">
+
+      <div class="contact-info">
+
+        <img src="logo.png" class="contact-logo" alt="Elektro Ludwig">
+
+        <h2>Elektro Ludwig s. r. o.</h2>
+
+        <div class="contact-line">
+
+          <i class="fas fa-location-dot"></i>
+
+          <div>
+            <strong>Sídlo spoločnosti</strong><br>
+            Kochanovce 84<br>
+            066 01 Kochanovce<br>
+            Slovenská republika
+          </div>
+
+        </div>
+
+        <div class="contact-line">
+
+          <i class="fas fa-building"></i>
+
+          <div>
+            <strong>IČO</strong><br>
+            55 110 088
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="contact-map">
+
+        <iframe
+          src="https://www.google.com/maps?q=Kochanovce%2084%2C%20066%2001%20Kochanovce%2C%20Slovakia&output=embed"
+          loading="lazy"
+          allowfullscreen=""
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+
+      </div>
+
+    </div>
+
+    <div class="contact-divider"></div>
+
+    <div class="contact-people">
+
+      <div class="person">
+
+        <h3>Konateľ firmy</h3>
+
+        <div class="person-name">
+          Ľudovít Hudák
+        </div>
+
+        <div class="person-detail">
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:ludovit.hudak.elektroludwig@gmail.com">
+            ludovit.hudak.elektroludwig@gmail.com
+          </a>
+        </div>
+
+        <div class="person-detail">
+          <i class="fas fa-phone"></i>
+          <a href="tel:+421940860363">
+            +421 940 860 363
+          </a>
+        </div>
+
+      </div>
+
+      <div class="person">
+
+        <h3>Elektromajster</h3>
+
+        <div class="person-name">
+          Vladimír Mendel
+        </div>
+
+        <div class="person-detail">
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:vladimir.mendel.elektroludwig@gmail.com">
+            vladimir.mendel.elektroludwig@gmail.com
+          </a>
+        </div>
+
+        <div class="person-detail">
+          <i class="fas fa-phone"></i>
+          <a href="tel:+421904162593">
+            +421 904 162 593
+          </a>
+        </div>
+
+      </div>
+
+      <div class="person">
+
+        <h3>Ekonomické oddelenie</h3>
+
+        <div class="person-name empty">
+          &nbsp;
+        </div>
+
+        <div class="person-detail">
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:faktury.hudak@gmail.com">
+            faktury.hudak@gmail.com
+          </a>
+        </div>
+
+        <div class="person-detail">
+          <i class="fas fa-phone"></i>
+          <a href="tel:+421940860363">
+            +421 940 860 363
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
 
   <div class="fixed-contact">
 
-    <a
-      href="https://wa.me/421940860363"
-      title="WhatsApp"
-    >
+    <a href="https://wa.me/421940860363">
       <i class="fab fa-whatsapp"></i>
     </a>
 
-    <a
-      href="tel:+421940860363"
-      title="Telefón"
-    >
+    <a href="tel:+421940860363">
       <i class="fas fa-phone"></i>
     </a>
 
-    <a
-      href="mailto:ludovit.hudak.elektroludwig@gmail.com"
-      title="E-mail"
-    >
+    <a href="mailto:ludovit.hudak.elektroludwig@gmail.com">
       <i class="fas fa-envelope"></i>
     </a>
 
   </div>
+
+  <script>
+
+    const aboutButton = document.getElementById("aboutButton");
+    const aboutSection = document.getElementById("onas");
+
+    const contactButton = document.getElementById("contactButton");
+    const contactSection = document.getElementById("kontakt");
+
+
+    aboutButton.addEventListener("click", function(event) {
+
+      event.preventDefault();
+
+      contactSection.classList.remove("show");
+      contactButton.classList.remove("active");
+
+      aboutSection.classList.toggle("show");
+      aboutButton.classList.toggle("active");
+
+      if (aboutSection.classList.contains("show")) {
+
+        setTimeout(function() {
+
+          aboutSection.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+          });
+
+        }, 200);
+
+      }
+
+    });
+
+
+    contactButton.addEventListener("click", function(event) {
+
+      event.preventDefault();
+
+      aboutSection.classList.remove("show");
+      aboutButton.classList.remove("active");
+
+      contactSection.classList.toggle("show");
+      contactButton.classList.toggle("active");
+
+      if (contactSection.classList.contains("show")) {
+
+        setTimeout(function() {
+
+          contactSection.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+          });
+
+        }, 200);
+
+      }
+
+    });
+
+  </script>
 
 </body>
 
