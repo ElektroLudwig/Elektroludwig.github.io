@@ -38,10 +38,10 @@ const projekty = [
     priecinok: "transgourmet-leipheim",
 
     kratkyPopis:
-      "Elektroinštalačné práce pri realizácii nového logistického a distribučného objektu Transgourmet v nemeckom Leipheime.",
+      "Elektroinštalačné práce a automatizácia pri realizácii nového logistického a distribučného objektu Transgourmet v nemeckom Leipheime.",
 
     popis:
-      "Na projekte Transgourmet Leipheim sa podieľame na realizácii elektroinštalácií v rozsiahlej logistickej a chladiarenskej prevádzke. Súčasťou našich prác je montáž káblových trás, príprava a ťahanie silnoprúdovej a slaboprúdovej kabeláže, montáž a zapájanie rozvádzačov, vedenie a zapájanie termostatov a ďalšie elektroinštalačné práce súvisiace s jednotlivými technológiami objektu. Práce realizujeme v rôznych častiach prevádzky vrátane hál, chladiacich a mraziacich priestorov a technologických častí objektu."
+      "Na projekte Transgourmet Leipheim sa podieľame na realizácii elektroinštalácií a automatizácie v rozsiahlej logistickej a chladiarenskej prevádzke. Na stavbe realizujeme práce pre spoločnosti TGW a Hauser. Súčasťou našich prác je montáž káblových trás, príprava a ťahanie silnoprúdovej a slaboprúdovej kabeláže, montáž a zapájanie rozvádzačov, vedenie a zapájanie termostatov, elektroinštalácie súvisiace s automatizáciou a technologickými zariadeniami, ako aj ďalšie elektroinštalačné práce podľa jednotlivých častí projektu. Práce realizujeme v rôznych častiach prevádzky vrátane hál, chladiacich a mraziacich priestorov a technologických častí objektu."
   }
 
 ];
