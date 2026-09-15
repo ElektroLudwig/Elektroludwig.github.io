@@ -9,43 +9,33 @@
 
 const projekty = [
 
-  /*
-  ==================================================
-  VZOR PROJEKTU
-
-  Tento vzor zatiaľ NIE JE reálny projekt.
-  Keď budeme pridávať prvú stavbu, vytvoríme
-  podľa neho skutočný záznam.
+  /* ==================================================
+     TRANSGOURMET LEIPHEIM
+  ================================================== */
 
   {
     datum: "2026-09",
 
-    nazov: "Názov projektu",
+    nazov: "Transgourmet Leipheim",
 
-    miesto: "Mesto, Nemecko",
+    miesto: "Leipheim, Nemecko",
 
     rok: "2026",
 
     hlavnaFotka:
-      "images/projekty/nazov-projektu/hlavna.jpg",
+      "images/projekty/transgourmet-leipheim/hlavna.jpeg",
 
     kratkyPopis:
-      "Krátky popis projektu, ktorý sa zobrazí priamo v zozname referencií.",
+      "Elektroinštalačné práce pri realizácii nového logistického a distribučného objektu Transgourmet v nemeckom Leipheime.",
 
     popis:
-      "Podrobnejší popis realizácie. Tu môžeme napísať, čo všetko sme na stavbe realizovali, akého typu bola stavba a aký bol rozsah našich elektroinštalačných prác.",
+      "Na projekte Transgourmet Leipheim sa podieľame na realizácii elektroinštalácií v rozsiahlej logistickej a chladiarenskej prevádzke. Súčasťou našich prác je montáž káblových trás, príprava a ťahanie silnoprúdovej a slaboprúdovej kabeláže, montáž a zapájanie rozvádzačov, vedenie a zapájanie termostatov a ďalšie elektroinštalačné práce súvisiace s jednotlivými technológiami objektu. Práce realizujeme v rôznych častiach prevádzky vrátane hál, chladiacich a mraziacich priestorov a technologických častí objektu.",
 
     fotky: [
-      "images/projekty/nazov-projektu/01.jpg",
-      "images/projekty/nazov-projektu/02.jpg",
-      "images/projekty/nazov-projektu/03.jpg"
+      "images/projekty/transgourmet-leipheim/01.jpeg",
+      "images/projekty/transgourmet-leipheim/02.jpeg"
     ]
   }
-
-  ==================================================
-  KONIEC VZORU
-  ==================================================
-  */
 
 ];
 
