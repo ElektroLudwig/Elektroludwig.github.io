@@ -1660,10 +1660,6 @@
         Kontakt
       </a>
 
-      <a href="#">
-        5
-      </a>
-
     </nav>
 
     <div class="menu-divider"></div>
@@ -2193,7 +2189,6 @@
 
         </div>
 
-
         <div class="contact-map">
 
           <iframe
@@ -2533,6 +2528,7 @@
     const menuLinks =
       document.querySelectorAll(".menu [data-section]");
 
+
     function updateActiveMenu() {
 
       let currentSection = "";
@@ -2551,6 +2547,7 @@
 
       });
 
+
       menuLinks.forEach(function(link) {
 
         link.classList.remove("active");
@@ -2564,6 +2561,7 @@
       });
 
     }
+
 
     window.addEventListener(
       "scroll",
@@ -2582,6 +2580,7 @@
 
     const dropdownToggle =
       document.getElementById("dropdownToggle");
+
 
     dropdownToggle.addEventListener(
       "click",
@@ -2607,10 +2606,12 @@
       }
     );
 
+
     const dropdownLinks =
       document.querySelectorAll(
         ".dropdown-menu a"
       );
+
 
     dropdownLinks.forEach(function(link) {
 
@@ -2631,6 +2632,7 @@
       );
 
     });
+
 
     document.addEventListener(
       "click",
@@ -2665,6 +2667,7 @@
 
     const formMessage =
       document.getElementById("formMessage");
+
 
     inquiryForm.addEventListener(
       "submit",
