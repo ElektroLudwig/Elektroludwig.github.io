@@ -591,9 +591,6 @@ function createAutomaticGallery(
       photoNumber;
 
 
-    image.loading =
-      "lazy";
-
 
     /*
       DÔLEŽITÉ:
