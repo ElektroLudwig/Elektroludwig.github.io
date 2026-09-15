@@ -1,4 +1,10 @@
 /* ==================================================
+   ELEKTRO LUDWIG
+   HLAVNÝ JAVASCRIPT
+================================================== */
+
+
+/* ==================================================
    PRI OBNOVENÍ STRÁNKY VŽDY ZAČAŤ HORE
 ================================================== */
 
@@ -211,8 +217,7 @@ const projectsEmpty =
 
 
 /* ==================================================
-   POMOCNÁ FUNKCIA
-   BEZPEČNÉ VLOŽENIE TEXTU DO HTML
+   BEZPEČNÉ VLOŽENIE TEXTU
 ================================================== */
 
 function escapeProjectText(value) {
@@ -238,11 +243,6 @@ function renderProjects() {
     return;
   }
 
-
-  /*
-    Ak projekty.js neobsahuje žiadny projekt,
-    zobrazíme informáciu, že referencie pripravujeme.
-  */
 
   if (
     typeof projekty === "undefined" ||
@@ -300,62 +300,30 @@ function renderProjects() {
         project.popis || ""
       );
 
-    const mainImage =
-      project.hlavnaFotka || "";
 
-    const galleryPhotos =
-      Array.isArray(project.fotky)
-        ? project.fotky
-        : [];
+    /*
+      Každý projekt má svoj priečinok.
 
+      Napríklad:
 
-    /* ----------------------------------------------
-       GALÉRIA
-    ---------------------------------------------- */
+      transgourmet-leipheim
+    */
 
-    let galleryHTML = "";
-
-
-    if (galleryPhotos.length > 0) {
-
-      galleryHTML = `
-        <h3 class="project-gallery-title">
-          Fotogaléria
-        </h3>
-
-        <div class="project-gallery">
-      `;
-
-
-      galleryPhotos.forEach(
-        function(photo, photoIndex) {
-
-          galleryHTML += `
-            <div
-              class="project-gallery-item"
-              data-project-index="${projectIndex}"
-              data-photo-index="${photoIndex}"
-              role="button"
-              tabindex="0"
-              aria-label="Otvoriť fotografiu ${photoIndex + 1}"
-            >
-              <img
-                src="${escapeProjectText(photo)}"
-                alt="${projectName} - fotografia ${photoIndex + 1}"
-                loading="lazy"
-              >
-            </div>
-          `;
-
-        }
+    const projectFolder =
+      escapeProjectText(
+        project.priecinok || ""
       );
 
 
-      galleryHTML += `
-        </div>
-      `;
+    const projectBasePath =
+      "images/projekty/" +
+      projectFolder +
+      "/";
 
-    }
+
+    const mainImage =
+      projectBasePath +
+      "hlavna.jpeg";
 
 
     /* ----------------------------------------------
@@ -369,7 +337,7 @@ function renderProjects() {
         <div class="project-main-image">
 
           <img
-            src="${escapeProjectText(mainImage)}"
+            src="${mainImage}"
             alt="${projectName}"
             loading="lazy"
           >
@@ -393,8 +361,11 @@ function renderProjects() {
             projectLocation
               ? `
                 <div class="project-location">
+
                   <i class="fas fa-location-dot"></i>
+
                   ${projectLocation}
+
                 </div>
               `
               : ""
@@ -413,8 +384,11 @@ function renderProjects() {
             class="project-open-button"
             data-project-open="${projectIndex}"
           >
+
             Zobraziť projekt
+
             <i class="fas fa-arrow-right"></i>
+
           </button>
 
         </div>
@@ -435,6 +409,7 @@ function renderProjects() {
               projectLocation
                 ? `
                   <div class="project-detail-location">
+
                     <i class="fas fa-location-dot"></i>
 
                     ${projectLocation}
@@ -463,7 +438,9 @@ function renderProjects() {
             data-project-close="${projectIndex}"
             aria-label="Zatvoriť projekt"
           >
+
             <i class="fas fa-xmark"></i>
+
           </button>
 
         </div>
@@ -478,7 +455,21 @@ function renderProjects() {
         </div>
 
 
-        ${galleryHTML}
+        <div
+          class="project-gallery-area"
+          id="project-gallery-area-${projectIndex}"
+        >
+
+          <h3 class="project-gallery-title">
+            Fotogaléria
+          </h3>
+
+          <div
+            class="project-gallery"
+            id="project-gallery-${projectIndex}"
+          ></div>
+
+        </div>
 
       </div>
 
@@ -489,11 +480,230 @@ function renderProjects() {
       projectWrapper
     );
 
+
+    /*
+      Automaticky skontrolujeme fotografie
+      01.jpeg až 50.jpeg.
+    */
+
+    createAutomaticGallery(
+      project,
+      projectIndex
+    );
+
   });
 
 
   activateProjectButtons();
-  activateGallery();
+
+}
+
+
+/* ==================================================
+   AUTOMATICKÁ GALÉRIA
+
+   WEB SKÚSI:
+   01.jpeg
+   02.jpeg
+   03.jpeg
+   ...
+   50.jpeg
+
+   EXISTUJÚCE FOTKY ZOBRAZÍ.
+   NEEXISTUJÚCE IGNORUJE.
+================================================== */
+
+function createAutomaticGallery(
+  project,
+  projectIndex
+) {
+
+  const gallery =
+    document.getElementById(
+      "project-gallery-" + projectIndex
+    );
+
+  const galleryArea =
+    document.getElementById(
+      "project-gallery-area-" + projectIndex
+    );
+
+
+  if (
+    !gallery ||
+    !galleryArea
+  ) {
+    return;
+  }
+
+
+  const projectFolder =
+    project.priecinok || "";
+
+
+  const basePath =
+    "images/projekty/" +
+    projectFolder +
+    "/";
+
+
+  let loadedPhotos = 0;
+
+
+  /*
+    Na začiatku galériu skryjeme.
+
+    Zobrazí sa až vtedy,
+    keď sa nájde aspoň jedna fotografia.
+  */
+
+  galleryArea.style.display =
+    "none";
+
+
+  for (
+    let photoNumber = 1;
+    photoNumber <= 50;
+    photoNumber++
+  ) {
+
+    const formattedNumber =
+      String(photoNumber).padStart(
+        2,
+        "0"
+      );
+
+
+    const photoPath =
+      basePath +
+      formattedNumber +
+      ".jpeg";
+
+
+    const galleryItem =
+      document.createElement("div");
+
+
+    galleryItem.className =
+      "project-gallery-item";
+
+
+    galleryItem.setAttribute(
+      "role",
+      "button"
+    );
+
+    galleryItem.setAttribute(
+      "tabindex",
+      "0"
+    );
+
+
+    const image =
+      document.createElement("img");
+
+
+    image.src =
+      photoPath;
+
+    image.alt =
+      (project.nazov || "Projekt") +
+      " - fotografia " +
+      photoNumber;
+
+    image.loading =
+      "lazy";
+
+
+    /*
+      Ak fotografia existuje,
+      pridáme ju do galérie.
+    */
+
+    image.addEventListener(
+      "load",
+      function() {
+
+        loadedPhotos++;
+
+        galleryArea.style.display =
+          "";
+
+      }
+    );
+
+
+    /*
+      Ak fotografia neexistuje,
+      celý jej blok odstránime.
+
+      Preto sa nikdy nezobrazí
+      rozbitý obrázok.
+    */
+
+    image.addEventListener(
+      "error",
+      function() {
+
+        galleryItem.remove();
+
+      }
+    );
+
+
+    /*
+      Kliknutie otvorí fotografiu.
+    */
+
+    galleryItem.addEventListener(
+      "click",
+      function() {
+
+        openLightboxFromGallery(
+          projectIndex,
+          photoPath
+        );
+
+      }
+    );
+
+
+    /*
+      Ovládanie klávesnicou.
+    */
+
+    galleryItem.addEventListener(
+      "keydown",
+      function(event) {
+
+        if (
+          event.key === "Enter" ||
+          event.key === " "
+        ) {
+
+          event.preventDefault();
+
+          openLightboxFromGallery(
+            projectIndex,
+            photoPath
+          );
+
+        }
+
+      }
+    );
+
+
+    galleryItem.appendChild(
+      image
+    );
+
+
+    gallery.appendChild(
+      galleryItem
+    );
+
+  }
 
 }
 
@@ -526,7 +736,8 @@ function activateProjectButtons() {
 
         const detail =
           document.getElementById(
-            "project-detail-" + projectIndex
+            "project-detail-" +
+            projectIndex
           );
 
 
@@ -536,27 +747,31 @@ function activateProjectButtons() {
 
 
         /*
-          Najskôr zavrieme prípadný iný
+          Zavrieme prípadný iný
           otvorený projekt.
         */
 
         document
-          .querySelectorAll(".project-detail.open")
+          .querySelectorAll(
+            ".project-detail.open"
+          )
           .forEach(function(openDetail) {
 
             if (openDetail !== detail) {
-              openDetail.classList.remove("open");
+
+              openDetail.classList.remove(
+                "open"
+              );
+
             }
 
           });
 
 
-        detail.classList.add("open");
+        detail.classList.add(
+          "open"
+        );
 
-
-        /*
-          Jemne posunieme stránku na detail.
-        */
 
         setTimeout(function() {
 
@@ -584,15 +799,19 @@ function activateProjectButtons() {
 
         const detail =
           document.getElementById(
-            "project-detail-" + projectIndex
+            "project-detail-" +
+            projectIndex
           );
+
 
         if (!detail) {
           return;
         }
 
 
-        detail.classList.remove("open");
+        detail.classList.remove(
+          "open"
+        );
 
 
         const openButton =
@@ -627,10 +846,13 @@ function activateProjectButtons() {
 ================================================== */
 
 let lightbox = null;
+
 let lightboxImage = null;
+
 let lightboxCounter = null;
 
-let currentProjectIndex = 0;
+let currentGalleryPhotos = [];
+
 let currentPhotoIndex = 0;
 
 
@@ -659,7 +881,9 @@ function createLightbox() {
       class="lightbox-close"
       aria-label="Zatvoriť fotografiu"
     >
+
       <i class="fas fa-xmark"></i>
+
     </button>
 
 
@@ -668,7 +892,9 @@ function createLightbox() {
       class="lightbox-prev"
       aria-label="Predchádzajúca fotografia"
     >
+
       <i class="fas fa-chevron-left"></i>
+
     </button>
 
 
@@ -684,7 +910,9 @@ function createLightbox() {
       class="lightbox-next"
       aria-label="Nasledujúca fotografia"
     >
+
       <i class="fas fa-chevron-right"></i>
+
     </button>
 
 
@@ -703,6 +931,7 @@ function createLightbox() {
       ".project-lightbox-image"
     );
 
+
   lightboxCounter =
     lightbox.querySelector(
       ".lightbox-counter"
@@ -714,10 +943,12 @@ function createLightbox() {
       ".lightbox-close"
     );
 
+
   const previousButton =
     lightbox.querySelector(
       ".lightbox-prev"
     );
+
 
   const nextButton =
     lightbox.querySelector(
@@ -736,6 +967,7 @@ function createLightbox() {
     function(event) {
 
       event.stopPropagation();
+
       showPreviousPhoto();
 
     }
@@ -747,23 +979,21 @@ function createLightbox() {
     function(event) {
 
       event.stopPropagation();
+
       showNextPhoto();
 
     }
   );
 
 
-  /*
-    Kliknutie na čierne pozadie
-    zatvorí fotografiu.
-  */
-
   lightbox.addEventListener(
     "click",
     function(event) {
 
       if (event.target === lightbox) {
+
         closeLightbox();
+
       }
 
     }
@@ -773,119 +1003,90 @@ function createLightbox() {
 
 
 /* ==================================================
-   AKTIVÁCIA FOTIEK V GALÉRII
+   OTVORENIE FOTKY Z GALÉRIE
 ================================================== */
 
-function activateGallery() {
+function openLightboxFromGallery(
+  projectIndex,
+  clickedPhoto
+) {
 
-  const galleryItems =
-    document.querySelectorAll(
-      ".project-gallery-item"
+  const gallery =
+    document.getElementById(
+      "project-gallery-" +
+      projectIndex
     );
 
 
-  galleryItems.forEach(function(item) {
+  if (!gallery) {
+    return;
+  }
 
-    item.addEventListener(
-      "click",
-      function() {
 
-        const projectIndex =
-          Number(item.dataset.projectIndex);
+  /*
+    Zoberieme iba fotografie,
+    ktoré sa reálne načítali.
+  */
 
-        const photoIndex =
-          Number(item.dataset.photoIndex);
-
-        openLightbox(
-          projectIndex,
-          photoIndex
-        );
-
-      }
+  const loadedImages =
+    gallery.querySelectorAll(
+      ".project-gallery-item img"
     );
 
 
-    /*
-      Enter alebo medzerník otvorí fotku
-      aj pri ovládaní klávesnicou.
-    */
+  currentGalleryPhotos = [];
 
-    item.addEventListener(
-      "keydown",
-      function(event) {
 
-        if (
-          event.key === "Enter" ||
-          event.key === " "
-        ) {
+  loadedImages.forEach(function(image) {
 
-          event.preventDefault();
+    if (
+      image.complete &&
+      image.naturalWidth > 0
+    ) {
 
-          const projectIndex =
-            Number(item.dataset.projectIndex);
+      currentGalleryPhotos.push(
+        image.src
+      );
 
-          const photoIndex =
-            Number(item.dataset.photoIndex);
-
-          openLightbox(
-            projectIndex,
-            photoIndex
-          );
-
-        }
-
-      }
-    );
+    }
 
   });
 
-}
-
-
-/* ==================================================
-   OTVORENIE LIGHTBOXU
-================================================== */
-
-function openLightbox(
-  projectIndex,
-  photoIndex
-) {
 
   if (
-    typeof projekty === "undefined" ||
-    !projekty[projectIndex]
+    currentGalleryPhotos.length === 0
   ) {
     return;
   }
 
 
-  const photos =
-    Array.isArray(
-      projekty[projectIndex].fotky
-    )
-      ? projekty[projectIndex].fotky
-      : [];
+  const absoluteClickedPhoto =
+    new URL(
+      clickedPhoto,
+      window.location.href
+    ).href;
 
 
-  if (!photos[photoIndex]) {
-    return;
+  currentPhotoIndex =
+    currentGalleryPhotos.indexOf(
+      absoluteClickedPhoto
+    );
+
+
+  if (currentPhotoIndex < 0) {
+    currentPhotoIndex = 0;
   }
 
 
   createLightbox();
 
-
-  currentProjectIndex =
-    projectIndex;
-
-  currentPhotoIndex =
-    photoIndex;
-
-
   updateLightbox();
 
 
-  lightbox.classList.add("open");
+  lightbox.classList.add(
+    "open"
+  );
+
 
   document.body.style.overflow =
     "hidden";
@@ -894,49 +1095,36 @@ function openLightbox(
 
 
 /* ==================================================
-   AKTUALIZÁCIA FOTKY V LIGHTBOXE
+   AKTUALIZÁCIA LIGHTBOXU
 ================================================== */
 
 function updateLightbox() {
 
-  const project =
-    projekty[currentProjectIndex];
-
-  if (!project) {
-    return;
-  }
-
-
-  const photos =
-    Array.isArray(project.fotky)
-      ? project.fotky
-      : [];
-
-
-  if (photos.length === 0) {
+  if (
+    !lightbox ||
+    currentGalleryPhotos.length === 0
+  ) {
     return;
   }
 
 
   lightboxImage.src =
-    photos[currentPhotoIndex];
-
-  lightboxImage.alt =
-    (project.nazov || "Projekt") +
-    " - fotografia " +
-    (currentPhotoIndex + 1);
+    currentGalleryPhotos[
+      currentPhotoIndex
+    ];
 
 
   lightboxCounter.textContent =
     (currentPhotoIndex + 1) +
     " / " +
-    photos.length;
+    currentGalleryPhotos.length;
 
 
   const previousButton =
     lightbox.querySelector(
       ".lightbox-prev"
     );
+
 
   const nextButton =
     lightbox.querySelector(
@@ -945,11 +1133,13 @@ function updateLightbox() {
 
 
   /*
-    Ak je iba jedna fotografia,
+    Pri jednej fotografii
     šípky nepotrebujeme.
   */
 
-  if (photos.length <= 1) {
+  if (
+    currentGalleryPhotos.length <= 1
+  ) {
 
     previousButton.style.display =
       "none";
@@ -976,21 +1166,9 @@ function updateLightbox() {
 
 function showPreviousPhoto() {
 
-  const project =
-    projekty[currentProjectIndex];
-
-  if (!project) {
-    return;
-  }
-
-
-  const photos =
-    Array.isArray(project.fotky)
-      ? project.fotky
-      : [];
-
-
-  if (photos.length === 0) {
+  if (
+    currentGalleryPhotos.length === 0
+  ) {
     return;
   }
 
@@ -999,8 +1177,10 @@ function showPreviousPhoto() {
 
 
   if (currentPhotoIndex < 0) {
+
     currentPhotoIndex =
-      photos.length - 1;
+      currentGalleryPhotos.length - 1;
+
   }
 
 
@@ -1015,21 +1195,9 @@ function showPreviousPhoto() {
 
 function showNextPhoto() {
 
-  const project =
-    projekty[currentProjectIndex];
-
-  if (!project) {
-    return;
-  }
-
-
-  const photos =
-    Array.isArray(project.fotky)
-      ? project.fotky
-      : [];
-
-
-  if (photos.length === 0) {
+  if (
+    currentGalleryPhotos.length === 0
+  ) {
     return;
   }
 
@@ -1039,7 +1207,7 @@ function showNextPhoto() {
 
   if (
     currentPhotoIndex >=
-    photos.length
+    currentGalleryPhotos.length
   ) {
 
     currentPhotoIndex = 0;
@@ -1063,7 +1231,10 @@ function closeLightbox() {
   }
 
 
-  lightbox.classList.remove("open");
+  lightbox.classList.remove(
+    "open"
+  );
+
 
   document.body.style.overflow =
     "";
@@ -1081,7 +1252,9 @@ document.addEventListener(
 
     if (
       !lightbox ||
-      !lightbox.classList.contains("open")
+      !lightbox.classList.contains(
+        "open"
+      )
     ) {
       return;
     }
@@ -1141,8 +1314,10 @@ if (
 
       event.preventDefault();
 
+
       formMessage.textContent =
         "Formulár je pripravený. V ďalšom kroku ho pripojíme na odosielanie správ na e-mail.";
+
 
       formMessage.classList.add(
         "visible"
