@@ -13,11 +13,9 @@ if ("scrollRestoration" in history) {
 }
 
 window.addEventListener("load", function() {
-
   if (!window.location.hash) {
     window.scrollTo(0, 0);
   }
-
 });
 
 
@@ -277,10 +275,6 @@ function renderProjects() {
       "project-wrapper";
 
 
-    /* ----------------------------------------------
-       ÚDAJE PROJEKTU
-    ---------------------------------------------- */
-
     const projectName =
       escapeProjectText(project.nazov || "");
 
@@ -300,15 +294,6 @@ function renderProjects() {
         project.popis || ""
       );
 
-
-    /*
-      Každý projekt má svoj priečinok.
-
-      Napríklad:
-
-      transgourmet-leipheim
-    */
-
     const projectFolder =
       escapeProjectText(
         project.priecinok || ""
@@ -325,10 +310,6 @@ function renderProjects() {
       projectBasePath +
       "hlavna.jpeg";
 
-
-    /* ----------------------------------------------
-       HLAVNÁ KARTA + DETAIL
-    ---------------------------------------------- */
 
     projectWrapper.innerHTML = `
 
@@ -481,11 +462,6 @@ function renderProjects() {
     );
 
 
-    /*
-      Automaticky skontrolujeme fotografie
-      01.jpeg až 50.jpeg.
-    */
-
     createAutomaticGallery(
       project,
       projectIndex
@@ -502,15 +478,15 @@ function renderProjects() {
 /* ==================================================
    AUTOMATICKÁ GALÉRIA
 
-   WEB SKÚSI:
+   Automaticky skúša:
    01.jpeg
    02.jpeg
    03.jpeg
    ...
    50.jpeg
 
-   EXISTUJÚCE FOTKY ZOBRAZÍ.
-   NEEXISTUJÚCE IGNORUJE.
+   Existujúce fotky zobrazí.
+   Neexistujúce fotky odstráni.
 ================================================== */
 
 function createAutomaticGallery(
@@ -547,18 +523,17 @@ function createAutomaticGallery(
     "/";
 
 
-  let loadedPhotos = 0;
-
-
   /*
     Na začiatku galériu skryjeme.
-
-    Zobrazí sa až vtedy,
-    keď sa nájde aspoň jedna fotografia.
+    Zobrazí sa hneď po nájdení
+    prvej existujúcej fotografie.
   */
 
   galleryArea.style.display =
     "none";
+
+
+  let foundPhotos = 0;
 
 
   for (
@@ -593,9 +568,16 @@ function createAutomaticGallery(
       "button"
     );
 
+
     galleryItem.setAttribute(
       "tabindex",
       "0"
+    );
+
+
+    galleryItem.setAttribute(
+      "data-photo-path",
+      photoPath
     );
 
 
@@ -603,56 +585,46 @@ function createAutomaticGallery(
       document.createElement("img");
 
 
-    image.src =
-      photoPath;
-
     image.alt =
       (project.nazov || "Projekt") +
       " - fotografia " +
       photoNumber;
+
 
     image.loading =
       "lazy";
 
 
     /*
-      Ak fotografia existuje,
-      pridáme ju do galérie.
+      DÔLEŽITÉ:
+      Najskôr nastavíme load/error
+      a AŽ POTOM image.src.
+
+      Takto nám prehliadač nepreskočí
+      kontrolu ani pri fotke z cache.
     */
 
-    image.addEventListener(
-      "load",
+    image.onload =
       function() {
 
-        loadedPhotos++;
+        foundPhotos++;
 
         galleryArea.style.display =
           "";
 
-      }
-    );
+      };
 
 
-    /*
-      Ak fotografia neexistuje,
-      celý jej blok odstránime.
-
-      Preto sa nikdy nezobrazí
-      rozbitý obrázok.
-    */
-
-    image.addEventListener(
-      "error",
+    image.onerror =
       function() {
 
         galleryItem.remove();
 
-      }
-    );
+      };
 
 
     /*
-      Kliknutie otvorí fotografiu.
+      Kliknutie na fotografiu.
     */
 
     galleryItem.addEventListener(
@@ -669,7 +641,7 @@ function createAutomaticGallery(
 
 
     /*
-      Ovládanie klávesnicou.
+      Enter alebo medzerník.
     */
 
     galleryItem.addEventListener(
@@ -702,6 +674,14 @@ function createAutomaticGallery(
     gallery.appendChild(
       galleryItem
     );
+
+
+    /*
+      SRC nastavujeme úplne nakoniec.
+    */
+
+    image.src =
+      photoPath;
 
   }
 
@@ -745,11 +725,6 @@ function activateProjectButtons() {
           return;
         }
 
-
-        /*
-          Zavrieme prípadný iný
-          otvorený projekt.
-        */
 
         document
           .querySelectorAll(
@@ -1023,11 +998,6 @@ function openLightboxFromGallery(
   }
 
 
-  /*
-    Zoberieme iba fotografie,
-    ktoré sa reálne načítali.
-  */
-
   const loadedImages =
     gallery.querySelectorAll(
       ".project-gallery-item img"
@@ -1131,11 +1101,6 @@ function updateLightbox() {
       ".lightbox-next"
     );
 
-
-  /*
-    Pri jednej fotografii
-    šípky nepotrebujeme.
-  */
 
   if (
     currentGalleryPhotos.length <= 1
