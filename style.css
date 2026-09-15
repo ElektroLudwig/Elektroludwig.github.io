@@ -1966,3 +1966,168 @@ section,
   }
 
 }
+/* ==================================================
+   REALIZÁCIA PRE – ODDELENIE OD POPISU
+================================================== */
+
+.project-realization-for {
+  margin: -5px 0 22px;
+  color: #222;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.project-realization-for strong {
+  font-weight: 700;
+}
+
+.project-detail-realization-for {
+  margin-top: 13px;
+  color: #444;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.project-detail-realization-for strong {
+  color: #111;
+  font-weight: 700;
+}
+
+
+/* ==================================================
+   ODSEKY V DETAILNOM POPISE PROJEKTU
+================================================== */
+
+.project-detail-description p {
+  margin: 0 0 20px;
+}
+
+.project-detail-description p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* ==================================================
+   ĎALŠIE REALIZÁCIE A SPOLUPRÁCE
+================================================== */
+
+.additional-realizations {
+  margin-top: 30px;
+  padding: 55px 55px 50px;
+  background: white;
+  border-radius: 8px;
+  border-top: 3px solid #d60000;
+  box-shadow: 0 5px 22px rgba(0, 0, 0, 0.08);
+}
+
+.additional-realizations-inner {
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+.additional-realizations-heading {
+  margin-bottom: 28px;
+}
+
+.additional-realizations-label {
+  display: block;
+  margin-bottom: 10px;
+  color: #d60000;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1.7px;
+  text-transform: uppercase;
+}
+
+.additional-realizations-heading h2 {
+  margin: 0;
+  color: #111;
+  font-size: 30px;
+  line-height: 1.25;
+}
+
+.additional-projects-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 32px;
+}
+
+.additional-project-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 9px 14px;
+  background: #f3f3f3;
+  border-left: 3px solid #d60000;
+  border-radius: 3px;
+  color: #222;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.additional-realizations-description {
+  max-width: 950px;
+}
+
+.additional-realizations-description p {
+  margin: 0 0 20px;
+  color: #444;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.additional-realizations-description p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* ==================================================
+   NOVÉ PRVKY – TABLET
+================================================== */
+
+@media (max-width: 950px) {
+  .additional-realizations {
+    padding: 45px 40px;
+  }
+}
+
+
+/* ==================================================
+   NOVÉ PRVKY – MOBIL
+================================================== */
+
+@media (max-width: 800px) {
+  .project-realization-for {
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
+
+  .project-detail-realization-for {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+
+  .additional-realizations {
+    margin-top: 15px;
+    padding: 35px 23px;
+  }
+
+  .additional-realizations-heading h2 {
+    font-size: 26px;
+  }
+
+  .additional-projects-list {
+    gap: 8px;
+    margin-bottom: 27px;
+  }
+
+  .additional-project-tag {
+    padding: 8px 11px;
+    font-size: 13px;
+  }
+
+  .additional-realizations-description p {
+    font-size: 15px;
+    line-height: 1.75;
+  }
+}
