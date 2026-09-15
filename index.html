@@ -100,7 +100,7 @@
 
 
     /* ==================================================
-       JAZYKY
+       JAZYKY - OPRAVENÉ ROZBAĽOVANIE
     ================================================== */
 
     .language-switcher {
@@ -111,49 +111,107 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 60px;
+      gap: 5px;
+      min-width: 65px;
       height: 28px;
+      padding: 0 8px;
       font-size: 14px;
       border-radius: 5px;
       cursor: pointer;
       transition: 0.2s;
     }
 
-    .language-current:hover {
+    .language-current .language-arrow {
+      font-size: 9px;
+      margin-left: 2px;
+      transition: transform 0.25s ease;
+    }
+
+    .language-switcher:hover .language-current {
       background: #d60000;
       color: white;
-      transform: scale(1.1);
+    }
+
+    .language-switcher:hover .language-arrow {
+      transform: rotate(180deg);
     }
 
     .language-menu {
-      display: none;
       position: absolute;
-      top: 35px;
+      top: calc(100% + 10px);
       right: 0;
+      min-width: 165px;
       background: white;
-      min-width: 120px;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+      border-top: 3px solid #d60000;
+      border-radius: 0 0 6px 6px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.16);
+      padding: 7px 0;
+
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+
+      transform: translateY(8px);
+
+      transition:
+        opacity 0.2s ease,
+        transform 0.2s ease,
+        visibility 0.2s ease;
+
       z-index: 9999;
     }
 
-    .language-menu a {
-      display: block;
-      width: auto;
-      height: auto;
-      padding: 10px;
-      color: black;
-      font-size: 14px;
-      border-radius: 0;
-    }
-
-    .language-menu a:hover {
-      background: #d60000;
-      color: white;
-      transform: none;
+    /* Neviditeľný most medzi SK a rozbaľovacím menu */
+    .language-menu::before {
+      content: "";
+      position: absolute;
+      top: -13px;
+      left: 0;
+      width: 100%;
+      height: 13px;
     }
 
     .language-switcher:hover .language-menu {
-      display: block;
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+
+    .language-menu a {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 10px;
+
+      width: 100%;
+      height: auto;
+
+      padding: 12px 16px;
+
+      color: #222;
+      text-decoration: none;
+
+      font-size: 14px;
+      font-weight: 600;
+
+      border-radius: 0;
+
+      transition: 0.2s;
+    }
+
+    .language-menu a i {
+      width: 17px;
+      color: #d60000;
+      text-align: center;
+      flex-shrink: 0;
+    }
+
+    .language-menu a:hover {
+      background: #f5f5f5;
+      color: #d60000;
+      transform: none;
+      padding-left: 20px;
     }
 
 
@@ -1284,17 +1342,40 @@
         <i class="fas fa-phone"></i>
       </a>
 
+
+      <!-- ==================================================
+           JAZYKY
+      ================================================== -->
+
       <div class="language-switcher">
 
         <div class="language-current">
-          <i class="fas fa-globe"></i>&nbsp;SK
+
+          <i class="fas fa-globe"></i>
+
+          <span>SK</span>
+
+          <i class="fas fa-chevron-down language-arrow"></i>
+
         </div>
+
 
         <div class="language-menu">
 
-          <a href="#">Slovenčina</a>
-          <a href="#">Deutsch</a>
-          <a href="#">English</a>
+          <a href="#">
+            <i class="fas fa-check"></i>
+            Slovenčina
+          </a>
+
+          <a href="#">
+            <i class="fas fa-language"></i>
+            Deutsch
+          </a>
+
+          <a href="#">
+            <i class="fas fa-language"></i>
+            English
+          </a>
 
         </div>
 
