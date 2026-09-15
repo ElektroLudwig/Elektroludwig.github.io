@@ -205,26 +205,33 @@
 
 
     /* ==================================================
-       LOGO
+       LOGO - KOMPAKTNEJŠIA HLAVIČKA
     ================================================== */
 
     .header {
       text-align: center;
-      padding: 0;
+      height: 205px;
       margin: 0;
+      padding: 0 20px;
       background: white;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .home-logo-link {
-      display: inline-block;
+      display: block;
       text-decoration: none;
       cursor: pointer;
+      line-height: 0;
     }
 
     .logo {
       display: block;
-      max-width: 620px;
-      width: 90%;
+      width: 620px;
+      max-width: 90vw;
+      height: auto;
       margin: 0 auto;
     }
 
@@ -913,9 +920,6 @@
       box-shadow: 0 5px 20px rgba(0,0,0,0.15);
     }
 
-
-    /* VNÚTORNÉ DELENIE KONTAKTU = SIVÉ */
-
     .contact-divider {
       max-width: 1200px;
       height: 1px;
@@ -1272,8 +1276,14 @@
         padding: 3px 15px;
       }
 
+      .header {
+        height: 155px;
+        padding: 0 12px;
+      }
+
       .logo {
-        max-width: 350px;
+        width: 390px;
+        max-width: 92vw;
       }
 
       .navigation-wrapper {
@@ -1675,7 +1685,6 @@
   </div>
 
 
-  <!-- ČERVENÁ ČIARA MEDZI HERO A O NÁS -->
   <div class="main-section-divider"></div>
 
 
@@ -1746,7 +1755,6 @@
   </section>
 
 
-  <!-- ČERVENÁ ČIARA MEDZI O NÁS A OBLASŤAMI -->
   <div class="main-section-divider"></div>
 
 
@@ -1788,12 +1796,7 @@
         <div class="realization-card reveal reveal-delay-1">
 
           <div class="realization-image">
-
-            <img
-              src="domovska2.png"
-              alt="Elektroinštalácie Elektro Ludwig"
-            >
-
+            <img src="domovska2.png" alt="Elektroinštalácie Elektro Ludwig">
           </div>
 
           <div class="realization-content">
@@ -1806,10 +1809,7 @@
               rozvádzače, zásuvkové a technologické okruhy.
             </p>
 
-            <a
-              href="#detail-elektroinstalacie"
-              class="realization-button"
-            >
+            <a href="#detail-elektroinstalacie" class="realization-button">
               Viac informácií
               <i class="fas fa-arrow-right"></i>
             </a>
@@ -1822,12 +1822,7 @@
         <div class="realization-card reveal reveal-delay-2">
 
           <div class="realization-image">
-
-            <img
-              src="domovska3.png"
-              alt="Priemyselné elektroinštalácie a automatizácia"
-            >
-
+            <img src="domovska3.png" alt="Priemyselné elektroinštalácie a automatizácia">
           </div>
 
           <div class="realization-content">
@@ -1839,10 +1834,7 @@
               výrobných zariadení a automatizovaných systémov.
             </p>
 
-            <a
-              href="#detail-priemysel"
-              class="realization-button"
-            >
+            <a href="#detail-priemysel" class="realization-button">
               Viac informácií
               <i class="fas fa-arrow-right"></i>
             </a>
@@ -1855,12 +1847,7 @@
         <div class="realization-card reveal reveal-delay-3">
 
           <div class="realization-image">
-
-            <img
-              src="domovska4.png"
-              alt="Elektroinštalácie výrobných a priemyselných hál"
-            >
-
+            <img src="domovska4.png" alt="Elektroinštalácie výrobných a priemyselných hál">
           </div>
 
           <div class="realization-content">
@@ -1873,10 +1860,7 @@
               skladových a logistických objektoch.
             </p>
 
-            <a
-              href="#detail-haly"
-              class="realization-button"
-            >
+            <a href="#detail-haly" class="realization-button">
               Viac informácií
               <i class="fas fa-arrow-right"></i>
             </a>
@@ -1892,7 +1876,6 @@
   </section>
 
 
-  <!-- ČERVENÁ ČIARA MEDZI PREHĽADOM A DETAILMI -->
   <div class="main-section-divider"></div>
 
 
@@ -1928,12 +1911,7 @@
       <div class="detail-block reveal" id="detail-elektroinstalacie">
 
         <div class="detail-image">
-
-          <img
-            src="domovska2.png"
-            alt="Kompletné elektroinštalácie"
-          >
-
+          <img src="domovska2.png" alt="Kompletné elektroinštalácie">
         </div>
 
         <div class="detail-content">
@@ -1976,18 +1954,10 @@
       </div>
 
 
-      <div
-        class="detail-block reverse reveal"
-        id="detail-priemysel"
-      >
+      <div class="detail-block reverse reveal" id="detail-priemysel">
 
         <div class="detail-image">
-
-          <img
-            src="domovska3.png"
-            alt="Priemysel a automatizácia"
-          >
-
+          <img src="domovska3.png" alt="Priemysel a automatizácia">
         </div>
 
         <div class="detail-content">
@@ -2034,12 +2004,7 @@
       <div class="detail-block reveal" id="detail-haly">
 
         <div class="detail-image">
-
-          <img
-            src="domovska4.png"
-            alt="Výrobné a priemyselné haly"
-          >
-
+          <img src="domovska4.png" alt="Výrobné a priemyselné haly">
         </div>
 
         <div class="detail-content">
@@ -2087,7 +2052,6 @@
   </section>
 
 
-  <!-- ČERVENÁ ČIARA MEDZI SLUŽBAMI A REFERENCIAMI -->
   <div class="main-section-divider"></div>
 
 
@@ -2095,10 +2059,7 @@
        KDE SME PRACOVALI
   ================================================== -->
 
-  <section
-    class="projects-section section-shell"
-    id="projekty"
-  >
+  <section class="projects-section section-shell" id="projekty">
 
     <div class="section-container">
 
@@ -2161,7 +2122,6 @@
   </section>
 
 
-  <!-- ČERVENÁ ČIARA MEDZI REFERENCIAMI A KONTAKTOM -->
   <div class="main-section-divider"></div>
 
 
@@ -2169,13 +2129,9 @@
        KONTAKT
   ================================================== -->
 
-  <section
-    class="contact-section section-shell"
-    id="kontakt"
-  >
+  <section class="contact-section section-shell" id="kontakt">
 
     <div class="section-container">
-
 
       <div class="contact-header reveal">
 
@@ -2211,18 +2167,13 @@
             <i class="fas fa-location-dot"></i>
 
             <div>
-
-              <strong>
-                Sídlo spoločnosti
-              </strong>
-
+              <strong>Sídlo spoločnosti</strong>
               <br>
               Kochanovce 84
               <br>
               066 01 Kochanovce
               <br>
               Slovenská republika
-
             </div>
 
           </div>
@@ -2233,11 +2184,9 @@
             <i class="fas fa-building"></i>
 
             <div>
-
               <strong>IČO</strong>
               <br>
               55 110 088
-
             </div>
 
           </div>
@@ -2260,41 +2209,31 @@
       </div>
 
 
-      <!-- SIVÁ ČIARA VNÚTRI KONTAKTU -->
       <div class="contact-divider"></div>
 
 
       <div class="contact-people reveal reveal-delay-2">
 
-
         <div class="person">
 
-          <h3>
-            Konateľ firmy
-          </h3>
+          <h3>Konateľ firmy</h3>
 
           <div class="person-name">
             Ľudovít Hudák
           </div>
 
           <div class="person-detail">
-
             <i class="fas fa-envelope"></i>
-
             <a href="mailto:ludovit.hudak.elektroludwig@gmail.com">
               ludovit.hudak.elektroludwig@gmail.com
             </a>
-
           </div>
 
           <div class="person-detail">
-
             <i class="fas fa-phone"></i>
-
             <a href="tel:+421940860363">
               +421 940 860 363
             </a>
-
           </div>
 
         </div>
@@ -2302,32 +2241,24 @@
 
         <div class="person">
 
-          <h3>
-            Elektromajster
-          </h3>
+          <h3>Elektromajster</h3>
 
           <div class="person-name">
             Vladimír Mendel
           </div>
 
           <div class="person-detail">
-
             <i class="fas fa-envelope"></i>
-
             <a href="mailto:vladimir.mendel.elektroludwig@gmail.com">
               vladimir.mendel.elektroludwig@gmail.com
             </a>
-
           </div>
 
           <div class="person-detail">
-
             <i class="fas fa-phone"></i>
-
             <a href="tel:+421904162593">
               +421 904 162 593
             </a>
-
           </div>
 
         </div>
@@ -2335,32 +2266,24 @@
 
         <div class="person">
 
-          <h3>
-            Ekonomické oddelenie
-          </h3>
+          <h3>Ekonomické oddelenie</h3>
 
           <div class="person-name empty">
             &nbsp;
           </div>
 
           <div class="person-detail">
-
             <i class="fas fa-envelope"></i>
-
             <a href="mailto:faktury.hudak@gmail.com">
               faktury.hudak@gmail.com
             </a>
-
           </div>
 
           <div class="person-detail">
-
             <i class="fas fa-phone"></i>
-
             <a href="tel:+421940860363">
               +421 940 860 363
             </a>
-
           </div>
 
         </div>
@@ -2370,7 +2293,6 @@
 
       <!-- ==================================================
            KONTAKTNÝ FORMULÁR
-           SIVÁ ČIARA = STÁLE SÚČASŤ KONTAKTU
       ================================================== -->
 
       <div class="inquiry-area reveal">
@@ -2393,65 +2315,49 @@
         </div>
 
 
-        <form
-          class="inquiry-form"
-          id="inquiryForm"
-        >
+        <form class="inquiry-form" id="inquiryForm">
 
           <div class="form-grid">
 
-
             <div class="form-group">
-
               <i class="fas fa-user"></i>
-
               <input
                 type="text"
                 name="name"
                 placeholder="Meno a priezvisko *"
                 required
               >
-
             </div>
 
 
             <div class="form-group">
-
               <i class="fas fa-building"></i>
-
               <input
                 type="text"
                 name="company"
                 placeholder="Spoločnosť"
               >
-
             </div>
 
 
             <div class="form-group">
-
               <i class="fas fa-envelope"></i>
-
               <input
                 type="email"
                 name="email"
                 placeholder="E-mail *"
                 required
               >
-
             </div>
 
 
             <div class="form-group">
-
               <i class="fas fa-phone"></i>
-
               <input
                 type="tel"
                 name="phone"
                 placeholder="Telefón"
               >
-
             </div>
 
 
@@ -2459,10 +2365,7 @@
 
               <i class="fas fa-list"></i>
 
-              <select
-                name="subject"
-                required
-              >
+              <select name="subject" required>
 
                 <option value="" selected disabled>
                   Vyberte typ dopytu *
@@ -2535,7 +2438,6 @@
               <i class="fas fa-paper-plane"></i>
             </button>
 
-
             <div
               class="form-message"
               id="formMessage"
@@ -2547,13 +2449,11 @@
 
       </div>
 
-
     </div>
 
   </section>
 
 
-  <!-- ČERVENÁ ČIARA = KONIEC HLAVNEJ SEKCIE KONTAKT -->
   <div class="main-section-divider"></div>
 
 
@@ -2593,14 +2493,8 @@
 
   <script>
 
-
-    /* ==================================================
-       ANIMÁCIE
-    ================================================== */
-
     const revealElements =
       document.querySelectorAll(".reveal");
-
 
     const revealObserver =
       new IntersectionObserver(
@@ -2620,7 +2514,6 @@
         }
       );
 
-
     revealElements.forEach(function(element) {
       revealObserver.observe(element);
     });
@@ -2637,10 +2530,8 @@
       document.getElementById("kontakt")
     ];
 
-
     const menuLinks =
       document.querySelectorAll(".menu [data-section]");
-
 
     function updateActiveMenu() {
 
@@ -2660,7 +2551,6 @@
 
       });
 
-
       menuLinks.forEach(function(link) {
 
         link.classList.remove("active");
@@ -2674,7 +2564,6 @@
       });
 
     }
-
 
     window.addEventListener(
       "scroll",
@@ -2693,7 +2582,6 @@
 
     const dropdownToggle =
       document.getElementById("dropdownToggle");
-
 
     dropdownToggle.addEventListener(
       "click",
@@ -2719,12 +2607,10 @@
       }
     );
 
-
     const dropdownLinks =
       document.querySelectorAll(
         ".dropdown-menu a"
       );
-
 
     dropdownLinks.forEach(function(link) {
 
@@ -2745,7 +2631,6 @@
       );
 
     });
-
 
     document.addEventListener(
       "click",
@@ -2781,7 +2666,6 @@
     const formMessage =
       document.getElementById("formMessage");
 
-
     inquiryForm.addEventListener(
       "submit",
       function(event) {
@@ -2795,7 +2679,6 @@
 
       }
     );
-
 
   </script>
 
