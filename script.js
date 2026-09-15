@@ -232,6 +232,31 @@ function escapeProjectText(value) {
 
 
 /* ==================================================
+   FORMÁTOVANIE DLHÉHO TEXTU PROJEKTU
+================================================== */
+
+function formatProjectDescription(value) {
+
+  const safeText =
+    escapeProjectText(value || "");
+
+  return safeText
+    .split(/\n\s*\n/)
+    .map(function(paragraph) {
+
+      return `
+        <p>
+          ${paragraph.replace(/\n/g, "<br>")}
+        </p>
+      `;
+
+    })
+    .join("");
+
+}
+
+
+/* ==================================================
    VYTVORENIE PROJEKTOV
 ================================================== */
 
@@ -284,13 +309,18 @@ function renderProjects() {
     const projectYear =
       escapeProjectText(project.rok || "");
 
+    const projectRealizationFor =
+      escapeProjectText(
+        project.realizaciaPre || ""
+      );
+
     const projectShortDescription =
       escapeProjectText(
         project.kratkyPopis || ""
       );
 
     const projectDescription =
-      escapeProjectText(
+      formatProjectDescription(
         project.popis || ""
       );
 
@@ -326,10 +356,10 @@ function renderProjects() {
           ${
             projectYear
               ? `
-                <div class="project-year">
-                  ${projectYear}
-                </div>
-              `
+                  <div class="project-year">
+                    ${projectYear}
+                  </div>
+                `
               : ""
           }
 
@@ -341,20 +371,31 @@ function renderProjects() {
           ${
             projectLocation
               ? `
-                <div class="project-location">
+                  <div class="project-location">
 
-                  <i class="fas fa-location-dot"></i>
+                    <i class="fas fa-location-dot"></i>
 
-                  ${projectLocation}
+                    ${projectLocation}
 
-                </div>
-              `
+                  </div>
+                `
               : ""
           }
 
           <h2>
             ${projectName}
           </h2>
+
+          ${
+            projectRealizationFor
+              ? `
+                  <div class="project-realization-for">
+                    <strong>Realizácia pre:</strong>
+                    ${projectRealizationFor}
+                  </div>
+                `
+              : ""
+          }
 
           <p>
             ${projectShortDescription}
@@ -389,26 +430,37 @@ function renderProjects() {
             ${
               projectLocation
                 ? `
-                  <div class="project-detail-location">
+                    <div class="project-detail-location">
 
-                    <i class="fas fa-location-dot"></i>
+                      <i class="fas fa-location-dot"></i>
 
-                    ${projectLocation}
+                      ${projectLocation}
 
-                    ${
-                      projectYear
-                        ? ` · ${projectYear}`
-                        : ""
-                    }
+                      ${
+                        projectYear
+                          ? ` · ${projectYear}`
+                          : ""
+                      }
 
-                  </div>
-                `
+                    </div>
+                  `
                 : ""
             }
 
             <h2>
               ${projectName}
             </h2>
+
+            ${
+              projectRealizationFor
+                ? `
+                    <div class="project-detail-realization-for">
+                      <strong>Realizácia pre:</strong>
+                      ${projectRealizationFor}
+                    </div>
+                  `
+                : ""
+            }
 
           </div>
 
@@ -429,9 +481,7 @@ function renderProjects() {
 
         <div class="project-detail-description">
 
-          <p>
-            ${projectDescription}
-          </p>
+          ${projectDescription}
 
         </div>
 
@@ -470,7 +520,108 @@ function renderProjects() {
   });
 
 
+  renderAdditionalRealizations();
+
   activateProjectButtons();
+
+}
+
+
+/* ==================================================
+   ĎALŠIE REALIZÁCIE A SPOLUPRÁCE
+================================================== */
+
+function renderAdditionalRealizations() {
+
+  if (
+    !projectsList ||
+    typeof dalsieRealizacie === "undefined" ||
+    !dalsieRealizacie
+  ) {
+    return;
+  }
+
+
+  const additionalSection =
+    document.createElement("section");
+
+  additionalSection.className =
+    "additional-realizations";
+
+
+  const additionalName =
+    escapeProjectText(
+      dalsieRealizacie.nazov ||
+      "Ďalšie realizácie a spolupráce"
+    );
+
+
+  const additionalProjects =
+    Array.isArray(dalsieRealizacie.projekty)
+      ? dalsieRealizacie.projekty
+      : [];
+
+
+  const additionalDescription =
+    formatProjectDescription(
+      dalsieRealizacie.popis || ""
+    );
+
+
+  const projectTags =
+    additionalProjects
+      .map(function(projectName) {
+
+        return `
+          <span class="additional-project-tag">
+            ${escapeProjectText(projectName)}
+          </span>
+        `;
+
+      })
+      .join("");
+
+
+  additionalSection.innerHTML = `
+
+    <div class="additional-realizations-inner">
+
+      <div class="additional-realizations-heading">
+
+        <span class="additional-realizations-label">
+          Ďalšie skúsenosti
+        </span>
+
+        <h2>
+          ${additionalName}
+        </h2>
+
+      </div>
+
+
+      ${
+        projectTags
+          ? `
+              <div class="additional-projects-list">
+                ${projectTags}
+              </div>
+            `
+          : ""
+      }
+
+
+      <div class="additional-realizations-description">
+        ${additionalDescription}
+      </div>
+
+    </div>
+
+  `;
+
+
+  projectsList.appendChild(
+    additionalSection
+  );
 
 }
 
@@ -589,7 +740,6 @@ function createAutomaticGallery(
       (project.nazov || "Projekt") +
       " - fotografia " +
       photoNumber;
-
 
 
     /*
