@@ -612,42 +612,43 @@
         <p class="projects-intro">
           Naše skúsenosti vznikali priamo na realizáciách rôzneho rozsahu –
           od budov a škôl až po výrobné, priemyselné a logistické projekty.
+          Pozrite si vybrané realizácie a rozsah prác, na ktorých sme sa podieľali.
         </p>
 
       </div>
 
 
-      <div class="projects-placeholder reveal reveal-delay-1">
+      <!--
+        SEM SA AUTOMATICKY NAČÍTAJÚ PROJEKTY
+        ZO SÚBORU projekty.js
+      -->
 
-        <div>
+      <div
+        class="projects-list"
+        id="projectsList"
+      ></div>
 
-          <h2>
-            Projekty a realizácie
-          </h2>
 
-          <p>
-            Túto časť doplníme konkrétnymi stavbami, fotografiami,
-            lokalitou a rozsahom vykonaných elektroinštalačných prác.
-            Vďaka tomu bude možné ukázať nielen to, čo realizujeme,
-            ale aj konkrétne skúsenosti z už dokončených alebo
-            prebiehajúcich projektov.
-          </p>
+      <!--
+        ZOBRAZÍ SA LEN V PRÍPADE,
+        ŽE V projekty.js ZATIAĽ NIE JE ŽIADNY PROJEKT
+      -->
 
-        </div>
+      <div
+        class="projects-empty"
+        id="projectsEmpty"
+      >
 
-        <div class="projects-stat">
+        <i class="fas fa-hard-hat"></i>
 
-          <i class="fas fa-industry"></i>
+        <h2>
+          Referencie pripravujeme
+        </h2>
 
-          <strong>
-            Reálne projekty
-          </strong>
-
-          <span>
-            doma aj v zahraničí
-          </span>
-
-        </div>
+        <p>
+          Postupne dopĺňame fotografie a informácie
+          z našich realizovaných projektov.
+        </p>
 
       </div>
 
@@ -1020,7 +1021,11 @@
   </div>
 
 
-  <script src="script.js"></script>
+  <!-- ==================================================
+       JAVASCRIPT
+  ================================================== -->
+
+  <script src="projekty.js"></script>
   <script src="script.js"></script>
 
 </body>
