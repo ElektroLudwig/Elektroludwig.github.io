@@ -13,9 +13,6 @@
   font-weight: 700;
 }
 
-
-/* Realizácia pre v otvorenom detaile projektu */
-
 .project-detail-realization-for {
   margin-top: 13px;
   color: #444;
@@ -27,9 +24,6 @@
   color: #111;
   font-weight: 700;
 }
-
-
-/* Viac priestoru medzi odsekmi dlhého popisu */
 
 .project-detail-description p {
   margin: 0 0 20px;
@@ -50,7 +44,7 @@
   background: white;
   border-radius: 8px;
   border-top: 3px solid #d60000;
-  box-shadow: 0 5px 22px rgba(0,0,0,0.08);
+  box-shadow: 0 5px 22px rgba(0, 0, 0, 0.08);
 }
 
 .additional-realizations-inner {
@@ -79,9 +73,6 @@
   line-height: 1.25;
 }
 
-
-/* Názvy menších projektov */
-
 .additional-projects-list {
   display: flex;
   flex-wrap: wrap;
@@ -101,9 +92,6 @@
   font-weight: 700;
 }
 
-
-/* Text ďalších realizácií */
-
 .additional-realizations-description {
   max-width: 950px;
 }
@@ -121,24 +109,21 @@
 
 
 /* ==================================================
-   NOVÉ PRVKY PROJEKTOV – TABLET
+   TABLET
 ================================================== */
 
 @media (max-width: 950px) {
-
   .additional-realizations {
     padding: 45px 40px;
   }
-
 }
 
 
 /* ==================================================
-   NOVÉ PRVKY PROJEKTOV – MOBIL
+   MOBIL
 ================================================== */
 
 @media (max-width: 800px) {
-
   .project-realization-for {
     margin-bottom: 20px;
     font-size: 14px;
@@ -172,5 +157,4 @@
     font-size: 15px;
     line-height: 1.75;
   }
-
 }
