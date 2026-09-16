@@ -28,7 +28,7 @@ window.elektroLudwigLanguages.en = {
     attr3: "Phone",
 
     text4: "About us",
-    text5: "Areas of expertise",
+    text5: "Our services",
     attr6: "Show submenu",
 
     text7:
@@ -38,7 +38,7 @@ window.elektroLudwigLanguages.en = {
       '<i class="fas fa-gears"></i> Industry and automation',
 
     text9:
-      '<i class="fas fa-industry"></i> Production and industrial halls',
+      '<i class="fas fa-industry"></i> Manufacturing and industrial halls',
 
     attr10:
       "Elektro Ludwig - More than just electricity",
@@ -50,49 +50,49 @@ window.elektroLudwigLanguages.en = {
       "About <span>us</span>",
 
     text13:
-      "<strong>Elektro Ludwig s.r.o.</strong> is a Slovak electrical installation company working mainly on projects in Slovakia and abroad. Although the company in its current legal form has operated since its establishment as a limited liability company, our experience goes back much further.",
+      "<strong>Elektro Ludwig s.r.o.</strong> is a Slovak electrical installation company working on projects both at home and abroad. Although the company has operated in its current legal form since its incorporation as a limited liability company, our experience goes back much further.",
 
     text14:
-      "Before Elektro Ludwig s.r.o. was established, we carried out electrical installation work as a sole trader under <strong>Ľudovít Hudák</strong>, who is now the company's managing director. Our history therefore does not begin with the registration of the limited liability company, but with years of practical experience directly on construction sites and extensive electrical installation projects.",
+      "Before Elektro Ludwig s.r.o. was established, we carried out electrical installation work through the sole trader business of <strong>Ľudovít Hudák</strong>, who is now the company's managing director. Our history therefore begins with years of hands-on experience on construction sites and major electrical installation projects, well before the company's entry in the commercial register.",
 
     text15:
-      "Over the years, we have worked on many different types of facilities – from <strong>schools and office buildings to production and industrial halls, automated production lines and logistics centres</strong>.",
+      "Over the years, we have worked on a wide range of facilities – from <strong>schools and office buildings to manufacturing and industrial halls, automated production lines and logistics centres</strong>.",
 
     text16:
-      "Our experience includes complete electrical installations for buildings, including power and low-current systems, lighting, emergency lighting, security systems, distribution boards, power supplies for individual technologies, outdoor lighting, car parks and other systems required for the safe and reliable operation of a facility.",
+      "Our experience covers complete building electrical installations, including power and low-current systems, lighting, emergency lighting, security systems, distribution boards, power supplies for equipment, outdoor and car park lighting, and other systems essential to the safe and reliable operation of a facility.",
 
     text17:
-      "For industrial projects, we carry out electrical installations in production halls, power supplies for machines and technological equipment, cable containment, distribution boards, control and signalling components, as well as complete electrical connections for individual technologies.",
+      "On industrial projects, we carry out electrical installations in production halls, power feeds and supplies for machinery and process equipment, cable containment systems, distribution boards, control and signalling components, and complete equipment wiring.",
 
     text18:
-      "A separate area of our expertise is <strong>industrial automation</strong>. We have participated in the implementation of automated production and logistics systems, providing the complete electrical installation required for automation – from cable containment and cabling to the connection of sensors, motors, control cabinets and individual technology components.",
+      "<strong>Industrial automation</strong> is another area of our expertise. We have contributed to automated production and logistics systems, providing the complete electrical installation needed for their operation – from cable containment and cabling to the connection of sensors, motors, control cabinets and individual equipment components.",
 
     text19:
-      "Thanks to our experience with different types of projects, we can provide everything from standard electrical installations to extensive industrial and automation projects.",
+      "Our experience across different types of construction allows us to deliver everything from standard electrical installations to large-scale industrial and automation projects.",
 
     text20:
-      "Simply put – wherever electrical power, cabling, control systems or technology are required, we can find a solution.",
+      "Put simply – wherever electrical power, cabling, control or equipment is needed, we can find a solution.",
 
     text21:
       "Our expertise",
 
     text22:
-      "Areas of <span>expertise</span>",
+      "Our <span>services</span>",
 
     text23:
-      "From building electrical installations to extensive industrial and automation projects. We carry out electrical installations, cabling and technology systems for various types of buildings, production facilities and logistics centres.",
+      "From building electrical installations to large-scale industrial and automation projects. We install electrical systems, cabling and equipment for a wide range of buildings, production facilities and logistics operations.",
 
     attr24:
-      "Elektro Ludwig electrical installations",
+      "Electrical installations by Elektro Ludwig",
 
     text25:
       "Electrical installations",
 
     text26:
-      "We carry out complete electrical installations for buildings and facilities – from cable containment and distribution systems to lighting, distribution boards, socket circuits and technology circuits.",
+      "We provide complete electrical installations for buildings and facilities – from cable containment and wiring to lighting, distribution boards, socket circuits and equipment power circuits.",
 
     text27:
-      'More information <i class="fas fa-arrow-right"></i>',
+      'Learn more <i class="fas fa-arrow-right"></i>',
 
     attr28:
       "Industrial electrical installations and automation",
@@ -101,31 +101,31 @@ window.elektroLudwigLanguages.en = {
       "Industry and automation",
 
     text30:
-      "We carry out electrical installations for industrial technologies, production equipment and automated systems.",
+      "We carry out electrical installations for industrial equipment, production machinery and automated systems.",
 
     text31:
-      'More information <i class="fas fa-arrow-right"></i>',
+      'Learn more <i class="fas fa-arrow-right"></i>',
 
     attr32:
-      "Electrical installations for production and industrial halls",
+      "Electrical installations for manufacturing and industrial halls",
 
     text33:
-      "Production and industrial halls",
+      "Manufacturing and industrial halls",
 
     text34:
-      "Complete electrical distribution, cable containment, lighting and power supplies for technology in production, warehouse and logistics facilities.",
+      "Complete electrical distribution, cable containment, lighting and equipment power supplies in production, warehouse and logistics facilities.",
 
     text35:
-      'More information <i class="fas fa-arrow-right"></i>',
+      'Learn more <i class="fas fa-arrow-right"></i>',
 
     text36:
-      "What we provide",
+      "What we deliver",
 
     text37:
-      "From cabling to <span>technology</span>",
+      "From cabling to <span>equipment</span>",
 
     text38:
-      "Our work does not end with simply pulling cables. We participate in electrical installations from cable containment and distribution systems through to connecting individual devices and technologies.",
+      "Our work goes beyond laying cables. We deliver electrical installations from cable containment and distribution systems through to the wiring of individual machines and equipment.",
 
     attr39:
       "Complete electrical installations",
@@ -137,18 +137,18 @@ window.elektroLudwigLanguages.en = {
       "Complete electrical installations",
 
     text42:
-      "We provide electrical installations for both new and existing facilities. Work is carried out according to project documentation and the requirements of each project – from preparing cable routes to the final connection of individual electrical components.",
+      "We provide electrical installations for both new and existing buildings. We work to the project documentation and the requirements of each site – from preparing cable routes to the final connection of individual electrical components.",
 
-    text43: "Power installations",
-    text44: "Low-current installations",
-    text45: "Cable containment and cable ladders",
+    text43: "Power distribution",
+    text44: "Low-current systems",
+    text45: "Cable trays and ladders",
     text46: "Distribution boards",
     text47: "Lighting",
     text48: "Emergency lighting",
     text49: "Socket circuits",
     text50: "Outdoor lighting",
     text51: "Security systems",
-    text52: "Technology power supplies",
+    text52: "Equipment power feeds",
 
     text53:
       'Contact us <i class="fas fa-arrow-right"></i>',
@@ -160,43 +160,43 @@ window.elektroLudwigLanguages.en = {
       "02 / INDUSTRY AND AUTOMATION",
 
     text56:
-      "Industrial technology and automation",
+      "Industrial equipment and automation",
 
     text57:
-      "For industrial projects, we carry out cabling and electrical connections for individual technologies, production equipment and automated systems. We work on projects where power supplies, control systems, sensors and individual technology components need to be integrated into a functional system.",
+      "On industrial projects, we install cabling and electrical connections for process equipment, production machinery and automated systems. We work on projects that bring together power supplies, controls, sensors and individual equipment components into a functioning system.",
 
     text58: "Machine cabling",
-    text59: "Automated production lines",
-    text60: "Sensors",
+    text59: "Automated lines",
+    text60: "Sensors and detectors",
     text61: "Motors and drives",
-    text62: "Control devices",
-    text63: "Signalling devices",
-    text64: "Control cabinets",
-    text65: "Cable containment",
+    text62: "Control components",
+    text63: "Signalling components",
+    text64: "Equipment control cabinets",
+    text65: "Cable containment systems",
     text66: "Logistics systems",
-    text67: "Technology connections",
+    text67: "Equipment wiring",
 
     text68:
       'Contact us <i class="fas fa-arrow-right"></i>',
 
     attr69:
-      "Production and industrial halls",
+      "Manufacturing and industrial halls",
 
     text70:
-      "03 / PRODUCTION AND INDUSTRIAL HALLS",
+      "03 / MANUFACTURING AND INDUSTRIAL HALLS",
 
     text71:
       "Electrical installations for production and logistics halls",
 
     text72:
-      "For large hall projects, we install the electrical infrastructure required for the operation of the entire facility. This may include main cable routes, distribution systems for individual technologies, lighting and power supplies for production or refrigeration equipment.",
+      "On large hall projects, we install the electrical infrastructure needed to operate the entire facility. Work may include main cable routes, wiring for individual systems, lighting and power supplies for production or refrigeration equipment.",
 
     text73: "Main cable routes",
     text74: "Secondary cable routes",
-    text75: "Technology power supplies",
+    text75: "Equipment power supplies",
     text76: "Production equipment",
-    text77: "Logistics technology",
-    text78: "Refrigeration technology",
+    text77: "Logistics equipment",
+    text78: "Refrigeration equipment",
     text79: "Distribution boards",
     text80: "Hall lighting",
     text81: "Emergency lighting",
@@ -206,25 +206,25 @@ window.elektroLudwigLanguages.en = {
       'Contact us <i class="fas fa-arrow-right"></i>',
 
     text84:
-      "References",
+      "Project references",
 
     text85:
       "Where we have <span>worked</span>",
 
     text86:
-      "Our experience has been built directly on projects of various sizes – from buildings and schools to production, industrial and logistics facilities. Take a look at selected projects and the scope of work we have carried out.",
+      "Our experience comes from hands-on work on projects of varying scale – from buildings and schools to manufacturing, industrial and logistics facilities. Explore selected projects and the scope of our work.",
 
     text87:
-      "References are being prepared",
+      "Project references coming soon",
 
     text88:
-      "We are gradually adding photographs and information from our completed projects.",
+      "We are gradually adding photographs and information about our completed projects.",
 
     text89:
       "Contact us",
 
     text90:
-      "We are <span>here for you</span>",
+      "We are <span>here to help</span>",
 
     text91:
       "Elektro Ludwig s. r. o.",
@@ -233,25 +233,25 @@ window.elektroLudwigLanguages.en = {
       "Registered office",
 
     text93:
-      "Company ID",
+      "Company registration number",
 
     text94:
-      "Managing Director",
+      "Managing director",
 
     text95:
-      "Master Electrician",
+      "Electrical supervisor",
 
     text96:
-      "Accounts Department",
+      "Accounts department",
 
     text97:
-      "Do you have a question or are you interested in working with us?",
+      "Have a question or interested in working with us?",
 
     text98:
-      "Write to <span>us</span>",
+      "Get in <span>touch</span>",
 
     text99:
-      "Send us some basic information about your project or request. We will get back to you as soon as possible.",
+      "Send us the basic details of your project or enquiry. We will get back to you as soon as possible.",
 
     attr100:
       "Company",
@@ -272,7 +272,7 @@ window.elektroLudwigLanguages.en = {
       "Industry and automation",
 
     text106:
-      "Production and industrial halls",
+      "Manufacturing and industrial halls",
 
     text107:
       "Other",
@@ -281,7 +281,7 @@ window.elektroLudwigLanguages.en = {
       "Your message *",
 
     text109:
-      "I consent to the processing of the personal data provided for the purpose of handling my enquiry. *",
+      "I consent to the processing of the personal data provided for the purpose of responding to my enquiry. *",
 
     text110:
       "* Required fields",
@@ -296,7 +296,7 @@ window.elektroLudwigLanguages.en = {
       "Email",
 
     country:
-      "Slovak Republic",
+      "Slovakia",
 
     home:
       "Home",
@@ -314,7 +314,7 @@ window.elektroLudwigLanguages.en = {
       "Choose language",
 
     realizationFor:
-      "Implemented for:",
+      "Work carried out for:",
 
     viewProject:
       "View project",
@@ -332,7 +332,7 @@ window.elektroLudwigLanguages.en = {
       "photo",
 
     moreExperience:
-      "Additional experience",
+      "Further experience",
 
     closePhoto:
       "Close photo",
@@ -347,10 +347,10 @@ window.elektroLudwigLanguages.en = {
       "Additional projects and collaborations",
 
     formPending:
-      "The form is not currently sending messages. Please contact us by email or phone.",
+      "This form does not send messages yet. Please contact us by email or phone.",
 
     formNotice:
-      "Sending messages through the form is not yet active. Please use the email address or phone number listed above.",
+      "Sending via this form is not available yet. Please use the email or phone details above.",
 
     requiredField:
       "Please complete this required field.",
