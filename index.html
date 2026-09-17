@@ -17,7 +17,11 @@
   <link rel="stylesheet" href="style.css">
 
   <style>
-    /* Doplnky pre ovládanie jazykov. Pôvodný style.css zostáva zachovaný. */
+    /* ==================================================
+       JAZYKOVÝ PREPÍNAČ
+       Pôvodný style.css zostáva zachovaný.
+    ================================================== */
+
     button.language-current {
       border: 0;
       background: transparent;
@@ -47,8 +51,199 @@
       outline: 2px solid #d60000;
       outline-offset: 3px;
     }
+
+
+    /* ==================================================
+       DOMOVSKÁ FOTKA – PREKLADATEĽNÉ TEXTY
+    ================================================== */
+
+    .home-hero {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .home-hero > img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    /*
+      SLOGAN NA ĽAVEJ STRANE
+    */
+
+    .hero-slogan {
+      position: absolute;
+      left: 6.5%;
+      top: 31%;
+      width: 23%;
+      color: #ffffff;
+      z-index: 2;
+      font-size: clamp(28px, 3.1vw, 66px);
+      font-family: "Brush Script MT", "Segoe Script", cursive;
+      font-style: italic;
+      font-weight: 400;
+      line-height: 1.05;
+      transform: rotate(-3deg);
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.45);
+    }
+
+    /*
+      SPODNÉ 4 INFORMAČNÉ BLOKY
+    */
+
+    .hero-features {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 17.5%;
+      z-index: 3;
+
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+
+      align-items: center;
+    }
+
+    .hero-feature {
+      min-width: 0;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      color: #ffffff;
+    }
+
+    /*
+      Ikony sú súčasťou obrázka.
+      Preto text začína napravo od nich.
+    */
+
+    .hero-feature:nth-child(1) {
+      padding-left: 11%;
+    }
+
+    .hero-feature:nth-child(2) {
+      padding-left: 34%;
+    }
+
+    .hero-feature:nth-child(3) {
+      padding-left: 31%;
+    }
+
+    .hero-feature:nth-child(4) {
+      padding-left: 31%;
+    }
+
+    .hero-feature-title {
+      display: block;
+
+      margin-bottom: 5px;
+
+      font-size: clamp(10px, 1.05vw, 22px);
+      line-height: 1.15;
+
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.01em;
+
+      white-space: nowrap;
+
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.65);
+    }
+
+    .hero-feature-text {
+      display: block;
+
+      font-size: clamp(9px, 0.9vw, 18px);
+      line-height: 1.25;
+
+      font-weight: 400;
+
+      white-space: nowrap;
+
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.65);
+    }
+
+
+    /* ==================================================
+       DOMOVSKÁ FOTKA – TABLET
+    ================================================== */
+
+    @media (max-width: 1000px) {
+
+      .hero-slogan {
+        left: 6%;
+        top: 30%;
+        width: 25%;
+        font-size: clamp(22px, 4vw, 42px);
+      }
+
+      .hero-feature-title {
+        font-size: clamp(8px, 1.25vw, 14px);
+      }
+
+      .hero-feature-text {
+        font-size: clamp(7px, 1.05vw, 12px);
+      }
+    }
+
+
+    /* ==================================================
+       DOMOVSKÁ FOTKA – MOBIL
+    ================================================== */
+
+    @media (max-width: 700px) {
+
+      .hero-slogan {
+        left: 5%;
+        top: 27%;
+        width: 27%;
+        font-size: clamp(17px, 5vw, 30px);
+      }
+
+      .hero-features {
+        height: 18%;
+      }
+
+      .hero-feature-title {
+        font-size: clamp(6px, 1.65vw, 10px);
+        margin-bottom: 2px;
+      }
+
+      .hero-feature-text {
+        font-size: clamp(5px, 1.4vw, 9px);
+      }
+    }
+
+
+    /* ==================================================
+       VEĽMI MALÝ MOBIL
+    ================================================== */
+
+    @media (max-width: 450px) {
+
+      .hero-slogan {
+        left: 5%;
+        top: 26%;
+        width: 29%;
+        font-size: clamp(14px, 5vw, 22px);
+      }
+
+      .hero-feature-title {
+        font-size: 6px;
+      }
+
+      .hero-feature-text {
+        font-size: 5px;
+      }
+    }
+
   </style>
 </head>
+
 
 <body>
 
@@ -87,6 +282,7 @@
 
     </div>
 
+
     <div style="display:flex; gap:10px; align-items:center;">
 
       <a
@@ -97,6 +293,7 @@
       >
         <i class="fas fa-phone"></i>
       </a>
+
 
       <div class="language-switcher">
 
@@ -109,11 +306,14 @@
         >
           <i class="fas fa-globe"></i>
           <span>SK</span>
+
           <i
             class="fas fa-chevron-down language-arrow"
             aria-hidden="true"
           ></i>
+
         </button>
+
 
         <div class="language-menu" id="languageMenu">
 
@@ -127,7 +327,11 @@
             Slovenčina
           </a>
 
-          <a href="#" data-language="en" lang="en">
+          <a
+            href="#"
+            data-language="en"
+            lang="en"
+          >
             <i class="fas fa-language"></i>
             English
           </a>
@@ -139,6 +343,7 @@
     </div>
 
   </div>
+
 
   <!-- ==================================================
        LOGO
@@ -152,14 +357,17 @@
       title="Domov"
       data-i18n-title="home"
     >
+
       <img
         src="logo.png"
         class="logo"
         alt="Elektro Ludwig"
       >
+
     </a>
 
   </div>
+
 
   <!-- ==================================================
        MENU
@@ -177,7 +385,11 @@
         Niečo o nás
       </a>
 
-      <div class="menu-dropdown" id="realizationsDropdown">
+
+      <div
+        class="menu-dropdown"
+        id="realizationsDropdown"
+      >
 
         <div class="menu-dropdown-top">
 
@@ -203,19 +415,29 @@
 
         </div>
 
+
         <div class="dropdown-menu">
 
-          <a href="#detail-elektroinstalacie" data-i18n="text7">
+          <a
+            href="#detail-elektroinstalacie"
+            data-i18n="text7"
+          >
             <i class="fas fa-bolt"></i>
             Elektroinštalácie
           </a>
 
-          <a href="#detail-priemysel" data-i18n="text8">
+          <a
+            href="#detail-priemysel"
+            data-i18n="text8"
+          >
             <i class="fas fa-gears"></i>
             Priemysel a automatizácia
           </a>
 
-          <a href="#detail-haly" data-i18n="text9">
+          <a
+            href="#detail-haly"
+            data-i18n="text9"
+          >
             <i class="fas fa-industry"></i>
             Výrobné a priemyselné haly
           </a>
@@ -224,6 +446,7 @@
 
       </div>
 
+
       <a
         href="#projekty"
         data-section="projekty"
@@ -231,6 +454,7 @@
       >
         Kde sme pracovali
       </a>
+
 
       <a
         href="#kontakt"
@@ -246,37 +470,141 @@
 
   </div>
 
+
   <!-- ==================================================
        DOMOVSKÁ FOTKA
+       TEXTY UŽ NIE SÚ SÚČASŤOU OBRÁZKA
   ================================================== -->
 
   <div class="home-hero">
 
     <img
       src="Domovska.png"
-      alt="Elektro Ludwig - Viac než len elektrina"
-      data-i18n-alt="attr10"
+      alt="Elektro Ludwig"
     >
+
+
+    <!-- SLOGAN -->
+
+    <div
+      class="hero-slogan"
+      data-i18n="heroSlogan"
+    >
+      Viac než len elektrina
+    </div>
+
+
+    <!-- SPODNÉ INFORMÁCIE -->
+
+    <div class="hero-features">
+
+      <div class="hero-feature">
+
+        <strong
+          class="hero-feature-title"
+          data-i18n="heroExperienceTitle"
+        >
+          SKÚSENOSTI
+        </strong>
+
+        <span
+          class="hero-feature-text"
+          data-i18n="heroExperienceText"
+        >
+          Roky praxe v odbore
+        </span>
+
+      </div>
+
+
+      <div class="hero-feature">
+
+        <strong
+          class="hero-feature-title"
+          data-i18n="heroReliabilityTitle"
+        >
+          SPOĽAHLIVOSŤ
+        </strong>
+
+        <span
+          class="hero-feature-text"
+          data-i18n="heroReliabilityText"
+        >
+          Dodržiavame termíny
+        </span>
+
+      </div>
+
+
+      <div class="hero-feature">
+
+        <strong
+          class="hero-feature-title"
+          data-i18n="heroQualityTitle"
+        >
+          KVALITA
+        </strong>
+
+        <span
+          class="hero-feature-text"
+          data-i18n="heroQualityText"
+        >
+          Precízna realizácia
+        </span>
+
+      </div>
+
+
+      <div class="hero-feature">
+
+        <strong
+          class="hero-feature-title"
+          data-i18n="heroFlexibilityTitle"
+        >
+          FLEXIBILITA
+        </strong>
+
+        <span
+          class="hero-feature-text"
+          data-i18n="heroFlexibilityText"
+        >
+          Riešenia na mieru
+        </span>
+
+      </div>
+
+    </div>
 
   </div>
 
+
   <div class="main-section-divider"></div>
+
 
   <!-- ==================================================
        O NÁS
   ================================================== -->
 
-  <section class="about-section section-shell" id="onas">
+  <section
+    class="about-section section-shell"
+    id="onas"
+  >
 
     <div class="section-container about-layout">
 
       <div class="about-heading-side reveal">
 
-        <div class="section-label" data-i18n="text11">
+        <div
+          class="section-label"
+          data-i18n="text11"
+        >
           Elektro Ludwig
         </div>
 
-        <h1 class="section-title" data-i18n="text12">
+        <h1
+          class="section-title"
+          data-i18n="text12"
+        >
           Niečo <span>o nás</span>
         </h1>
 
@@ -284,7 +612,10 @@
 
       </div>
 
-      <div class="about-text-side reveal reveal-delay-1">
+
+      <div
+        class="about-text-side reveal reveal-delay-1"
+      >
 
         <p data-i18n="text13">
           <strong>Elektro Ludwig s.r.o.</strong>
@@ -316,9 +647,11 @@
         </p>
 
         <div class="final-text">
+
           <strong data-i18n="text20">
             Jednoducho – tam, kde je potrebná elektrická energia, kabeláž, riadenie alebo technológia, vieme nájsť riešenie.
           </strong>
+
         </div>
 
       </div>
@@ -327,7 +660,9 @@
 
   </section>
 
+
   <div class="main-section-divider"></div>
+
 
   <!-- ==================================================
        OBLASTI REALIZÁCIE
@@ -342,17 +677,26 @@
 
       <div class="realizations-header reveal">
 
-        <div class="section-label" data-i18n="text21">
+        <div
+          class="section-label"
+          data-i18n="text21"
+        >
           Naše kompetencie
         </div>
 
-        <h1 class="section-title" data-i18n="text22">
+        <h1
+          class="section-title"
+          data-i18n="text22"
+        >
           Oblasti <span>realizácie</span>
         </h1>
 
         <div class="section-line"></div>
 
-        <p class="realizations-intro" data-i18n="text23">
+        <p
+          class="realizations-intro"
+          data-i18n="text23"
+        >
           Od elektroinštalácií budov až po rozsiahle priemyselné
           a automatizačné projekty. Realizujeme elektroinštalácie,
           kabeláž a technologické systémy pre rôzne typy objektov,
@@ -361,21 +705,28 @@
 
       </div>
 
+
       <div class="realizations-grid">
 
-        <div class="realization-card reveal reveal-delay-1">
+        <div
+          class="realization-card reveal reveal-delay-1"
+        >
 
           <div class="realization-image">
+
             <img
               src="domovska2.png"
               alt="Elektroinštalácie Elektro Ludwig"
               data-i18n-alt="attr24"
             >
+
           </div>
 
           <div class="realization-content">
 
-            <h2 data-i18n="text25">Elektroinštalácie</h2>
+            <h2 data-i18n="text25">
+              Elektroinštalácie
+            </h2>
 
             <p data-i18n="text26">
               Realizujeme kompletné elektroinštalácie budov a objektov –
@@ -396,19 +747,26 @@
 
         </div>
 
-        <div class="realization-card reveal reveal-delay-2">
+
+        <div
+          class="realization-card reveal reveal-delay-2"
+        >
 
           <div class="realization-image">
+
             <img
               src="domovska3.png"
               alt="Priemyselné elektroinštalácie a automatizácia"
               data-i18n-alt="attr28"
             >
+
           </div>
 
           <div class="realization-content">
 
-            <h2 data-i18n="text29">Priemysel a automatizácia</h2>
+            <h2 data-i18n="text29">
+              Priemysel a automatizácia
+            </h2>
 
             <p data-i18n="text30">
               Realizujeme elektroinštalácie priemyselných technológií,
@@ -428,19 +786,26 @@
 
         </div>
 
-        <div class="realization-card reveal reveal-delay-3">
+
+        <div
+          class="realization-card reveal reveal-delay-3"
+        >
 
           <div class="realization-image">
+
             <img
               src="domovska4.png"
               alt="Elektroinštalácie výrobných a priemyselných hál"
               data-i18n-alt="attr32"
             >
+
           </div>
 
           <div class="realization-content">
 
-            <h2 data-i18n="text33">Výrobné a priemyselné haly</h2>
+            <h2 data-i18n="text33">
+              Výrobné a priemyselné haly
+            </h2>
 
             <p data-i18n="text34">
               Kompletné elektrické rozvody, káblové trasy,
@@ -467,7 +832,9 @@
 
   </section>
 
+
   <div class="main-section-divider"></div>
+
 
   <!-- ==================================================
        DETAILY
@@ -479,11 +846,17 @@
 
       <div class="details-main-header reveal">
 
-        <div class="section-label" data-i18n="text36">
+        <div
+          class="section-label"
+          data-i18n="text36"
+        >
           Čo zabezpečujeme
         </div>
 
-        <h1 class="section-title" data-i18n="text37">
+        <h1
+          class="section-title"
+          data-i18n="text37"
+        >
           Od kabeláže až po <span>technológiu</span>
         </h1>
 
@@ -497,19 +870,31 @@
 
       </div>
 
-      <div class="detail-block reveal" id="detail-elektroinstalacie">
+
+      <!-- ELEKTROINŠTALÁCIE -->
+
+      <div
+        class="detail-block reveal"
+        id="detail-elektroinstalacie"
+      >
 
         <div class="detail-image">
+
           <img
             src="domovska2.png"
             alt="Kompletné elektroinštalácie"
             data-i18n-alt="attr39"
           >
+
         </div>
+
 
         <div class="detail-content">
 
-          <span class="detail-number" data-i18n="text40">
+          <span
+            class="detail-number"
+            data-i18n="text40"
+          >
             01 / ELEKTROINŠTALÁCIE
           </span>
 
@@ -524,18 +909,51 @@
             zapojenie jednotlivých elektrických prvkov.
           </p>
 
+
           <ul class="detail-list">
-            <li data-i18n="text43">Silnoprúdové rozvody</li>
-            <li data-i18n="text44">Slaboprúdové rozvody</li>
-            <li data-i18n="text45">Káblové trasy a rebríky</li>
-            <li data-i18n="text46">Rozvádzače</li>
-            <li data-i18n="text47">Osvetlenie</li>
-            <li data-i18n="text48">Núdzové osvetlenie</li>
-            <li data-i18n="text49">Zásuvkové okruhy</li>
-            <li data-i18n="text50">Vonkajšie osvetlenie</li>
-            <li data-i18n="text51">Zabezpečovacie systémy</li>
-            <li data-i18n="text52">Technologické prívody</li>
+
+            <li data-i18n="text43">
+              Silnoprúdové rozvody
+            </li>
+
+            <li data-i18n="text44">
+              Slaboprúdové rozvody
+            </li>
+
+            <li data-i18n="text45">
+              Káblové trasy a rebríky
+            </li>
+
+            <li data-i18n="text46">
+              Rozvádzače
+            </li>
+
+            <li data-i18n="text47">
+              Osvetlenie
+            </li>
+
+            <li data-i18n="text48">
+              Núdzové osvetlenie
+            </li>
+
+            <li data-i18n="text49">
+              Zásuvkové okruhy
+            </li>
+
+            <li data-i18n="text50">
+              Vonkajšie osvetlenie
+            </li>
+
+            <li data-i18n="text51">
+              Zabezpečovacie systémy
+            </li>
+
+            <li data-i18n="text52">
+              Technologické prívody
+            </li>
+
           </ul>
+
 
           <a
             href="#kontakt"
@@ -550,19 +968,31 @@
 
       </div>
 
-      <div class="detail-block reverse reveal" id="detail-priemysel">
+
+      <!-- PRIEMYSEL A AUTOMATIZÁCIA -->
+
+      <div
+        class="detail-block reverse reveal"
+        id="detail-priemysel"
+      >
 
         <div class="detail-image">
+
           <img
             src="domovska3.png"
             alt="Priemysel a automatizácia"
             data-i18n-alt="attr54"
           >
+
         </div>
+
 
         <div class="detail-content">
 
-          <span class="detail-number" data-i18n="text55">
+          <span
+            class="detail-number"
+            data-i18n="text55"
+          >
             02 / PRIEMYSEL A AUTOMATIZÁCIA
           </span>
 
@@ -578,18 +1008,51 @@
             a jednotlivé technologické prvky do funkčného celku.
           </p>
 
+
           <ul class="detail-list">
-            <li data-i18n="text58">Kabeláž strojov</li>
-            <li data-i18n="text59">Automatizované linky</li>
-            <li data-i18n="text60">Senzory a snímače</li>
-            <li data-i18n="text61">Motory a pohony</li>
-            <li data-i18n="text62">Ovládacie prvky</li>
-            <li data-i18n="text63">Signalizačné prvky</li>
-            <li data-i18n="text64">Technologické rozvádzače</li>
-            <li data-i18n="text65">Káblové trasy</li>
-            <li data-i18n="text66">Logistické systémy</li>
-            <li data-i18n="text67">Zapojenie technológií</li>
+
+            <li data-i18n="text58">
+              Kabeláž strojov
+            </li>
+
+            <li data-i18n="text59">
+              Automatizované linky
+            </li>
+
+            <li data-i18n="text60">
+              Senzory a snímače
+            </li>
+
+            <li data-i18n="text61">
+              Motory a pohony
+            </li>
+
+            <li data-i18n="text62">
+              Ovládacie prvky
+            </li>
+
+            <li data-i18n="text63">
+              Signalizačné prvky
+            </li>
+
+            <li data-i18n="text64">
+              Technologické rozvádzače
+            </li>
+
+            <li data-i18n="text65">
+              Káblové trasy
+            </li>
+
+            <li data-i18n="text66">
+              Logistické systémy
+            </li>
+
+            <li data-i18n="text67">
+              Zapojenie technológií
+            </li>
+
           </ul>
+
 
           <a
             href="#kontakt"
@@ -604,19 +1067,31 @@
 
       </div>
 
-      <div class="detail-block reveal" id="detail-haly">
+
+      <!-- VÝROBNÉ A PRIEMYSELNÉ HALY -->
+
+      <div
+        class="detail-block reveal"
+        id="detail-haly"
+      >
 
         <div class="detail-image">
+
           <img
             src="domovska4.png"
             alt="Výrobné a priemyselné haly"
             data-i18n-alt="attr69"
           >
+
         </div>
+
 
         <div class="detail-content">
 
-          <span class="detail-number" data-i18n="text70">
+          <span
+            class="detail-number"
+            data-i18n="text70"
+          >
             03 / VÝROBNÉ A PRIEMYSELNÉ HALY
           </span>
 
@@ -632,18 +1107,51 @@
             výrobných alebo chladiacich zariadení.
           </p>
 
+
           <ul class="detail-list">
-            <li data-i18n="text73">Hlavné káblové trasy</li>
-            <li data-i18n="text74">Vedľajšie káblové trasy</li>
-            <li data-i18n="text75">Napájanie technológií</li>
-            <li data-i18n="text76">Výrobné zariadenia</li>
-            <li data-i18n="text77">Logistické technológie</li>
-            <li data-i18n="text78">Chladiace technológie</li>
-            <li data-i18n="text79">Rozvádzače</li>
-            <li data-i18n="text80">Osvetlenie hál</li>
-            <li data-i18n="text81">Núdzové osvetlenie</li>
-            <li data-i18n="text82">Kompletné elektrické rozvody</li>
+
+            <li data-i18n="text73">
+              Hlavné káblové trasy
+            </li>
+
+            <li data-i18n="text74">
+              Vedľajšie káblové trasy
+            </li>
+
+            <li data-i18n="text75">
+              Napájanie technológií
+            </li>
+
+            <li data-i18n="text76">
+              Výrobné zariadenia
+            </li>
+
+            <li data-i18n="text77">
+              Logistické technológie
+            </li>
+
+            <li data-i18n="text78">
+              Chladiace technológie
+            </li>
+
+            <li data-i18n="text79">
+              Rozvádzače
+            </li>
+
+            <li data-i18n="text80">
+              Osvetlenie hál
+            </li>
+
+            <li data-i18n="text81">
+              Núdzové osvetlenie
+            </li>
+
+            <li data-i18n="text82">
+              Kompletné elektrické rozvody
+            </li>
+
           </ul>
+
 
           <a
             href="#kontakt"
@@ -662,35 +1170,50 @@
 
   </section>
 
+
   <div class="main-section-divider"></div>
+
 
   <!-- ==================================================
        KDE SME PRACOVALI
   ================================================== -->
 
-  <section class="projects-section section-shell" id="projekty">
+  <section
+    class="projects-section section-shell"
+    id="projekty"
+  >
 
     <div class="section-container">
 
       <div class="projects-header reveal">
 
-        <div class="section-label" data-i18n="text84">
+        <div
+          class="section-label"
+          data-i18n="text84"
+        >
           Referencie
         </div>
 
-        <h1 class="section-title" data-i18n="text85">
+        <h1
+          class="section-title"
+          data-i18n="text85"
+        >
           Kde sme <span>pracovali</span>
         </h1>
 
         <div class="section-line"></div>
 
-        <p class="projects-intro" data-i18n="text86">
+        <p
+          class="projects-intro"
+          data-i18n="text86"
+        >
           Naše skúsenosti vznikali priamo na realizáciách rôzneho rozsahu –
           od budov a škôl až po výrobné, priemyselné a logistické projekty.
           Pozrite si vybrané realizácie a rozsah prác, na ktorých sme sa podieľali.
         </p>
 
       </div>
+
 
       <!--
         SEM SA AUTOMATICKY NAČÍTAJÚ PROJEKTY
@@ -701,6 +1224,7 @@
         class="projects-list"
         id="projectsList"
       ></div>
+
 
       <!--
         ZOBRAZÍ SA LEN V PRÍPADE,
@@ -729,23 +1253,34 @@
 
   </section>
 
+
   <div class="main-section-divider"></div>
+
 
   <!-- ==================================================
        KONTAKT
   ================================================== -->
 
-  <section class="contact-section section-shell" id="kontakt">
+  <section
+    class="contact-section section-shell"
+    id="kontakt"
+  >
 
     <div class="section-container">
 
       <div class="contact-header reveal">
 
-        <div class="section-label" data-i18n="text89">
+        <div
+          class="section-label"
+          data-i18n="text89"
+        >
           Kontaktujte nás
         </div>
 
-        <h1 class="section-title" data-i18n="text90">
+        <h1
+          class="section-title"
+          data-i18n="text90"
+        >
           Sme vám <span>k dispozícii</span>
         </h1>
 
@@ -753,7 +1288,10 @@
 
       </div>
 
-      <div class="contact-container reveal reveal-delay-1">
+
+      <div
+        class="contact-container reveal reveal-delay-1"
+      >
 
         <div class="contact-info">
 
@@ -767,35 +1305,51 @@
             Elektro Ludwig s. r. o.
           </h2>
 
+
           <div class="contact-line">
 
             <i class="fas fa-location-dot"></i>
 
             <div>
-              <strong data-i18n="text92">Sídlo spoločnosti</strong>
+
+              <strong data-i18n="text92">
+                Sídlo spoločnosti
+              </strong>
+
               <br>
               Kochanovce 84
               <br>
               066 01 Kochanovce
               <br>
-              <span data-i18n="country">Slovenská republika</span>
+
+              <span data-i18n="country">
+                Slovenská republika
+              </span>
+
             </div>
 
           </div>
+
 
           <div class="contact-line">
 
             <i class="fas fa-building"></i>
 
             <div>
-              <strong data-i18n="text93">IČO</strong>
+
+              <strong data-i18n="text93">
+                IČO
+              </strong>
+
               <br>
               55 110 088
+
             </div>
 
           </div>
 
         </div>
+
 
         <div class="contact-map">
 
@@ -811,83 +1365,124 @@
 
       </div>
 
+
       <div class="contact-divider"></div>
 
-      <div class="contact-people reveal reveal-delay-2">
+
+      <div
+        class="contact-people reveal reveal-delay-2"
+      >
+
+        <!-- ĽUDOVÍT -->
 
         <div class="person">
 
-          <h3 data-i18n="text94">Konateľ firmy</h3>
+          <h3 data-i18n="text94">
+            Konateľ firmy
+          </h3>
 
           <div class="person-name">
             Ľudovít Hudák
           </div>
 
           <div class="person-detail">
+
             <i class="fas fa-envelope"></i>
-            <a href="mailto:ludovit.hudak.elektroludwig@gmail.com">
+
+            <a
+              href="mailto:ludovit.hudak.elektroludwig@gmail.com"
+            >
               ludovit.hudak.elektroludwig@gmail.com
             </a>
+
           </div>
 
           <div class="person-detail">
+
             <i class="fas fa-phone"></i>
+
             <a href="tel:+421940860363">
               +421 940 860 363
             </a>
+
           </div>
 
         </div>
 
+
+        <!-- VLADIMÍR -->
+
         <div class="person">
 
-          <h3 data-i18n="text95">Elektromajster</h3>
+          <h3 data-i18n="text95">
+            Elektromajster
+          </h3>
 
           <div class="person-name">
             Vladimír Mendel
           </div>
 
           <div class="person-detail">
+
             <i class="fas fa-envelope"></i>
-            <a href="mailto:vladimir.mendel.elektroludwig@gmail.com">
+
+            <a
+              href="mailto:vladimir.mendel.elektroludwig@gmail.com"
+            >
               vladimir.mendel.elektroludwig@gmail.com
             </a>
+
           </div>
 
           <div class="person-detail">
+
             <i class="fas fa-phone"></i>
+
             <a href="tel:+421904162593">
               +421 904 162 593
             </a>
+
           </div>
 
         </div>
 
+
+        <!-- EKONOMICKÉ -->
+
         <div class="person">
 
-          <h3 data-i18n="text96">Ekonomické oddelenie</h3>
+          <h3 data-i18n="text96">
+            Ekonomické oddelenie
+          </h3>
 
           <div class="person-name empty">
             &nbsp;
           </div>
 
           <div class="person-detail">
+
             <i class="fas fa-envelope"></i>
+
             <a href="mailto:faktury.hudak@gmail.com">
               faktury.hudak@gmail.com
             </a>
+
           </div>
 
           <div class="person-detail">
+
             <i class="fas fa-phone"></i>
+
             <a href="tel:+421940860363">
               +421 940 860 363
             </a>
+
           </div>
 
         </div>
 
       </div>
+
 
       <!-- ==================================================
            KONTAKTNÝ FORMULÁR
@@ -897,32 +1492,52 @@
 
         <div class="inquiry-header">
 
-          <div class="section-label" data-i18n="text97">
+          <div
+            class="section-label"
+            data-i18n="text97"
+          >
             Máte otázku alebo záujem o spoluprácu?
           </div>
 
-          <h2 class="inquiry-title" data-i18n="text98">
+          <h2
+            class="inquiry-title"
+            data-i18n="text98"
+          >
             Napíšte <span>nám</span>
           </h2>
 
-          <p class="inquiry-description" data-i18n="text99">
+          <p
+            class="inquiry-description"
+            data-i18n="text99"
+          >
             Pošlite nám základné informácie o vašom projekte alebo požiadavke.
             Ozveme sa vám čo najskôr.
           </p>
 
         </div>
 
-        <p class="required-note" data-i18n="formNotice">
+
+        <p
+          class="required-note"
+          data-i18n="formNotice"
+        >
           Odosielanie cez formulár zatiaľ nie je aktívne.
           Použite, prosím, e-mail alebo telefón uvedený vyššie.
         </p>
 
-        <form class="inquiry-form" id="inquiryForm">
+
+        <form
+          class="inquiry-form"
+          id="inquiryForm"
+        >
 
           <div class="form-grid">
 
+
             <div class="form-group">
+
               <i class="fas fa-user"></i>
+
               <input
                 type="text"
                 name="name"
@@ -930,20 +1545,28 @@
                 data-i18n-placeholder="fullName"
                 required
               >
+
             </div>
 
+
             <div class="form-group">
+
               <i class="fas fa-building"></i>
+
               <input
                 type="text"
                 name="company"
                 placeholder="Spoločnosť"
                 data-i18n-placeholder="attr100"
               >
+
             </div>
 
+
             <div class="form-group">
+
               <i class="fas fa-envelope"></i>
+
               <input
                 type="email"
                 name="email"
@@ -951,23 +1574,32 @@
                 data-i18n-placeholder="attr101"
                 required
               >
+
             </div>
 
+
             <div class="form-group">
+
               <i class="fas fa-phone"></i>
+
               <input
                 type="tel"
                 name="phone"
                 placeholder="Telefón"
                 data-i18n-placeholder="attr102"
               >
+
             </div>
+
 
             <div class="form-group full">
 
               <i class="fas fa-list"></i>
 
-              <select name="subject" required>
+              <select
+                name="subject"
+                required
+              >
 
                 <option
                   value=""
@@ -999,7 +1631,10 @@
                   Výrobné a priemyselné haly
                 </option>
 
-                <option value="Iné" data-i18n="text107">
+                <option
+                  value="Iné"
+                  data-i18n="text107"
+                >
                   Iné
                 </option>
 
@@ -1007,7 +1642,10 @@
 
             </div>
 
-            <div class="form-group full textarea-group">
+
+            <div
+              class="form-group full textarea-group"
+            >
 
               <i class="fas fa-message"></i>
 
@@ -1021,6 +1659,7 @@
             </div>
 
           </div>
+
 
           <label class="privacy-row">
 
@@ -1037,9 +1676,14 @@
 
           </label>
 
-          <div class="required-note" data-i18n="text110">
+
+          <div
+            class="required-note"
+            data-i18n="text110"
+          >
             * Povinné údaje
           </div>
+
 
           <div class="form-submit-row">
 
@@ -1051,6 +1695,7 @@
               Odoslať správu
               <i class="fas fa-paper-plane"></i>
             </button>
+
 
             <div
               class="form-message"
@@ -1069,7 +1714,9 @@
 
   </section>
 
+
   <div class="main-section-divider"></div>
+
 
   <!-- ==================================================
        BOČNÝ KONTAKT
@@ -1102,6 +1749,7 @@
 
   </div>
 
+
   <!-- ==================================================
        JAVASCRIPT
   ================================================== -->
@@ -1113,8 +1761,10 @@
   <script src="languages/fr.js"></script>
   <script src="languages/es.js"></script>
   <script src="languages/zh.js"></script>
+
   <script src="projekty.js"></script>
   <script src="script.js"></script>
 
 </body>
+
 </html>
