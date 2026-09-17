@@ -43,6 +43,33 @@ window.elektroLudwigLanguages.zh = {
     attr10:
       "Elektro Ludwig – 不止于电气",
 
+    heroSlogan:
+      "不止于电力",
+
+    heroExperienceTitle:
+      "经验",
+
+    heroExperienceText:
+      "多年行业经验",
+
+    heroReliabilityTitle:
+      "可靠",
+
+    heroReliabilityText:
+      "按时交付",
+
+    heroQualityTitle:
+      "品质",
+
+    heroQualityText:
+      "精准施工",
+
+    heroFlexibilityTitle:
+      "灵活",
+
+    heroFlexibilityText:
+      "定制解决方案",
+
     text11:
       "Elektro Ludwig",
 
