@@ -19,6 +19,16 @@ const languagePacks = window.elektroLudwigLanguages || {};
 const supportedLanguages = {};
 const siteTranslations = {};
 
+const languageFlags = {
+  sk: "🇸🇰",
+  en: "🇬🇧",
+  de: "🇩🇪",
+  pl: "🇵🇱",
+  fr: "🇫🇷",
+  es: "🇪🇸",
+  zh: "🇨🇳"
+};
+
 Object.entries(languagePacks).forEach(function([languageCode, languagePack]) {
   supportedLanguages[languageCode] =
     languagePack.name || languageCode.toUpperCase();
@@ -152,8 +162,14 @@ function applyStaticTranslations() {
     document.querySelector(".language-current span");
 
   if (currentLanguageLabel) {
-    currentLanguageLabel.textContent =
+    const currentCode =
       currentPack.code || currentLanguage.toUpperCase();
+
+    const currentFlag =
+      languageFlags[currentLanguage] || "🌐";
+
+    currentLanguageLabel.textContent =
+      currentFlag + " " + currentCode;
   }
 
   const languageCurrent =
@@ -494,6 +510,9 @@ function initializeLanguageSwitcher() {
         const htmlLang =
           pack.htmlLang || code;
 
+        const flag =
+          languageFlags[code] || "🌐";
+
         return `
           <a
             href="#"
@@ -504,7 +523,11 @@ function initializeLanguageSwitcher() {
               class="fas fa-language"
               aria-hidden="true"
             ></i>
-            ${name}
+            <span
+              class="language-flag"
+              aria-hidden="true"
+            >${flag}</span>
+            <span class="language-name">${name}</span>
           </a>
         `;
       })
