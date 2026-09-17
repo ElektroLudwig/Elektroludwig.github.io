@@ -17,295 +17,199 @@
   <link rel="stylesheet" href="style.css">
 
   <style>
+  /* ==================================================
+     JAZYKOVÝ PREPÍNAČ
+     Pôvodný style.css zostáva zachovaný.
+  ================================================== */
 
-    /* ==================================================
-       JAZYKOVÝ PREPÍNAČ
-    ================================================== */
+  button.language-current {
+    border: 0;
+    background: transparent;
+    color: inherit;
+    font-family: inherit;
+  }
 
-    button.language-current {
-      border: 0;
-      background: transparent;
-      color: inherit;
-      font-family: inherit;
-    }
+  .language-switcher:not(.is-open) .language-menu {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
 
-    .language-switcher:not(.is-open) .language-menu {
-      opacity: 0;
-      visibility: hidden;
-      pointer-events: none;
-    }
+  .language-switcher.is-open .language-menu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
 
-    .language-switcher.is-open .language-menu {
-      opacity: 1;
-      visibility: visible;
-      pointer-events: auto;
-      transform: translateY(0);
-    }
+  .language-switcher.is-open .language-arrow {
+    transform: rotate(180deg);
+  }
 
-    .language-switcher.is-open .language-arrow {
-      transform: rotate(180deg);
-    }
-
-    .language-current:focus-visible,
-    .language-menu a:focus-visible {
-      outline: 2px solid #d60000;
-      outline-offset: 3px;
-    }
-
-
-    /* ==================================================
-       DOMOVSKÁ FOTKA – PREKLADATEĽNÉ TEXTY
-    ================================================== */
-
-    .home-hero {
-      position: relative;
-      overflow: hidden;
-    }
-
-    .home-hero > img {
-      display: block;
-      width: 100%;
-      height: auto;
-    }
+  .language-current:focus-visible,
+  .language-menu a:focus-visible {
+    outline: 2px solid #d60000;
+    outline-offset: 3px;
+  }
 
 
-    /* ==================================================
-       SLOGAN NA ĽAVEJ STRANE
-    ================================================== */
+  /* ==================================================
+     DOMOVSKÁ FOTKA – PREKLADATEĽNÉ TEXTY
+  ================================================== */
 
+  .home-hero {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .home-hero > img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .hero-slogan {
+    position: absolute;
+    left: 6.5%;
+    top: 43%;
+    width: 23%;
+    color: #ffffff;
+    z-index: 2;
+    font-size: clamp(28px, 3.1vw, 66px);
+    font-family: "Brush Script MT", "Segoe Script", cursive;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.05;
+    transform: rotate(-3deg);
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.45);
+  }
+
+  .hero-features {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 2.5%;
+    height: 17.5%;
+    z-index: 3;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+  }
+
+  .hero-feature {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #ffffff;
+  }
+
+  .hero-feature:nth-child(1) {
+    padding-left: 38%;
+  }
+
+  .hero-feature:nth-child(2) {
+    padding-left: 40%;
+  }
+
+  .hero-feature:nth-child(3) {
+    padding-left: 39%;
+  }
+
+  .hero-feature:nth-child(4) {
+    padding-left: 39%;
+  }
+
+  .hero-feature-title {
+    display: block;
+    margin-bottom: 5px;
+    font-size: clamp(10px, 1.05vw, 22px);
+    line-height: 1.15;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.01em;
+    white-space: nowrap;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.65);
+  }
+
+  .hero-feature-text {
+    display: block;
+    font-size: clamp(9px, 0.9vw, 18px);
+    line-height: 1.25;
+    font-weight: 400;
+    white-space: nowrap;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.65);
+  }
+
+  @media (max-width: 1000px) {
     .hero-slogan {
-      position: absolute;
-
-      left: 6.5%;
-      top: 43%;
-
-      width: 23%;
-
-      color: #ffffff;
-
-      z-index: 2;
-
-      font-size: clamp(28px, 3.1vw, 66px);
-
-      font-family:
-        "Brush Script MT",
-        "Segoe Script",
-        cursive;
-
-      font-style: italic;
-      font-weight: 400;
-
-      line-height: 1.05;
-
-      transform: rotate(-3deg);
-
-      text-shadow:
-        0 2px 10px rgba(0, 0, 0, 0.45);
+      left: 6%;
+      top: 42%;
+      width: 25%;
+      font-size: clamp(22px, 4vw, 42px);
     }
-
-
-    /* ==================================================
-       SPODNÉ 4 INFORMAČNÉ BLOKY
-    ================================================== */
 
     .hero-features {
-      position: absolute;
-
-      left: 0;
-      right: 0;
-
       bottom: 2.5%;
-
-      height: 17.5%;
-
-      z-index: 3;
-
-      display: grid;
-
-      grid-template-columns:
-        repeat(4, 1fr);
-
-      align-items: center;
     }
-
-    .hero-feature {
-      min-width: 0;
-
-      display: flex;
-
-      flex-direction: column;
-
-      justify-content: center;
-
-      color: #ffffff;
-    }
-
-
-    /*
-      Ikony sú priamo súčasťou obrázka.
-      Text preto začína napravo od jednotlivých ikon.
-    */
-
-    .hero-feature:nth-child(1) {
-      padding-left: 38%;
-    }
-
-    .hero-feature:nth-child(2) {
-      padding-left: 40%;
-    }
-
-    .hero-feature:nth-child(3) {
-      padding-left: 39%;
-    }
-
-    .hero-feature:nth-child(4) {
-      padding-left: 39%;
-    }
-
 
     .hero-feature-title {
-      display: block;
-
-      margin-bottom: 5px;
-
-      font-size:
-        clamp(10px, 1.05vw, 22px);
-
-      line-height: 1.15;
-
-      font-weight: 700;
-
-      text-transform: uppercase;
-
-      letter-spacing: 0.01em;
-
-      white-space: nowrap;
-
-      text-shadow:
-        0 2px 8px rgba(0, 0, 0, 0.65);
+      font-size: clamp(8px, 1.25vw, 14px);
     }
-
 
     .hero-feature-text {
-      display: block;
+      font-size: clamp(7px, 1.05vw, 12px);
+    }
+  }
 
-      font-size:
-        clamp(9px, 0.9vw, 18px);
-
-      line-height: 1.25;
-
-      font-weight: 400;
-
-      white-space: nowrap;
-
-      text-shadow:
-        0 2px 8px rgba(0, 0, 0, 0.65);
+  @media (max-width: 700px) {
+    .hero-slogan {
+      left: 5%;
+      top: 41%;
+      width: 27%;
+      font-size: clamp(17px, 5vw, 30px);
     }
 
-
-    /* ==================================================
-       DOMOVSKÁ FOTKA – TABLET
-    ================================================== */
-
-    @media (max-width: 1000px) {
-
-      .hero-slogan {
-        left: 6%;
-        top: 42%;
-        width: 25%;
-
-        font-size:
-          clamp(22px, 4vw, 42px);
-      }
-
-      .hero-features {
-        bottom: 2.5%;
-      }
-
-      .hero-feature-title {
-        font-size:
-          clamp(8px, 1.25vw, 14px);
-      }
-
-      .hero-feature-text {
-        font-size:
-          clamp(7px, 1.05vw, 12px);
-      }
-
+    .hero-features {
+      height: 18%;
+      bottom: 2.5%;
     }
 
-
-    /* ==================================================
-       DOMOVSKÁ FOTKA – MOBIL
-    ================================================== */
-
-    @media (max-width: 700px) {
-
-      .hero-slogan {
-        left: 5%;
-        top: 41%;
-        width: 27%;
-
-        font-size:
-          clamp(17px, 5vw, 30px);
-      }
-
-      .hero-features {
-        height: 18%;
-        bottom: 2.5%;
-      }
-
-      .hero-feature-title {
-        font-size:
-          clamp(6px, 1.65vw, 10px);
-
-        margin-bottom: 2px;
-      }
-
-      .hero-feature-text {
-        font-size:
-          clamp(5px, 1.4vw, 9px);
-      }
-
+    .hero-feature-title {
+      font-size: clamp(6px, 1.65vw, 10px);
+      margin-bottom: 2px;
     }
 
-
-    /* ==================================================
-       VEĽMI MALÝ MOBIL
-    ================================================== */
-
-    @media (max-width: 450px) {
-
-      .hero-slogan {
-        left: 5%;
-        top: 40%;
-        width: 29%;
-
-        font-size:
-          clamp(14px, 5vw, 22px);
-      }
-
-      .hero-features {
-        bottom: 2.5%;
-      }
-
-      .hero-feature-title {
-        font-size: 6px;
-      }
-
-      .hero-feature-text {
-        font-size: 5px;
-      }
-
+    .hero-feature-text {
+      font-size: clamp(5px, 1.4vw, 9px);
     }
+  }
+
+  @media (max-width: 450px) {
+    .hero-slogan {
+      left: 5%;
+      top: 40%;
+      width: 29%;
+      font-size: clamp(14px, 5vw, 22px);
+    }
+
+    .hero-features {
+      bottom: 2.5%;
+    }
+
+    .hero-feature-title {
+      font-size: 6px;
+    }
+
+    .hero-feature-text {
+      font-size: 5px;
+    }
+  }
 
   </style>
-
 </head>
 
-
 <body>
-
 
   <!-- ==================================================
        HORNÁ LIŠTA
@@ -315,23 +219,13 @@
 
     <div class="topbar-left">
 
-      <a
-        href="#"
-        class="facebook"
-        title="Facebook"
-      >
+      <a href="#" class="facebook" title="Facebook">
         <i class="fab fa-facebook-f"></i>
       </a>
 
-
-      <a
-        href="#"
-        class="instagram"
-        title="Instagram"
-      >
+      <a href="#" class="instagram" title="Instagram">
         <i class="fab fa-instagram"></i>
       </a>
-
 
       <a
         href="mailto:ludovit.hudak.elektroludwig@gmail.com"
@@ -341,7 +235,6 @@
       >
         <i class="fas fa-envelope"></i>
       </a>
-
 
       <a
         href="https://wa.me/421940860363"
@@ -353,14 +246,7 @@
 
     </div>
 
-
-    <div
-      style="
-        display:flex;
-        gap:10px;
-        align-items:center;
-      "
-    >
+    <div style="display:flex; gap:10px; align-items:center;">
 
       <a
         href="tel:+421940860363"
@@ -371,7 +257,6 @@
         <i class="fas fa-phone"></i>
       </a>
 
-
       <div class="language-switcher">
 
         <button
@@ -381,90 +266,47 @@
           aria-controls="languageMenu"
           aria-label="Vybrať jazyk"
         >
-
           <i class="fas fa-globe"></i>
-
           <span>SK</span>
-
           <i
             class="fas fa-chevron-down language-arrow"
             aria-hidden="true"
           ></i>
-
         </button>
 
+        <div class="language-menu" id="languageMenu">
 
-        <div
-          class="language-menu"
-          id="languageMenu"
-        >
-
-          <a
-            href="#"
-            data-language="sk"
-            lang="sk"
-            aria-current="true"
-          >
+          <a href="#" data-language="sk" lang="sk" aria-current="true">
             <i class="fas fa-check"></i>
             Slovenčina
           </a>
 
-
-          <a
-            href="#"
-            data-language="en"
-            lang="en"
-          >
+          <a href="#" data-language="en" lang="en">
             <i class="fas fa-language"></i>
             English
           </a>
 
-
-          <a
-            href="#"
-            data-language="de"
-            lang="de"
-          >
+          <a href="#" data-language="de" lang="de">
             <i class="fas fa-language"></i>
             Deutsch
           </a>
 
-
-          <a
-            href="#"
-            data-language="pl"
-            lang="pl"
-          >
+          <a href="#" data-language="pl" lang="pl">
             <i class="fas fa-language"></i>
             Polski
           </a>
 
-
-          <a
-            href="#"
-            data-language="fr"
-            lang="fr"
-          >
+          <a href="#" data-language="fr" lang="fr">
             <i class="fas fa-language"></i>
             Français
           </a>
 
-
-          <a
-            href="#"
-            data-language="es"
-            lang="es"
-          >
+          <a href="#" data-language="es" lang="es">
             <i class="fas fa-language"></i>
             Español
           </a>
 
-
-          <a
-            href="#"
-            data-language="zh"
-            lang="zh"
-          >
+          <a href="#" data-language="zh" lang="zh">
             <i class="fas fa-language"></i>
             中文
           </a>
@@ -482,10 +324,7 @@
        LOGO
   ================================================== -->
 
-  <div
-    class="header"
-    id="domov"
-  >
+  <div class="header" id="domov">
 
     <a
       href="#domov"
@@ -513,7 +352,6 @@
 
     <nav class="menu">
 
-
       <a
         href="#onas"
         data-section="onas"
@@ -521,7 +359,6 @@
       >
         Niečo o nás
       </a>
-
 
       <div
         class="menu-dropdown"
@@ -539,7 +376,6 @@
             Oblasti realizácie
           </a>
 
-
           <button
             class="dropdown-toggle"
             id="dropdownToggle"
@@ -548,38 +384,24 @@
             aria-expanded="false"
             data-i18n-aria-label="attr6"
           >
-
             <i class="fas fa-chevron-down"></i>
-
           </button>
 
         </div>
 
-
         <div class="dropdown-menu">
 
-          <a
-            href="#detail-elektroinstalacie"
-            data-i18n="text7"
-          >
+          <a href="#detail-elektroinstalacie" data-i18n="text7">
             <i class="fas fa-bolt"></i>
             Elektroinštalácie
           </a>
 
-
-          <a
-            href="#detail-priemysel"
-            data-i18n="text8"
-          >
+          <a href="#detail-priemysel" data-i18n="text8">
             <i class="fas fa-gears"></i>
             Priemysel a automatizácia
           </a>
 
-
-          <a
-            href="#detail-haly"
-            data-i18n="text9"
-          >
+          <a href="#detail-haly" data-i18n="text9">
             <i class="fas fa-industry"></i>
             Výrobné a priemyselné haly
           </a>
@@ -588,7 +410,6 @@
 
       </div>
 
-
       <a
         href="#projekty"
         data-section="projekty"
@@ -596,7 +417,6 @@
       >
         Kde sme pracovali
       </a>
-
 
       <a
         href="#kontakt"
@@ -607,6 +427,8 @@
       </a>
 
     </nav>
+
+    <div class="menu-divider"></div>
 
   </div>
 
@@ -622,7 +444,6 @@
       alt="Elektro Ludwig"
     >
 
-
     <div
       class="hero-slogan"
       data-i18n="heroSlogan"
@@ -630,12 +451,9 @@
       Viac než len elektrina
     </div>
 
-
     <div class="hero-features">
 
-
       <div class="hero-feature">
-
         <strong
           class="hero-feature-title"
           data-i18n="heroExperienceTitle"
@@ -649,12 +467,9 @@
         >
           Roky praxe v odbore
         </span>
-
       </div>
 
-
       <div class="hero-feature">
-
         <strong
           class="hero-feature-title"
           data-i18n="heroReliabilityTitle"
@@ -668,12 +483,9 @@
         >
           Dodržiavame termíny
         </span>
-
       </div>
 
-
       <div class="hero-feature">
-
         <strong
           class="hero-feature-title"
           data-i18n="heroQualityTitle"
@@ -687,12 +499,9 @@
         >
           Precízna realizácia
         </span>
-
       </div>
 
-
       <div class="hero-feature">
-
         <strong
           class="hero-feature-title"
           data-i18n="heroFlexibilityTitle"
@@ -706,90 +515,92 @@
         >
           Riešenia na mieru
         </span>
-
       </div>
 
     </div>
 
   </div>
 
+  <div class="main-section-divider"></div>
+
 
   <!-- ==================================================
-       NIEČO O NÁS
+       O NÁS
   ================================================== -->
 
   <section
-    class="about-section"
+    class="about-section section-shell"
     id="onas"
   >
 
-    <div class="section-heading">
+    <div class="section-container about-layout">
 
-      <span
-        class="section-label"
-        data-i18n="aboutLabel"
-      >
-        ELEKTRO LUDWIG
-      </span>
+      <div class="about-heading-side reveal">
 
-      <h2 data-i18n="aboutTitle">
-        Niečo o nás
-      </h2>
+        <div
+          class="section-label"
+          data-i18n="text11"
+        >
+          Elektro Ludwig
+        </div>
 
-    </div>
+        <h1
+          class="section-title"
+          data-i18n="text12"
+        >
+          Niečo <span>o nás</span>
+        </h1>
 
-
-    <div class="about-content">
-
-      <div class="about-text">
-
-        <p data-i18n="aboutText1">
-          Elektro Ludwig s. r. o. je slovenská spoločnosť
-          pôsobiaca v oblasti elektroinštalácií,
-          priemyselných elektroinštalácií a automatizácie.
-        </p>
-
-
-        <p data-i18n="aboutText2">
-          Naše skúsenosti však siahajú ešte pred vznik
-          spoločnosti, keď sme dlhé roky pôsobili
-          v elektrotechnickom odbore formou živnosti
-          pod menom Ľudovít Hudák.
-        </p>
-
-
-        <p data-i18n="aboutText3">
-          Počas rokov sme získali skúsenosti na rôznych
-          typoch projektov na Slovensku aj v zahraničí.
-          Realizovali sme elektroinštalácie v školách,
-          priemyselných halách, výrobných závodoch,
-          logistických centrách a technologických
-          prevádzkach.
-        </p>
-
-
-        <p data-i18n="aboutText4">
-          Našou prioritou je kvalitne odvedená práca,
-          spoľahlivosť, dodržiavanie termínov
-          a schopnosť prispôsobiť sa požiadavkám
-          konkrétneho projektu.
-        </p>
+        <div class="section-line"></div>
 
       </div>
 
+      <div
+        class="about-text-side reveal reveal-delay-1"
+      >
 
-      <div class="about-image">
+        <p data-i18n="text13">
+          <strong>Elektro Ludwig s.r.o.</strong>
+          je slovenská elektroinštalačná spoločnosť pôsobiaca najmä na projektoch doma aj v zahraničí. Hoci spoločnosť v dnešnej právnej forme funguje od svojho založenia ako s.r.o., naše skúsenosti siahajú podstatne ďalej.
+        </p>
 
-        <img
-          src="onas.jpeg"
-          alt="Elektro Ludwig"
-        >
+        <p data-i18n="text14">
+          Ešte pred vznikom spoločnosti Elektro Ludwig s.r.o. sme realizovali elektroinštalačné práce pod živnosťou <strong>Ľudovíta Hudáka</strong>, ktorý je dnes konateľom spoločnosti. Naša história preto nezačína dátumom zápisu s.r.o. do obchodného registra, ale rokmi praktických skúseností priamo na stavbách a pri realizácii rozsiahlych elektroinštalačných projektov.
+        </p>
+
+        <p data-i18n="text15">
+          Za ten čas sme pracovali na rôznych typoch objektov – od <strong>škôl a administratívnych budov, cez výrobné a priemyselné haly až po automatizované výrobné linky a logistické centrá</strong>.
+        </p>
+
+        <p data-i18n="text16">
+          Naše skúsenosti zahŕňajú kompletné elektroinštalácie budov vrátane silnoprúdových a slaboprúdových rozvodov, osvetlenia, núdzového osvetlenia, zabezpečovacích systémov, rozvádzačov, napájania jednotlivých technológií, vonkajšieho osvetlenia, parkovacích plôch a ďalších systémov potrebných pre bezpečné a spoľahlivé fungovanie objektu.
+        </p>
+
+        <p data-i18n="text17">
+          Pri priemyselných projektoch realizujeme elektroinštalácie výrobných hál, prívody a napájanie strojov a technologických zariadení, káblové trasy, rozvádzače, ovládacie a signalizačné prvky či kompletné zapojenie jednotlivých technológií.
+        </p>
+
+        <p data-i18n="text18">
+          Samostatnou oblasťou našich skúseností je <strong>priemyselná automatizácia</strong>. Podieľali sme sa na realizácii automatizovaných výrobných a logistických systémov, kde sme zabezpečovali kompletnú elektroinštaláciu potrebnú pre chod automatizácie – od káblových trás a kabeláže až po pripojenie senzorov, motorov, rozvádzačov a jednotlivých prvkov technológie.
+        </p>
+
+        <p data-i18n="text19">
+          Vďaka skúsenostiam z rôznych typov stavieb dokážeme zabezpečiť práce od bežnej elektroinštalácie až po rozsiahle priemyselné a automatizačné projekty.
+        </p>
+
+        <div class="final-text">
+          <strong data-i18n="text20">
+            Jednoducho – tam, kde je potrebná elektrická energia, kabeláž, riadenie alebo technológia, vieme nájsť riešenie.
+          </strong>
+        </div>
 
       </div>
 
     </div>
 
   </section>
+
+  <div class="main-section-divider"></div>
 
 
   <!-- ==================================================
@@ -797,474 +608,456 @@
   ================================================== -->
 
   <section
-    class="realizations-section"
+    class="realizations-section section-shell"
     id="oblasti-realizacie"
   >
 
-    <div class="section-heading">
+    <div class="section-container">
 
-      <span
-        class="section-label"
-        data-i18n="realizationsLabel"
-      >
-        ČOMU SA VENUJEME
-      </span>
+      <div class="realizations-header reveal">
 
-      <h2 data-i18n="realizationsTitle">
-        Oblasti realizácie
-      </h2>
+        <div
+          class="section-label"
+          data-i18n="text21"
+        >
+          Naše kompetencie
+        </div>
+
+        <h1
+          class="section-title"
+          data-i18n="text22"
+        >
+          Oblasti <span>realizácie</span>
+        </h1>
+
+        <div class="section-line"></div>
+
+        <p
+          class="realizations-intro"
+          data-i18n="text23"
+        >
+          Od elektroinštalácií budov až po rozsiahle priemyselné
+          a automatizačné projekty. Realizujeme elektroinštalácie,
+          kabeláž a technologické systémy pre rôzne typy objektov,
+          výrobných prevádzok a logistických zariadení.
+        </p>
+
+      </div>
+
+      <div class="realizations-grid">
+
+        <div class="realization-card reveal reveal-delay-1">
+
+          <div class="realization-image">
+            <img
+              src="domovska2.png"
+              alt="Elektroinštalácie Elektro Ludwig"
+              data-i18n-alt="attr24"
+            >
+          </div>
+
+          <div class="realization-content">
+
+            <h2 data-i18n="text25">
+              Elektroinštalácie
+            </h2>
+
+            <p data-i18n="text26">
+              Realizujeme kompletné elektroinštalácie budov a objektov –
+              od káblových trás a rozvodov až po osvetlenie,
+              rozvádzače, zásuvkové a technologické okruhy.
+            </p>
+
+            <a
+              href="#detail-elektroinstalacie"
+              class="realization-button"
+              data-i18n="text27"
+            >
+              Viac informácií
+              <i class="fas fa-arrow-right"></i>
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="realization-card reveal reveal-delay-2">
+
+          <div class="realization-image">
+            <img
+              src="domovska3.png"
+              alt="Priemyselné elektroinštalácie a automatizácia"
+              data-i18n-alt="attr28"
+            >
+          </div>
+
+          <div class="realization-content">
+
+            <h2 data-i18n="text29">
+              Priemysel a automatizácia
+            </h2>
+
+            <p data-i18n="text30">
+              Realizujeme elektroinštalácie priemyselných technológií,
+              výrobných zariadení a automatizovaných systémov.
+            </p>
+
+            <a
+              href="#detail-priemysel"
+              class="realization-button"
+              data-i18n="text31"
+            >
+              Viac informácií
+              <i class="fas fa-arrow-right"></i>
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="realization-card reveal reveal-delay-3">
+
+          <div class="realization-image">
+            <img
+              src="domovska4.png"
+              alt="Elektroinštalácie výrobných a priemyselných hál"
+              data-i18n-alt="attr32"
+            >
+          </div>
+
+          <div class="realization-content">
+
+            <h2 data-i18n="text33">
+              Výrobné a priemyselné haly
+            </h2>
+
+            <p data-i18n="text34">
+              Kompletné elektrické rozvody, káblové trasy,
+              osvetlenie a napájanie technológií vo výrobných,
+              skladových a logistických objektoch.
+            </p>
+
+            <a
+              href="#detail-haly"
+              class="realization-button"
+              data-i18n="text35"
+            >
+              Viac informácií
+              <i class="fas fa-arrow-right"></i>
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
 
     </div>
 
+  </section>
 
-    <div class="realizations-grid">
+  <div class="main-section-divider"></div>
+
+
+  <!-- ==================================================
+       DETAILY
+  ================================================== -->
+
+  <section class="details-section">
+
+    <div class="details-container">
+
+      <div class="details-main-header reveal">
+
+        <div
+          class="section-label"
+          data-i18n="text36"
+        >
+          Čo zabezpečujeme
+        </div>
+
+        <h1
+          class="section-title"
+          data-i18n="text37"
+        >
+          Od kabeláže až po <span>technológiu</span>
+        </h1>
+
+        <div class="section-line"></div>
+
+        <p data-i18n="text38">
+          Naše práce nekončia pri samotnom natiahnutí káblov.
+          Podieľame sa na realizácii elektroinštalácií od káblových trás
+          a rozvodov až po zapojenie jednotlivých zariadení a technológií.
+        </p>
+
+      </div>
 
 
       <!-- ELEKTROINŠTALÁCIE -->
 
-      <a
-        href="#detail-elektroinstalacie"
-        class="realization-card"
+      <div
+        class="detail-block reveal"
+        id="detail-elektroinstalacie"
       >
 
-        <div class="realization-image">
-
+        <div class="detail-image">
           <img
-            src="elektroinstalacie.jpeg"
-            alt="Elektroinštalácie"
+            src="domovska2.png"
+            alt="Kompletné elektroinštalácie"
+            data-i18n-alt="attr39"
           >
-
         </div>
 
+        <div class="detail-content">
 
-        <div class="realization-content">
+          <span
+            class="detail-number"
+            data-i18n="text40"
+          >
+            01 / ELEKTROINŠTALÁCIE
+          </span>
 
-          <div class="realization-icon">
-            <i class="fas fa-bolt"></i>
-          </div>
+          <h2 data-i18n="text41">
+            Kompletné elektroinštalácie
+          </h2>
 
-          <h3 data-i18n="text7">
-            Elektroinštalácie
-          </h3>
-
-          <p data-i18n="realizationElectricalText">
-            Kompletné elektroinštalačné práce
-            pre komerčné, verejné
-            a technologické objekty.
+          <p data-i18n="text42">
+            Zabezpečujeme elektroinštalácie pre nové aj existujúce objekty.
+            Práce realizujeme podľa projektovej dokumentácie a požiadaviek
+            konkrétnej stavby – od prípravy káblových trás až po konečné
+            zapojenie jednotlivých elektrických prvkov.
           </p>
 
+          <ul class="detail-list">
+            <li data-i18n="text43">Silnoprúdové rozvody</li>
+            <li data-i18n="text44">Slaboprúdové rozvody</li>
+            <li data-i18n="text45">Káblové trasy a rebríky</li>
+            <li data-i18n="text46">Rozvádzače</li>
+            <li data-i18n="text47">Osvetlenie</li>
+            <li data-i18n="text48">Núdzové osvetlenie</li>
+            <li data-i18n="text49">Zásuvkové okruhy</li>
+            <li data-i18n="text50">Vonkajšie osvetlenie</li>
+            <li data-i18n="text51">Zabezpečovacie systémy</li>
+            <li data-i18n="text52">Technologické prívody</li>
+          </ul>
+
+          <a
+            href="#kontakt"
+            class="contact-button"
+            data-i18n="text53"
+          >
+            Kontaktovať nás
+            <i class="fas fa-arrow-right"></i>
+          </a>
+
         </div>
 
-      </a>
+      </div>
 
 
-      <!-- PRIEMYSEL -->
+      <!-- PRIEMYSEL A AUTOMATIZÁCIA -->
 
-      <a
-        href="#detail-priemysel"
-        class="realization-card"
+      <div
+        class="detail-block reverse reveal"
+        id="detail-priemysel"
       >
 
-        <div class="realization-image">
-
+        <div class="detail-image">
           <img
-            src="priemysel.jpeg"
+            src="domovska3.png"
             alt="Priemysel a automatizácia"
+            data-i18n-alt="attr54"
           >
-
         </div>
 
+        <div class="detail-content">
 
-        <div class="realization-content">
+          <span
+            class="detail-number"
+            data-i18n="text55"
+          >
+            02 / PRIEMYSEL A AUTOMATIZÁCIA
+          </span>
 
-          <div class="realization-icon">
-            <i class="fas fa-gears"></i>
-          </div>
+          <h2 data-i18n="text56">
+            Priemyselné technológie a automatizácia
+          </h2>
 
-          <h3 data-i18n="text8">
-            Priemysel a automatizácia
-          </h3>
-
-          <p data-i18n="realizationIndustryText">
-            Elektroinštalácie technologických zariadení,
-            rozvádzačov, snímačov
-            a automatizačných systémov.
+          <p data-i18n="text57">
+            Pri priemyselných projektoch realizujeme kabeláž a elektrické
+            zapojenie jednotlivých technológií, výrobných zariadení
+            a automatizovaných systémov. Pracujeme na projektoch,
+            kde je potrebné prepojiť napájanie, riadenie, senzory
+            a jednotlivé technologické prvky do funkčného celku.
           </p>
 
+          <ul class="detail-list">
+            <li data-i18n="text58">Kabeláž strojov</li>
+            <li data-i18n="text59">Automatizované linky</li>
+            <li data-i18n="text60">Senzory a snímače</li>
+            <li data-i18n="text61">Motory a pohony</li>
+            <li data-i18n="text62">Ovládacie prvky</li>
+            <li data-i18n="text63">Signalizačné prvky</li>
+            <li data-i18n="text64">Technologické rozvádzače</li>
+            <li data-i18n="text65">Káblové trasy</li>
+            <li data-i18n="text66">Logistické systémy</li>
+            <li data-i18n="text67">Zapojenie technológií</li>
+          </ul>
+
+          <a
+            href="#kontakt"
+            class="contact-button"
+            data-i18n="text68"
+          >
+            Kontaktovať nás
+            <i class="fas fa-arrow-right"></i>
+          </a>
+
         </div>
 
-      </a>
+      </div>
 
 
-      <!-- HALY -->
+      <!-- VÝROBNÉ A PRIEMYSELNÉ HALY -->
 
-      <a
-        href="#detail-haly"
-        class="realization-card"
+      <div
+        class="detail-block reveal"
+        id="detail-haly"
       >
 
-        <div class="realization-image">
-
+        <div class="detail-image">
           <img
-            src="haly.jpeg"
+            src="domovska4.png"
             alt="Výrobné a priemyselné haly"
+            data-i18n-alt="attr69"
           >
-
         </div>
 
+        <div class="detail-content">
 
-        <div class="realization-content">
+          <span
+            class="detail-number"
+            data-i18n="text70"
+          >
+            03 / VÝROBNÉ A PRIEMYSELNÉ HALY
+          </span>
 
-          <div class="realization-icon">
-            <i class="fas fa-industry"></i>
-          </div>
+          <h2 data-i18n="text71">
+            Elektroinštalácie výrobných a logistických hál
+          </h2>
 
-          <h3 data-i18n="text9">
-            Výrobné a priemyselné haly
-          </h3>
-
-          <p data-i18n="realizationHallsText">
-            Elektroinštalácie výrobných,
-            logistických a priemyselných hál
-            vrátane technologických rozvodov.
+          <p data-i18n="text72">
+            Pri rozsiahlych halových projektoch realizujeme elektrickú
+            infraštruktúru potrebnú pre fungovanie celého objektu.
+            Súčasťou prác môžu byť hlavné káblové trasy, rozvody
+            jednotlivých technológií, osvetlenie aj napájanie
+            výrobných alebo chladiacich zariadení.
           </p>
 
+          <ul class="detail-list">
+            <li data-i18n="text73">Hlavné káblové trasy</li>
+            <li data-i18n="text74">Vedľajšie káblové trasy</li>
+            <li data-i18n="text75">Napájanie technológií</li>
+            <li data-i18n="text76">Výrobné zariadenia</li>
+            <li data-i18n="text77">Logistické technológie</li>
+            <li data-i18n="text78">Chladiace technológie</li>
+            <li data-i18n="text79">Rozvádzače</li>
+            <li data-i18n="text80">Osvetlenie hál</li>
+            <li data-i18n="text81">Núdzové osvetlenie</li>
+            <li data-i18n="text82">Kompletné elektrické rozvody</li>
+          </ul>
+
+          <a
+            href="#kontakt"
+            class="contact-button"
+            data-i18n="text83"
+          >
+            Kontaktovať nás
+            <i class="fas fa-arrow-right"></i>
+          </a>
+
         </div>
 
-      </a>
-
-    </div>
-
-  </section>
-
-
-  <!-- ==================================================
-       DETAIL – ELEKTROINŠTALÁCIE
-  ================================================== -->
-
-  <section
-    class="detail-block"
-    id="detail-elektroinstalacie"
-  >
-
-    <div class="detail-container">
-
-
-      <div class="detail-image">
-
-        <img
-          src="elektroinstalacie-detail.jpeg"
-          alt="Elektroinštalácie"
-        >
-
-      </div>
-
-
-      <div class="detail-content">
-
-        <span
-          class="detail-number"
-          aria-hidden="true"
-        >
-          01
-        </span>
-
-
-        <span
-          class="section-label"
-          data-i18n="detailElectricalLabel"
-        >
-          ELEKTROINŠTALÁCIE
-        </span>
-
-
-        <h2 data-i18n="detailElectricalTitle">
-          Elektroinštalačné práce
-        </h2>
-
-
-        <p data-i18n="detailElectricalText1">
-          Realizujeme elektroinštalačné práce
-          v administratívnych, komerčných,
-          verejných a technologických objektoch.
-        </p>
-
-
-        <p data-i18n="detailElectricalText2">
-          Zabezpečujeme kompletné káblové rozvody,
-          montáž káblových trás, rozvádzačov,
-          zásuviek, osvetlenia, núdzového osvetlenia
-          a ďalších elektrických zariadení.
-        </p>
-
-
-        <ul class="detail-list">
-
-          <li data-i18n="detailElectricalItem1">
-            Silnoprúdové elektroinštalácie
-          </li>
-
-          <li data-i18n="detailElectricalItem2">
-            Slaboprúdové rozvody
-          </li>
-
-          <li data-i18n="detailElectricalItem3">
-            Káblové trasy a káblové rozvody
-          </li>
-
-          <li data-i18n="detailElectricalItem4">
-            Rozvádzače a elektrické skrine
-          </li>
-
-          <li data-i18n="detailElectricalItem5">
-            Osvetlenie a núdzové osvetlenie
-          </li>
-
-          <li data-i18n="detailElectricalItem6">
-            Elektroinštalácie technologických zariadení
-          </li>
-
-        </ul>
-
       </div>
 
     </div>
 
   </section>
 
-
-  <!-- ==================================================
-       DETAIL – PRIEMYSEL A AUTOMATIZÁCIA
-  ================================================== -->
-
-  <section
-    class="detail-block detail-block-alternate"
-    id="detail-priemysel"
-  >
-
-    <div class="detail-container">
-
-
-      <div class="detail-content">
-
-        <span
-          class="detail-number"
-          aria-hidden="true"
-        >
-          02
-        </span>
-
-
-        <span
-          class="section-label"
-          data-i18n="detailIndustryLabel"
-        >
-          PRIEMYSEL
-        </span>
-
-
-        <h2 data-i18n="detailIndustryTitle">
-          Priemysel a automatizácia
-        </h2>
-
-
-        <p data-i18n="detailIndustryText1">
-          V priemyselných prevádzkach realizujeme
-          elektrickú časť technologických zariadení,
-          výrobných liniek a automatizačných systémov.
-        </p>
-
-
-        <p data-i18n="detailIndustryText2">
-          Naše práce zahŕňajú prípravu a montáž
-          káblových trás, ťahanie a zapájanie káblov,
-          pripojenie snímačov, motorov, rozvádzačov
-          a ďalších elektrických komponentov.
-        </p>
-
-
-        <ul class="detail-list">
-
-          <li data-i18n="detailIndustryItem1">
-            Elektrická časť výrobných technológií
-          </li>
-
-          <li data-i18n="detailIndustryItem2">
-            Káblové trasy a technologické rozvody
-          </li>
-
-          <li data-i18n="detailIndustryItem3">
-            Zapájanie rozvádzačov
-          </li>
-
-          <li data-i18n="detailIndustryItem4">
-            Snímače, motory a akčné členy
-          </li>
-
-          <li data-i18n="detailIndustryItem5">
-            Slaboprúdové a riadiace vedenia
-          </li>
-
-          <li data-i18n="detailIndustryItem6">
-            Elektroinštalácie automatizačných systémov
-          </li>
-
-        </ul>
-
-      </div>
-
-
-      <div class="detail-image">
-
-        <img
-          src="priemysel-detail.jpeg"
-          alt="Priemysel a automatizácia"
-        >
-
-      </div>
-
-    </div>
-
-  </section>
+  <div class="main-section-divider"></div>
 
 
   <!-- ==================================================
-       DETAIL – HALY
+       KDE SME PRACOVALI
   ================================================== -->
 
   <section
-    class="detail-block"
-    id="detail-haly"
-  >
-
-    <div class="detail-container">
-
-
-      <div class="detail-image">
-
-        <img
-          src="haly-detail.jpeg"
-          alt="Výrobné a priemyselné haly"
-        >
-
-      </div>
-
-
-      <div class="detail-content">
-
-        <span
-          class="detail-number"
-          aria-hidden="true"
-        >
-          03
-        </span>
-
-
-        <span
-          class="section-label"
-          data-i18n="detailHallsLabel"
-        >
-          VÝROBNÉ A PRIEMYSELNÉ HALY
-        </span>
-
-
-        <h2 data-i18n="detailHallsTitle">
-          Výrobné a priemyselné haly
-        </h2>
-
-
-        <p data-i18n="detailHallsText1">
-          Máme skúsenosti s realizáciou
-          elektroinštalácií vo výrobných,
-          logistických a priemyselných halách.
-        </p>
-
-
-        <p data-i18n="detailHallsText2">
-          Práce realizujeme od prípravy káblových trás
-          a rozvodov až po zapojenie technologických
-          zariadení, rozvádzačov, osvetlenia
-          a ďalších elektrických systémov.
-        </p>
-
-
-        <ul class="detail-list">
-
-          <li data-i18n="detailHallsItem1">
-            Výrobné haly
-          </li>
-
-          <li data-i18n="detailHallsItem2">
-            Logistické centrá
-          </li>
-
-          <li data-i18n="detailHallsItem3">
-            Priemyselné prevádzky
-          </li>
-
-          <li data-i18n="detailHallsItem4">
-            Káblové trasy
-          </li>
-
-          <li data-i18n="detailHallsItem5">
-            Silnoprúdové a slaboprúdové rozvody
-          </li>
-
-          <li data-i18n="detailHallsItem6">
-            Osvetlenie a technologické zariadenia
-          </li>
-
-        </ul>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- ==================================================
-       PROJEKTY
-  ================================================== -->
-
-  <section
-    class="projects-section"
+    class="projects-section section-shell"
     id="projekty"
   >
 
-    <div class="section-heading">
+    <div class="section-container">
 
-      <span
-        class="section-label"
-        data-i18n="projectsLabel"
+      <div class="projects-header reveal">
+
+        <div
+          class="section-label"
+          data-i18n="text84"
+        >
+          Referencie
+        </div>
+
+        <h1
+          class="section-title"
+          data-i18n="text85"
+        >
+          Kde sme <span>pracovali</span>
+        </h1>
+
+        <div class="section-line"></div>
+
+        <p
+          class="projects-intro"
+          data-i18n="text86"
+        >
+          Naše skúsenosti vznikali priamo na realizáciách rôzneho rozsahu –
+          od budov a škôl až po výrobné, priemyselné a logistické projekty.
+          Pozrite si vybrané realizácie a rozsah prác, na ktorých sme sa podieľali.
+        </p>
+
+      </div>
+
+      <div
+        class="projects-list"
+        id="projectsList"
+      ></div>
+
+      <div
+        class="projects-empty"
+        id="projectsEmpty"
       >
-        NAŠE SKÚSENOSTI
-      </span>
 
-      <h2 data-i18n="projectsTitle">
-        Kde sme pracovali
-      </h2>
+        <i class="fas fa-hard-hat"></i>
 
-      <p
-        class="section-intro"
-        data-i18n="projectsIntro"
-      >
-        Výber projektov a realizácií,
-        na ktorých sme sa podieľali
-        na Slovensku aj v zahraničí.
-      </p>
+        <h2 data-i18n="text87">
+          Referencie pripravujeme
+        </h2>
+
+        <p data-i18n="text88">
+          Postupne dopĺňame fotografie a informácie
+          z našich realizovaných projektov.
+        </p>
+
+      </div>
 
     </div>
 
-
-    <!-- Projekty dopĺňa projekty.js -->
-
-    <div
-      class="projects-grid"
-      id="projectsGrid"
-    ></div>
-
   </section>
+
+  <div class="main-section-divider"></div>
 
 
   <!-- ==================================================
@@ -1272,342 +1065,352 @@
   ================================================== -->
 
   <section
-    class="contact-section"
+    class="contact-section section-shell"
     id="kontakt"
   >
 
-    <div class="section-heading">
+    <div class="section-container">
 
-      <span
-        class="section-label"
-        data-i18n="contactLabel"
+      <div class="contact-header reveal">
+
+        <div
+          class="section-label"
+          data-i18n="text89"
+        >
+          Kontaktujte nás
+        </div>
+
+        <h1
+          class="section-title"
+          data-i18n="text90"
+        >
+          Sme vám <span>k dispozícii</span>
+        </h1>
+
+        <div class="section-line"></div>
+
+      </div>
+
+      <div
+        class="contact-container reveal reveal-delay-1"
       >
-        KONTAKTUJTE NÁS
-      </span>
 
-      <h2 data-i18n="navContact">
-        Kontakt
-      </h2>
+        <div class="contact-info">
 
-    </div>
+          <img
+            src="logo.png"
+            class="contact-logo"
+            alt="Elektro Ludwig"
+          >
 
+          <h2 data-i18n="text91">
+            Elektro Ludwig s. r. o.
+          </h2>
 
-    <div class="contact-container">
+          <div class="contact-line">
 
+            <i class="fas fa-location-dot"></i>
 
-      <!-- ==================================================
-           FIRMA
-      ================================================== -->
+            <div>
 
-      <div class="company-info">
+              <strong data-i18n="text92">
+                Sídlo spoločnosti
+              </strong>
 
-        <h3>
-          Elektro Ludwig s. r. o.
-        </h3>
+              <br>
+              Kochanovce 84
+              <br>
+              066 01 Kochanovce
+              <br>
 
+              <span data-i18n="country">
+                Slovenská republika
+              </span>
 
-        <div class="company-detail">
+            </div>
 
-          <i class="fas fa-location-dot"></i>
+          </div>
 
-          <div>
+          <div class="contact-line">
 
-            <strong data-i18n="contactAddress">
-              Adresa
-            </strong>
+            <i class="fas fa-building"></i>
 
-            <span>
-              Kochanovce 84<br>
-              066 01 Kochanovce<br>
-              Slovenská republika
-            </span>
+            <div>
+              <strong data-i18n="text93">
+                IČO
+              </strong>
+              <br>
+              55 110 088
+            </div>
 
           </div>
 
         </div>
 
+        <div class="contact-map">
 
-        <div class="company-detail">
-
-          <i class="fas fa-building"></i>
-
-          <div>
-
-            <strong data-i18n="companyIdLabel">
-              IČO
-            </strong>
-
-            <span>
-              55 110 088
-            </span>
-
-          </div>
+          <iframe
+            src="https://www.google.com/maps?q=Kochanovce%2084%2C%20066%2001%20Kochanovce%2C%20Slovakia&output=embed"
+            loading="lazy"
+            allowfullscreen=""
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Elektro Ludwig - Kochanovce 84"
+          ></iframe>
 
         </div>
 
       </div>
 
+      <div class="contact-divider"></div>
 
-      <!-- ==================================================
-           KONTAKTNÉ OSOBY
-      ================================================== -->
-
-      <div class="contact-people">
-
-
-        <!-- ĽUDOVÍT -->
+      <div
+        class="contact-people reveal reveal-delay-2"
+      >
 
         <div class="person">
 
-          <h3 data-i18n="managingDirector">
-            Konateľ
+          <h3 data-i18n="text94">
+            Konateľ firmy
           </h3>
-
 
           <div class="person-name">
             Ľudovít Hudák
           </div>
 
+          <div class="person-detail">
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:ludovit.hudak.elektroludwig@gmail.com">
+              ludovit.hudak.elektroludwig@gmail.com
+            </a>
+          </div>
 
           <div class="person-detail">
-
             <i class="fas fa-phone"></i>
-
             <a href="tel:+421940860363">
               +421 940 860 363
             </a>
-
-          </div>
-
-
-          <div class="person-detail">
-
-            <i class="fas fa-envelope"></i>
-
-            <a
-              href="mailto:ludovit.hudak.elektroludwig@gmail.com"
-            >
-              ludovit.hudak.elektroludwig@gmail.com
-            </a>
-
           </div>
 
         </div>
 
 
-        <!-- VLADIMÍR -->
-
         <div class="person">
 
-          <h3 data-i18n="electricalSupervisor">
+          <h3 data-i18n="text95">
             Elektromajster
           </h3>
-
 
           <div class="person-name">
             Vladimír Mendel
           </div>
 
+          <div class="person-detail">
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:vladimir.mendel.elektroludwig@gmail.com">
+              vladimir.mendel.elektroludwig@gmail.com
+            </a>
+          </div>
 
           <div class="person-detail">
-
             <i class="fas fa-phone"></i>
-
             <a href="tel:+421904162593">
               +421 904 162 593
             </a>
-
-          </div>
-
-
-          <div class="person-detail">
-
-            <i class="fas fa-envelope"></i>
-
-            <a
-              href="mailto:vladimir.mendel.elektroludwig@gmail.com"
-            >
-              vladimir.mendel.elektroludwig@gmail.com
-            </a>
-
           </div>
 
         </div>
 
 
-        <!-- EKONOMICKÉ -->
-
         <div class="person">
 
-          <h3 data-i18n="economicDepartment">
+          <h3 data-i18n="text96">
             Ekonomické oddelenie
           </h3>
-
 
           <div class="person-name empty">
             &nbsp;
           </div>
 
+          <div class="person-detail">
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:faktury.hudak@gmail.com">
+              faktury.hudak@gmail.com
+            </a>
+          </div>
 
           <div class="person-detail">
-
             <i class="fas fa-phone"></i>
-
             <a href="tel:+421940860363">
               +421 940 860 363
             </a>
-
-          </div>
-
-
-          <div class="person-detail">
-
-            <i class="fas fa-envelope"></i>
-
-            <a
-              href="mailto:faktury.hudak@gmail.com"
-            >
-              faktury.hudak@gmail.com
-            </a>
-
           </div>
 
         </div>
 
       </div>
 
-    </div>
 
+      <!-- ==================================================
+           KONTAKTNÝ FORMULÁR
+      ================================================== -->
 
-    <!-- ==================================================
-         FORMULÁR
-    ================================================== -->
+      <div class="inquiry-area reveal">
 
-    <div class="inquiry-area">
+        <div class="inquiry-header">
 
-      <div class="inquiry-inner">
+          <div
+            class="section-label"
+            data-i18n="text97"
+          >
+            Máte otázku alebo záujem o spoluprácu?
+          </div>
 
-        <span
-          class="section-label"
-          data-i18n="inquiryLabel"
-        >
-          NAPÍŠTE NÁM
-        </span>
+          <h2
+            class="inquiry-title"
+            data-i18n="text98"
+          >
+            Napíšte <span>nám</span>
+          </h2>
 
+          <p
+            class="inquiry-description"
+            data-i18n="text99"
+          >
+            Pošlite nám základné informácie o vašom projekte alebo požiadavke.
+            Ozveme sa vám čo najskôr.
+          </p>
 
-        <h2
-          class="inquiry-title"
-          data-i18n="inquiryTitle"
-        >
-          Máte záujem o spoluprácu?
-        </h2>
-
+        </div>
 
         <p
-          class="inquiry-text"
-          data-i18n="inquiryText"
+          class="required-note"
+          data-i18n="formNotice"
         >
-          Kontaktujte nás a radi s vami
-          preberieme možnosti spolupráce
-          na vašom projekte.
+          Odosielanie cez formulár zatiaľ nie je aktívne.
+          Použite, prosím, e-mail alebo telefón uvedený vyššie.
         </p>
 
-
         <form
-          class="contact-form"
-          id="contactForm"
+          class="inquiry-form"
+          id="inquiryForm"
         >
 
           <div class="form-grid">
 
-
             <div class="form-group">
 
-              <label
-                for="name"
-                data-i18n="formName"
-              >
-                Meno / firma
-              </label>
+              <i class="fas fa-user"></i>
 
               <input
                 type="text"
-                id="name"
                 name="name"
+                placeholder="Meno a priezvisko *"
+                data-i18n-placeholder="fullName"
                 required
               >
 
             </div>
 
+            <div class="form-group">
+
+              <i class="fas fa-building"></i>
+
+              <input
+                type="text"
+                name="company"
+                placeholder="Spoločnosť"
+                data-i18n-placeholder="attr100"
+              >
+
+            </div>
 
             <div class="form-group">
 
-              <label
-                for="email"
-                data-i18n="formEmail"
-              >
-                E-mail
-              </label>
+              <i class="fas fa-envelope"></i>
 
               <input
                 type="email"
-                id="email"
                 name="email"
+                placeholder="E-mail *"
+                data-i18n-placeholder="attr101"
                 required
               >
 
             </div>
 
-
             <div class="form-group">
 
-              <label
-                for="phone"
-                data-i18n="formPhone"
-              >
-                Telefón
-              </label>
+              <i class="fas fa-phone"></i>
 
               <input
                 type="tel"
-                id="phone"
                 name="phone"
+                placeholder="Telefón"
+                data-i18n-placeholder="attr102"
               >
 
             </div>
-
-
-            <div class="form-group">
-
-              <label
-                for="subject"
-                data-i18n="formSubject"
-              >
-                Predmet
-              </label>
-
-              <input
-                type="text"
-                id="subject"
-                name="subject"
-              >
-
-            </div>
-
 
             <div class="form-group full">
 
-              <label
-                for="message"
-                data-i18n="formMessage"
+              <i class="fas fa-list"></i>
+
+              <select
+                name="subject"
+                required
               >
-                Správa
-              </label>
+
+                <option
+                  value=""
+                  selected
+                  disabled
+                  data-i18n="text103"
+                >
+                  Vyberte typ dopytu *
+                </option>
+
+                <option
+                  value="Elektroinštalácie"
+                  data-i18n="text104"
+                >
+                  Elektroinštalácie
+                </option>
+
+                <option
+                  value="Priemysel a automatizácia"
+                  data-i18n="text105"
+                >
+                  Priemysel a automatizácia
+                </option>
+
+                <option
+                  value="Výrobné a priemyselné haly"
+                  data-i18n="text106"
+                >
+                  Výrobné a priemyselné haly
+                </option>
+
+                <option
+                  value="Iné"
+                  data-i18n="text107"
+                >
+                  Iné
+                </option>
+
+              </select>
+
+            </div>
+
+            <div
+              class="form-group full textarea-group"
+            >
+
+              <i class="fas fa-message"></i>
 
               <textarea
-                id="message"
                 name="message"
-                rows="6"
+                placeholder="Vaša správa *"
+                data-i18n-placeholder="attr108"
                 required
               ></textarea>
 
@@ -1615,16 +1418,45 @@
 
           </div>
 
+          <label class="privacy-row">
+
+            <input
+              type="checkbox"
+              name="privacy"
+              required
+            >
+
+            <span data-i18n="text109">
+              Súhlasím so spracovaním uvedených osobných údajov
+              za účelom vybavenia môjho dopytu. *
+            </span>
+
+          </label>
+
+          <div
+            class="required-note"
+            data-i18n="text110"
+          >
+            * Povinné údaje
+          </div>
 
           <div class="form-submit-row">
 
             <button
               type="submit"
               class="submit-button"
-              data-i18n="formSubmit"
+              data-i18n="text111"
             >
               Odoslať správu
+              <i class="fas fa-paper-plane"></i>
             </button>
+
+            <div
+              class="form-message"
+              id="formMessage"
+              role="status"
+              aria-live="polite"
+            ></div>
 
           </div>
 
@@ -1636,80 +1468,55 @@
 
   </section>
 
+  <div class="main-section-divider"></div>
+
 
   <!-- ==================================================
-       PEVNÝ KONTAKT
+       BOČNÝ KONTAKT
   ================================================== -->
 
   <div class="fixed-contact">
 
     <a
-      href="tel:+421940860363"
-      title="Telefón"
-      data-i18n-title="attr3"
+      href="https://wa.me/421940860363"
+      title="WhatsApp"
     >
-
-      <i class="fas fa-phone"></i>
-
+      <i class="fab fa-whatsapp"></i>
     </a>
 
+    <a
+      href="tel:+421940860363"
+      title="Telefón"
+      data-i18n-title="attr112"
+    >
+      <i class="fas fa-phone"></i>
+    </a>
 
     <a
       href="mailto:ludovit.hudak.elektroludwig@gmail.com"
       title="E-mail"
-      data-i18n-title="attr2"
+      data-i18n-title="attr113"
     >
-
       <i class="fas fa-envelope"></i>
-
-    </a>
-
-
-    <a
-      href="https://wa.me/421940860363"
-      title="WhatsApp"
-    >
-
-      <i class="fab fa-whatsapp"></i>
-
     </a>
 
   </div>
 
 
   <!-- ==================================================
-       JAZYKY
+       JAVASCRIPT
   ================================================== -->
 
   <script src="languages/sk.js"></script>
-
   <script src="languages/en.js"></script>
-
   <script src="languages/de.js"></script>
-
   <script src="languages/pl.js"></script>
-
   <script src="languages/fr.js"></script>
-
   <script src="languages/es.js"></script>
-
   <script src="languages/zh.js"></script>
 
-
-  <!-- ==================================================
-       PROJEKTY
-  ================================================== -->
-
   <script src="projekty.js"></script>
-
-
-  <!-- ==================================================
-       HLAVNÝ JAVASCRIPT
-  ================================================== -->
-
   <script src="script.js"></script>
 
-
 </body>
-
 </html>
