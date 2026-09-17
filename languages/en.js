@@ -43,6 +43,33 @@ window.elektroLudwigLanguages.en = {
     attr10:
       "Elektro Ludwig - More than just electricity",
 
+    heroSlogan:
+      "More than just electricity",
+
+    heroExperienceTitle:
+      "EXPERIENCE",
+
+    heroExperienceText:
+      "Years of industry experience",
+
+    heroReliabilityTitle:
+      "RELIABILITY",
+
+    heroReliabilityText:
+      "We meet deadlines",
+
+    heroQualityTitle:
+      "QUALITY",
+
+    heroQualityText:
+      "Precise execution",
+
+    heroFlexibilityTitle:
+      "FLEXIBILITY",
+
+    heroFlexibilityText:
+      "Tailored solutions",
+
     text11:
       "Elektro Ludwig",
 
