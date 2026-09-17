@@ -43,6 +43,33 @@ window.elektroLudwigLanguages.sk = {
     attr10:
       "Elektro Ludwig - Viac než len elektrina",
 
+    heroSlogan:
+      "Viac než len elektrina",
+
+    heroExperienceTitle:
+      "SKÚSENOSTI",
+
+    heroExperienceText:
+      "Roky praxe v odbore",
+
+    heroReliabilityTitle:
+      "SPOĽAHLIVOSŤ",
+
+    heroReliabilityText:
+      "Dodržiavame termíny",
+
+    heroQualityTitle:
+      "KVALITA",
+
+    heroQualityText:
+      "Precízna realizácia",
+
+    heroFlexibilityTitle:
+      "FLEXIBILITA",
+
+    heroFlexibilityText:
+      "Riešenia na mieru",
+
     text11:
       "Elektro Ludwig",
 
