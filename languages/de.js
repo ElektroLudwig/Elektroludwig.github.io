@@ -43,6 +43,33 @@ window.elektroLudwigLanguages.de = {
     attr10:
       "Elektro Ludwig – Mehr als nur Elektrik",
 
+    heroSlogan:
+      "Mehr als nur Elektrik",
+
+    heroExperienceTitle:
+      "ERFAHRUNG",
+
+    heroExperienceText:
+      "Langjährige Branchenerfahrung",
+
+    heroReliabilityTitle:
+      "ZUVERLÄSSIGKEIT",
+
+    heroReliabilityText:
+      "Wir halten Termine ein",
+
+    heroQualityTitle:
+      "QUALITÄT",
+
+    heroQualityText:
+      "Präzise Ausführung",
+
+    heroFlexibilityTitle:
+      "FLEXIBILITÄT",
+
+    heroFlexibilityText:
+      "Lösungen nach Maß",
+
     text11:
       "Elektro Ludwig",
 
