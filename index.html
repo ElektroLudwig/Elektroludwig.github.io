@@ -17,334 +17,240 @@
   <link rel="stylesheet" href="style.css">
 
   <style>
-    /* ==================================================
-       JAZYKOVÝ PREPÍNAČ
-       Pôvodný style.css zostáva zachovaný.
-    ================================================== */
+  /* ==================================================
+     JAZYKOVÝ PREPÍNAČ
+     Pôvodný style.css zostáva zachovaný.
+  ================================================== */
 
-    button.language-current {
-      border: 0;
-      background: transparent;
-      color: inherit;
-      font-family: inherit;
-    }
+  button.language-current {
+    border: 0;
+    background: transparent;
+    color: inherit;
+    font-family: inherit;
+  }
 
-    .language-switcher:not(.is-open) .language-menu {
-      opacity: 0;
-      visibility: hidden;
-      pointer-events: none;
-    }
+  .language-switcher:not(.is-open) .language-menu {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
 
-    .language-switcher.is-open .language-menu {
-      opacity: 1;
-      visibility: visible;
-      pointer-events: auto;
-      transform: translateY(0);
-    }
+  .language-switcher.is-open .language-menu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
 
-    .language-switcher.is-open .language-arrow {
-      transform: rotate(180deg);
-    }
+  .language-switcher.is-open .language-arrow {
+    transform: rotate(180deg);
+  }
 
-    .language-current:focus-visible,
-    .language-menu a:focus-visible {
-      outline: 2px solid #d60000;
-      outline-offset: 3px;
-    }
+  .language-current:focus-visible,
+  .language-menu a:focus-visible {
+    outline: 2px solid #d60000;
+    outline-offset: 3px;
+  }
 
 
-    /* ==================================================
-       DOMOVSKÁ FOTKA – PREKLADATEĽNÉ TEXTY
-    ================================================== */
+  /* ==================================================
+     DOMOVSKÁ FOTKA – PREKLADATEĽNÉ TEXTY
+  ================================================== */
 
-    .home-hero {
-      position: relative;
-      overflow: hidden;
-    }
+  .home-hero {
+    position: relative;
+    overflow: hidden;
+  }
 
-    .home-hero > img {
-      display: block;
-      width: 100%;
-      height: auto;
-    }
+  .home-hero > img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
 
-    /*
-      SLOGAN NA ĽAVEJ STRANE
-    */
+  /*
+    SLOGAN NA ĽAVEJ STRANE
+  */
+
+  .hero-slogan {
+    position: absolute;
+    left: 6.5%;
+    top: 43%;
+    width: 23%;
+    color: #ffffff;
+    z-index: 2;
+    font-size: clamp(28px, 3.1vw, 66px);
+    font-family: "Brush Script MT", "Segoe Script", cursive;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.05;
+    transform: rotate(-3deg);
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.45);
+  }
+
+  /*
+    SPODNÉ 4 INFORMAČNÉ BLOKY
+  */
+
+  .hero-features {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 2.5%;
+    height: 17.5%;
+    z-index: 3;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    align-items: center;
+  }
+
+  .hero-feature {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    color: #ffffff;
+  }
+
+  /*
+    Ikony sú súčasťou obrázka.
+    Preto text začína napravo od nich.
+  */
+
+  .hero-feature:nth-child(1) {
+    padding-left: 38%;
+  }
+
+  .hero-feature:nth-child(2) {
+    padding-left: 40%;
+  }
+
+  .hero-feature:nth-child(3) {
+    padding-left: 39%;
+  }
+
+  .hero-feature:nth-child(4) {
+    padding-left: 39%;
+  }
+
+  .hero-feature-title {
+    display: block;
+
+    margin-bottom: 5px;
+
+    font-size: clamp(10px, 1.05vw, 22px);
+    line-height: 1.15;
+
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.01em;
+
+    white-space: nowrap;
+
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.65);
+  }
+
+  .hero-feature-text {
+    display: block;
+
+    font-size: clamp(9px, 0.9vw, 18px);
+    line-height: 1.25;
+
+    font-weight: 400;
+
+    white-space: nowrap;
+
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.65);
+  }
+
+
+  /* ==================================================
+     DOMOVSKÁ FOTKA – TABLET
+  ================================================== */
+
+  @media (max-width: 1000px) {
 
     .hero-slogan {
-      position: absolute;
-      left: 6.5%;
-      top: 38%;
-      width: 23%;
-      color: #ffffff;
-      z-index: 2;
-      font-size: clamp(28px, 3.1vw, 66px);
-      font-family: "Brush Script MT", "Segoe Script", cursive;
-      font-style: italic;
-      font-weight: 400;
-      line-height: 1.05;
-      transform: rotate(-3deg);
-      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.45);
+      left: 6%;
+      top: 42%;
+      width: 25%;
+      font-size: clamp(22px, 4vw, 42px);
     }
-
-    /*
-      SPODNÉ 4 INFORMAČNÉ BLOKY
-    */
 
     .hero-features {
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: -1.5%;
-      height: 17.5%;
-      z-index: 3;
-
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-
-      align-items: center;
-    }
-
-    .hero-feature {
-      min-width: 0;
-
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-
-      color: #ffffff;
-    }
-
-    /*
-      Ikony sú súčasťou obrázka.
-      Preto text začína napravo od nich.
-    */
-
-    .hero-feature:nth-child(1) {
-      padding-left: 31%;
-    }
-
-    .hero-feature:nth-child(2) {
-      padding-left: 38%;
-    }
-
-    .hero-feature:nth-child(3) {
-      padding-left: 37%;
-    }
-
-    .hero-feature:nth-child(4) {
-      padding-left: 37%;
+      bottom: 2.5%;
     }
 
     .hero-feature-title {
-      display: block;
-
-      margin-bottom: 5px;
-
-      font-size: clamp(10px, 1.05vw, 22px);
-      line-height: 1.15;
-
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.01em;
-
-      white-space: nowrap;
-
-      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.65);
+      font-size: clamp(8px, 1.25vw, 14px);
     }
 
     .hero-feature-text {
-      display: block;
+      font-size: clamp(7px, 1.05vw, 12px);
+    }
+  }
 
-      font-size: clamp(9px, 0.9vw, 18px);
-      line-height: 1.25;
 
-      font-weight: 400;
+  /* ==================================================
+     DOMOVSKÁ FOTKA – MOBIL
+  ================================================== */
 
-      white-space: nowrap;
+  @media (max-width: 700px) {
 
-      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.65);
+    .hero-slogan {
+      left: 5%;
+      top: 41%;
+      width: 27%;
+      font-size: clamp(17px, 5vw, 30px);
     }
 
-
-    /* ==================================================
-       DOMOVSKÁ FOTKA – TABLET
-    ================================================== */
-
-    @media (max-width: 1000px) {
-
-      .hero-slogan {
-        left: 6%;
-        top: 37%;
-        width: 25%;
-        font-size: clamp(22px, 4vw, 42px);
-      }
-
-      .hero-feature-title {
-        font-size: clamp(8px, 1.25vw, 14px);
-      }
-
-      .hero-feature-text {
-        font-size: clamp(7px, 1.05vw, 12px);
-      }
+    .hero-features {
+      height: 18%;
+      bottom: 2.5%;
     }
 
-
-    /* ==================================================
-       DOMOVSKÁ FOTKA – MOBIL
-    ================================================== */
-
-    @media (max-width: 700px) {
-
-      .hero-slogan {
-        left: 5%;
-        top: 35%;
-        width: 27%;
-        font-size: clamp(17px, 5vw, 30px);
-      }
-
-      .hero-features {
-        height: 18%;
-        bottom: -1.5%;
-      }
-
-      .hero-feature-title {
-        font-size: clamp(6px, 1.65vw, 10px);
-        margin-bottom: 2px;
-      }
-
-      .hero-feature-text {
-        font-size: clamp(5px, 1.4vw, 9px);
-      }
+    .hero-feature-title {
+      font-size: clamp(6px, 1.65vw, 10px);
+      margin-bottom: 2px;
     }
 
+    .hero-feature-text {
+      font-size: clamp(5px, 1.4vw, 9px);
+    }
+  }
 
-    /* ==================================================
-       VEĽMI MALÝ MOBIL
-    ================================================== */
 
-    @media (max-width: 450px) {
+  /* ==================================================
+     VEĽMI MALÝ MOBIL
+  ================================================== */
 
-      .hero-slogan {
-        left: 5%;
-        top: 34%;
-        width: 29%;
-        font-size: clamp(14px, 5vw, 22px);
-      }
+  @media (max-width: 450px) {
 
-      .hero-feature-title {
-        font-size: 6px;
-      }
-
-      .hero-feature-text {
-        font-size: 5px;
-      }
+    .hero-slogan {
+      left: 5%;
+      top: 40%;
+      width: 29%;
+      font-size: clamp(14px, 5vw, 22px);
     }
 
-  </style>
-</head>
+    .hero-features {
+      bottom: 2.5%;
+    }
 
+    .hero-feature-title {
+      font-size: 6px;
+    }
 
-<body>
+    .hero-feature-text {
+      font-size: 5px;
+    }
+  }
 
-  <!-- ==================================================
-       HORNÁ LIŠTA
-  ================================================== -->
-
-  <div class="topbar">
-
-    <div class="topbar-left">
-
-      <a href="#" class="facebook" title="Facebook">
-        <i class="fab fa-facebook-f"></i>
-      </a>
-
-      <a href="#" class="instagram" title="Instagram">
-        <i class="fab fa-instagram"></i>
-      </a>
-
-      <a
-        href="mailto:ludovit.hudak.elektroludwig@gmail.com"
-        class="email"
-        title="E-mail"
-        data-i18n-title="attr2"
-      >
-        <i class="fas fa-envelope"></i>
-      </a>
-
-      <a
-        href="https://wa.me/421940860363"
-        class="whatsapp"
-        title="WhatsApp"
-      >
-        <i class="fab fa-whatsapp"></i>
-      </a>
-
-    </div>
-
-
-    <div style="display:flex; gap:10px; align-items:center;">
-
-      <a
-        href="tel:+421940860363"
-        class="phone"
-        title="Telefón"
-        data-i18n-title="attr3"
-      >
-        <i class="fas fa-phone"></i>
-      </a>
-
-
-      <div class="language-switcher">
-
-        <button
-          type="button"
-          class="language-current"
-          aria-expanded="false"
-          aria-controls="languageMenu"
-          aria-label="Vybrať jazyk"
-        >
-          <i class="fas fa-globe"></i>
-          <span>SK</span>
-
-          <i
-            class="fas fa-chevron-down language-arrow"
-            aria-hidden="true"
-          ></i>
-
-        </button>
-
-
-        <div class="language-menu" id="languageMenu">
-
-          <a
-            href="#"
-            data-language="sk"
-            lang="sk"
-            aria-current="true"
-          >
-            <i class="fas fa-check"></i>
-            Slovenčina
-          </a>
-
-          <a
-            href="#"
-            data-language="en"
-            lang="en"
-          >
-            <i class="fas fa-language"></i>
-            English
-          </a>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
+</style>
 
   <!-- ==================================================
        LOGO
