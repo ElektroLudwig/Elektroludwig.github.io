@@ -2131,3 +2131,14 @@ section,
     line-height: 1.75;
   }
 }
+/* ==================================================
+   OPRAVA POZÍCIE SEKCIE PO KLIKNUTÍ V MENU
+   Zarovná začiatok sekcie pod navigáciu
+================================================== */
+
+#onas,
+#oblasti-realizacie,
+#projekty,
+#kontakt {
+  scroll-margin-top: 80px;
+}
