@@ -433,8 +433,19 @@ function setLanguage(language) {
     typeof formMessage !== "undefined" &&
     formMessage?.classList.contains("visible")
   ) {
-    formMessage.textContent =
-      t("formPending");
+    const status =
+      formMessage.dataset.status;
+
+    if (status === "success") {
+      formMessage.innerHTML =
+        t("formSuccess");
+    } else if (status === "error") {
+      formMessage.innerHTML =
+        t("formError");
+    } else {
+      formMessage.textContent =
+        t("formSending");
+    }
   }
 
   document
@@ -1921,6 +1932,9 @@ if (
       formMessage.textContent =
         t("formSending");
 
+      formMessage.dataset.status =
+        "sending";
+
       formMessage.classList.remove(
         "success",
         "error"
@@ -1953,6 +1967,13 @@ if (
           formMessage.innerHTML =
             t("formSuccess");
 
+          formMessage.dataset.status =
+            "success";
+
+          formMessage.classList.remove(
+            "error"
+          );
+
           formMessage.classList.add(
             "success"
           );
@@ -1982,6 +2003,13 @@ if (
 
         formMessage.innerHTML =
           t("formError");
+
+        formMessage.dataset.status =
+          "error";
+
+        formMessage.classList.remove(
+          "success"
+        );
 
         formMessage.classList.add(
           "error"
