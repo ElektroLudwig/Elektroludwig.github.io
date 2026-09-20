@@ -22,7 +22,7 @@ window.elektroLudwigLanguages.fr = {
 
   ui: {
 
-    text1: "Elektroludwig | Installations électriques",
+    text1: "Elektro Ludwig | Installations électriques",
 
     attr2: "E-mail",
     attr3: "Téléphone",
@@ -77,28 +77,28 @@ window.elektroLudwigLanguages.fr = {
       "À propos <span>de nous</span>",
 
     text13:
-      "<strong>Elektro Ludwig s.r.o.</strong> est une entreprise slovaque spécialisée dans les installations électriques, intervenant sur des projets en Slovaquie comme à l’étranger. Bien que la société exerce sous sa forme juridique actuelle de s.r.o. depuis sa création, notre expérience remonte à bien plus longtemps.",
+      "<strong>Elektro Ludwig s. r. o.</strong> est une entreprise slovaque spécialisée dans les installations électriques, intervenant sur des projets en Slovaquie comme à l’étranger. Bien que la société exerce sous sa forme juridique actuelle depuis sa création en tant que société à responsabilité limitée, notre expérience remonte à bien plus longtemps.",
 
     text14:
-      "Avant même la création d’Elektro Ludwig s.r.o., nous réalisions déjà des travaux d’installation électrique dans le cadre de l’activité indépendante de <strong>Ľudovít Hudák</strong>, aujourd’hui gérant de la société. Notre histoire ne commence donc pas à la date d’inscription de la s.r.o. au registre du commerce, mais repose sur de nombreuses années d’expérience pratique acquise directement sur les chantiers et lors de la réalisation de projets électriques de grande envergure.",
+      "Avant même la création d’Elektro Ludwig s. r. o., nous réalisions déjà des travaux d’installation électrique dans le cadre de l’activité indépendante de <strong>Ľudovít Hudák</strong>, aujourd’hui gérant de la société. Notre histoire ne commence donc pas à la date d’inscription de la société au registre du commerce, mais repose sur de nombreuses années d’expérience pratique acquise directement sur les chantiers et lors de la réalisation de projets électriques de grande envergure.",
 
     text15:
       "Au fil des années, nous avons travaillé sur différents types de bâtiments et d’installations – des <strong>écoles et bâtiments administratifs aux halls de production et industriels, en passant par les lignes de production automatisées et les centres logistiques</strong>.",
 
     text16:
-      "Notre expérience comprend les installations électriques complètes des bâtiments, notamment les installations de puissance et de courant faible, l’éclairage, l’éclairage de secours, les systèmes de sécurité, les tableaux électriques, l’alimentation des différentes technologies, l’éclairage extérieur, les installations des zones de stationnement ainsi que d’autres systèmes nécessaires au fonctionnement sûr et fiable des bâtiments.",
+      "Notre expérience comprend les installations électriques complètes des bâtiments, notamment les installations de puissance et de courant faible, l’éclairage, l’éclairage de secours, les systèmes de sécurité, les tableaux électriques, l’alimentation des différents équipements, l’éclairage extérieur, les installations des zones de stationnement ainsi que d’autres systèmes nécessaires au fonctionnement sûr et fiable des bâtiments.",
 
     text17:
-      "Dans le cadre de projets industriels, nous réalisons les installations électriques des halls de production, l’alimentation des machines et équipements technologiques, les chemins de câbles, les tableaux électriques, les éléments de commande et de signalisation ainsi que le raccordement électrique complet des différentes technologies.",
+      "Dans le cadre de projets industriels, nous réalisons les installations électriques des halls de production, l’alimentation des machines et équipements techniques, les chemins de câbles, les tableaux électriques, les éléments de commande et de signalisation ainsi que le raccordement électrique complet des différents équipements.",
 
     text18:
-      "L’<strong>automatisation industrielle</strong> constitue un autre domaine important de notre expérience. Nous avons participé à la réalisation de systèmes automatisés de production et de logistique, pour lesquels nous avons assuré les installations électriques nécessaires au fonctionnement de l’automatisation – des chemins de câbles et du câblage jusqu’au raccordement des capteurs, moteurs, tableaux électriques et différents composants technologiques.",
+      "L’<strong>automatisation industrielle</strong> constitue un autre domaine important de notre expérience. Nous avons participé à la réalisation de systèmes automatisés de production et de logistique, pour lesquels nous avons assuré les installations électriques nécessaires à leur fonctionnement – des chemins de câbles et du câblage jusqu’au raccordement des capteurs, moteurs, armoires électriques et différents composants techniques.",
 
     text19:
       "Grâce à notre expérience acquise sur différents types de chantiers, nous sommes en mesure de réaliser aussi bien des installations électriques courantes que des projets industriels et d’automatisation de grande envergure.",
 
     text20:
-      "En résumé – partout où l’électricité, le câblage, la commande ou la technologie sont nécessaires, nous savons trouver une solution.",
+      "En résumé – partout où l’électricité, le câblage, la commande ou des équipements techniques sont nécessaires, nous savons trouver une solution.",
 
     text21:
       "Nos compétences",
@@ -107,7 +107,7 @@ window.elektroLudwigLanguages.fr = {
       "Domaines <span>d’intervention</span>",
 
     text23:
-      "Des installations électriques de bâtiments aux grands projets industriels et d’automatisation. Nous réalisons des installations électriques, du câblage et des systèmes technologiques pour différents types de bâtiments, sites de production et installations logistiques.",
+      "Des installations électriques de bâtiments aux grands projets industriels et d’automatisation. Nous réalisons des installations électriques, du câblage et des systèmes techniques pour différents types de bâtiments, sites de production et installations logistiques.",
 
     attr24:
       "Installations électriques Elektro Ludwig",
@@ -116,7 +116,7 @@ window.elektroLudwigLanguages.fr = {
       "Installations électriques",
 
     text26:
-      "Nous réalisons des installations électriques complètes pour les bâtiments et autres ouvrages – des chemins de câbles et réseaux électriques jusqu’à l’éclairage, aux tableaux électriques et aux circuits de prises et de technologies.",
+      "Nous réalisons des installations électriques complètes pour les bâtiments et autres ouvrages – des chemins de câbles et réseaux électriques jusqu’à l’éclairage, aux tableaux électriques, aux circuits de prises et à l’alimentation des équipements.",
 
     text27:
       'Plus d’informations <i class="fas fa-arrow-right"></i>',
@@ -128,7 +128,7 @@ window.elektroLudwigLanguages.fr = {
       "Industrie et automatisation",
 
     text30:
-      "Nous réalisons les installations électriques des technologies industrielles, des équipements de production et des systèmes automatisés.",
+      "Nous réalisons les installations électriques des équipements industriels, des machines de production et des systèmes automatisés.",
 
     text31:
       'Plus d’informations <i class="fas fa-arrow-right"></i>',
@@ -140,7 +140,7 @@ window.elektroLudwigLanguages.fr = {
       "Halls de production et industriels",
 
     text34:
-      "Installations électriques complètes, chemins de câbles, éclairage et alimentation des technologies dans les bâtiments de production, de stockage et de logistique.",
+      "Installations électriques complètes, chemins de câbles, éclairage et alimentation des équipements dans les bâtiments de production, de stockage et de logistique.",
 
     text35:
       'Plus d’informations <i class="fas fa-arrow-right"></i>',
@@ -149,10 +149,10 @@ window.elektroLudwigLanguages.fr = {
       "Ce que nous réalisons",
 
     text37:
-      "Du câblage à la <span>technologie</span>",
+      "Du câblage aux <span>équipements</span>",
 
     text38:
-      "Notre travail ne s’arrête pas à la simple pose des câbles. Nous participons à la réalisation des installations électriques, depuis les chemins de câbles et les réseaux jusqu’au raccordement des différents équipements et technologies.",
+      "Notre travail ne s’arrête pas à la simple pose des câbles. Nous réalisons les installations électriques depuis les chemins de câbles et les réseaux de distribution jusqu’au raccordement des différents appareils et équipements.",
 
     attr39:
       "Installations électriques complètes",
@@ -175,7 +175,7 @@ window.elektroLudwigLanguages.fr = {
     text49: "Circuits de prises",
     text50: "Éclairage extérieur",
     text51: "Systèmes de sécurité",
-    text52: "Alimentation des technologies",
+    text52: "Alimentation des équipements",
 
     text53:
       'Nous contacter <i class="fas fa-arrow-right"></i>',
@@ -187,10 +187,10 @@ window.elektroLudwigLanguages.fr = {
       "02 / INDUSTRIE ET AUTOMATISATION",
 
     text56:
-      "Technologies industrielles et automatisation",
+      "Équipements industriels et automatisation",
 
     text57:
-      "Dans le cadre de projets industriels, nous réalisons le câblage et le raccordement électrique des différentes technologies, équipements de production et systèmes automatisés. Nous intervenons sur des projets où l’alimentation, la commande, les capteurs et les différents composants technologiques doivent être intégrés dans un ensemble fonctionnel.",
+      "Dans le cadre de projets industriels, nous réalisons le câblage et le raccordement électrique des différents équipements, machines de production et systèmes automatisés. Nous intervenons sur des projets où l’alimentation, la commande, les capteurs et les différents composants techniques doivent être intégrés dans un ensemble fonctionnel.",
 
     text58: "Câblage des machines",
     text59: "Lignes automatisées",
@@ -198,10 +198,10 @@ window.elektroLudwigLanguages.fr = {
     text61: "Moteurs et entraînements",
     text62: "Éléments de commande",
     text63: "Éléments de signalisation",
-    text64: "Tableaux électriques technologiques",
+    text64: "Armoires électriques de commande",
     text65: "Chemins de câbles",
     text66: "Systèmes logistiques",
-    text67: "Raccordement des technologies",
+    text67: "Raccordement des équipements",
 
     text68:
       'Nous contacter <i class="fas fa-arrow-right"></i>',
@@ -216,14 +216,14 @@ window.elektroLudwigLanguages.fr = {
       "Installations électriques des halls de production et logistiques",
 
     text72:
-      "Dans le cadre de grands projets de halls, nous réalisons l’infrastructure électrique nécessaire au fonctionnement de l’ensemble du bâtiment. Les travaux peuvent comprendre les principaux chemins de câbles, les installations des différentes technologies, l’éclairage ainsi que l’alimentation des équipements de production ou de réfrigération.",
+      "Dans le cadre de grands projets de halls, nous réalisons l’infrastructure électrique nécessaire au fonctionnement de l’ensemble du bâtiment. Les travaux peuvent comprendre les principaux chemins de câbles, les installations électriques des différents équipements, l’éclairage ainsi que l’alimentation des équipements de production ou de réfrigération.",
 
     text73: "Chemins de câbles principaux",
     text74: "Chemins de câbles secondaires",
-    text75: "Alimentation des technologies",
+    text75: "Alimentation des équipements",
     text76: "Équipements de production",
-    text77: "Technologies logistiques",
-    text78: "Technologies frigorifiques",
+    text77: "Équipements logistiques",
+    text78: "Équipements frigorifiques",
     text79: "Tableaux électriques",
     text80: "Éclairage des halls",
     text81: "Éclairage de secours",
@@ -239,7 +239,7 @@ window.elektroLudwigLanguages.fr = {
       "Où nous avons <span>travaillé</span>",
 
     text86:
-      "Notre expérience s’est construite directement sur des projets de différentes envergures – des bâtiments et écoles aux projets de production, industriels et logistiques. Découvrez une sélection de nos réalisations et l’étendue des travaux auxquels nous avons participé.",
+      "Notre expérience s’est construite directement sur des projets de différentes envergures – des bâtiments et écoles aux sites de production, industriels et logistiques. Découvrez une sélection de nos réalisations et l’étendue des travaux auxquels nous avons participé.",
 
     text87:
       "Références en préparation",
@@ -323,7 +323,7 @@ window.elektroLudwigLanguages.fr = {
       "E-mail",
 
     country:
-      "République slovaque",
+      "Slovaquie",
 
     home:
       "Accueil",
@@ -373,11 +373,14 @@ window.elektroLudwigLanguages.fr = {
     additionalTitle:
       "Autres réalisations et collaborations",
 
-    formPending:
-      "Le formulaire n’envoie pas encore de messages. Veuillez nous contacter par e-mail ou par téléphone.",
+    formSending:
+      "Envoi de votre message...",
 
-    formNotice:
-      "L’envoi de messages via le formulaire n’est pas encore actif. Veuillez utiliser l’adresse e-mail ou le numéro de téléphone indiqué ci-dessus.",
+    formSuccess:
+      "Merci. Votre message a bien été envoyé.<br>Nous vous répondrons dans les plus brefs délais.",
+
+    formError:
+      "Votre message n’a pas pu être envoyé. Veuillez réessayer ou nous contacter par e-mail ou par téléphone.",
 
     requiredField:
       "Veuillez remplir ce champ obligatoire.",
@@ -413,9 +416,9 @@ window.elektroLudwigLanguages.fr = {
       popis:
 `Dans le cadre du projet Transgourmet Leipheim, nous participons à la réalisation des installations électriques et de l’automatisation d’un vaste complexe logistique et frigorifique. Sur ce chantier, nous effectuons des travaux pour les entreprises TGW et Hauser.
 
-Nos travaux comprennent le montage des chemins de câbles, la préparation et la pose du câblage de puissance et de courant faible, le montage et le raccordement des tableaux électriques, la pose et le raccordement des thermostats ainsi que les installations électriques liées à l’automatisation et aux différents équipements technologiques.
+Nos travaux comprennent le montage des chemins de câbles, la préparation et la pose du câblage de puissance et de courant faible, le montage et le raccordement des tableaux électriques, la pose et le raccordement des thermostats ainsi que les installations électriques liées à l’automatisation et aux différents équipements techniques.
 
-Nous intervenons dans différentes parties du complexe, notamment dans les halls logistiques, les chambres froides et zones de congélation ainsi que dans les zones technologiques du site. L’étendue des travaux est adaptée en permanence aux différentes phases de construction et aux exigences des technologies successives.
+Nous intervenons dans différentes parties du complexe, notamment dans les halls logistiques, les chambres froides et zones de congélation ainsi que dans les zones techniques du site. L’étendue des travaux est adaptée en permanence aux différentes phases de construction et aux exigences des équipements associés.
 
 Le projet Transgourmet Leipheim constitue une réalisation complexe réunissant installations de puissance et de courant faible, systèmes de distribution électrique et éléments d’automatisation au sein d’un grand complexe logistique et frigorifique.`
     },
@@ -460,16 +463,16 @@ Ce projet constitue une autre de nos réalisations dans le domaine des infrastru
         "Christof Industries GmbH",
 
       kratkyPopis:
-        "Travaux d’installation électrique lors de la modernisation de la technologie de production d’une papeterie – du débranchement électrique et du démontage des équipements existants jusqu’au câblage et au raccordement de la nouvelle technologie.",
+        "Travaux d’installation électrique lors de la modernisation des équipements de production d’une papeterie – du débranchement électrique et du démontage des équipements existants jusqu’au câblage et au raccordement des nouveaux équipements.",
 
       popis:
-`Dans la papeterie Palm à Eltmann, nous avons participé à la modernisation d’une partie de la technologie de production existante, dans le cadre de laquelle les anciens équipements ont été remplacés après plusieurs années de fonctionnement par une nouvelle solution technologique.
+`Dans la papeterie Palm à Eltmann, nous avons participé à la modernisation d’une partie des équipements de production existants, dans le cadre de laquelle les anciens équipements ont été remplacés après plusieurs années de fonctionnement par une nouvelle solution technique.
 
-Au début du projet, nous avons réalisé le débranchement électrique de la technologie existante ainsi que le démontage du câblage existant. Les différents câbles devaient être identifiés conformément à la documentation du projet afin de déterminer lesquels pouvaient être réutilisés pour la nouvelle technologie et lesquels devaient être retirés des chemins de câbles.
+Au début du projet, nous avons réalisé le débranchement électrique des équipements existants ainsi que le démontage du câblage existant. Les différents câbles devaient être identifiés conformément à la documentation du projet afin de déterminer lesquels pouvaient être réutilisés pour les nouveaux équipements et lesquels devaient être retirés des chemins de câbles.
 
-Après le montage mécanique de la nouvelle technologie, nous avons réalisé le nouveau câblage ainsi que le raccordement électrique des différents équipements conformément à la documentation du projet. Les travaux comprenaient la réutilisation de certains câbles existants, l’ajout de nouveaux câbles ainsi que le raccordement de nouveaux éléments technologiques, de commande et de sécurité.
+Après le montage mécanique des nouveaux équipements, nous avons réalisé le nouveau câblage ainsi que le raccordement électrique des différents appareils conformément à la documentation du projet. Les travaux comprenaient la réutilisation de certains câbles existants, l’ajout de nouveaux câbles ainsi que le raccordement de nouveaux composants techniques, de commande et de sécurité.
 
-Le projet couvrait ainsi l’ensemble du processus du point de vue de l’installation électrique – de la mise hors service et du débranchement des équipements existants, en passant par la modification des installations existantes, jusqu’à la mise en service électrique de la nouvelle technologie de production.`
+Le projet couvrait ainsi l’ensemble du processus du point de vue de l’installation électrique – de la mise hors service et du débranchement des équipements existants, en passant par la modification des installations existantes, jusqu’à la mise en service électrique des nouveaux équipements de production.`
     },
 
 
@@ -485,24 +488,24 @@ Le projet couvrait ainsi l’ensemble du processus du point de vue de l’instal
         "TGW Logistics",
 
       kratkyPopis:
-        "Installations électriques et raccordement électrique de systèmes logistiques automatisés, de technologies de convoyage et d’équipements automatisés de stockage dans le cadre de plusieurs projets TGW.",
+        "Installations électriques et raccordement de systèmes logistiques automatisés, de convoyeurs et d’équipements automatisés de stockage dans le cadre de plusieurs projets TGW.",
 
       popis:
-`Dans le cadre de plusieurs projets logistiques, nous avons réalisé la partie électrique de vastes systèmes automatisés de convoyage et de stockage. Le montage mécanique de la technologie elle-même était effectué par d’autres entreprises, tandis que notre mission concernait les installations électriques, le câblage et le raccordement électrique des différents équipements.
+`Dans le cadre de plusieurs projets logistiques, nous avons réalisé la partie électrique de vastes systèmes automatisés de convoyage et de stockage. Le montage mécanique des équipements était effectué par d’autres entreprises, tandis que notre mission concernait les installations électriques, le câblage et le raccordement des différents composants.
 
-Les travaux comprenaient principalement le raccordement des convoyeurs, moteurs électriques, capteurs, barrières immatérielles, éléments de commande et tableaux électriques, ainsi que l’interconnexion et la communication entre les différentes parties de l’automatisation via PROFINET.
+Les travaux comprenaient principalement le raccordement des convoyeurs, moteurs électriques, capteurs, cellules photoélectriques, éléments de commande et armoires électriques, ainsi que l’interconnexion et la communication entre les différents composants d’automatisation via PROFINET.
 
 Amazon Kojetín – 2022
-Dans le nouveau centre logistique Amazon, nous avons réalisé la partie électrique des sections de technologie de convoyage et d’automatisation qui nous avaient été confiées. Le projet comprenait également un système robotisé automatisé de stockage dans lequel des unités robotisées transportaient les unités stockées jusqu’aux postes de travail.
+Dans le nouveau centre logistique Amazon, nous avons réalisé la partie électrique des sections de convoyage et d’automatisation qui nous avaient été confiées. Le projet comprenait également un système robotisé automatisé de stockage dans lequel des unités robotisées transportaient les unités stockées jusqu’aux postes de travail.
 
 Erwin Müller, Buttenwiesen – 2024
-Pendant environ trois à quatre mois, nous avons réalisé la partie électrique du système de convoyage du site logistique Erwin Müller. Les travaux comprenaient le câblage et le raccordement des moteurs, capteurs, barrières immatérielles, éléments de commande et autres composants d’automatisation.
+Pendant environ trois à quatre mois, nous avons réalisé la partie électrique du système de convoyage du site logistique Erwin Müller. Les travaux comprenaient le câblage et le raccordement des moteurs, capteurs, cellules photoélectriques, éléments de commande et autres composants d’automatisation.
 
 H&M – 2025
-Outre la technologie de convoyage, le projet comprenait une vaste zone de stockage automatisée équipée de transstockeurs assurant le stockage et la récupération automatiques des unités dans les différents emplacements de stockage.
+Outre les systèmes de convoyage, le projet comprenait une vaste zone de stockage automatisée équipée de transstockeurs assurant le stockage et la récupération automatiques des unités dans les différents emplacements de stockage.
 
 AUTODOC Logistics, Cheb – 2025–2026
-Dans le cadre du projet AUTODOC, nous avons poursuivi la réalisation d’un type similaire de technologie logistique automatisée comprenant des systèmes de convoyage et des équipements automatisés de stockage avec transstockeurs.`
+Dans le cadre du projet AUTODOC, nous avons poursuivi la réalisation d’un type similaire d’installation logistique automatisée comprenant des systèmes de convoyage et des équipements automatisés de stockage avec transstockeurs.`
     },
 
 
@@ -518,16 +521,16 @@ Dans le cadre du projet AUTODOC, nous avons poursuivi la réalisation d’un typ
         "Christof Industries GmbH",
 
       kratkyPopis:
-        "Travaux d’installation électrique sur les systèmes technologiques et de commande de la station de conversion SuedLink à Leingarten, faisant partie de l’une des principales infrastructures énergétiques d’Allemagne.",
+        "Travaux d’installation électrique sur les équipements et systèmes de commande de la station de conversion SuedLink à Leingarten, faisant partie de l’une des principales infrastructures énergétiques d’Allemagne.",
 
       popis:
 `Dans le cadre du projet TransnetBW / SuedLink à Leingarten, nous avons réalisé des travaux d’installation électrique dans les bâtiments techniques de la station de conversion, qui fait partie du système de transport d’électricité à courant continu haute tension SuedLink.
 
 SuedLink sert à transporter de grandes quantités d’électricité entre le nord et le sud de l’Allemagne. La station de conversion assure la conversion entre courant continu et courant alternatif afin que l’électricité transportée puisse ensuite être intégrée au réseau de transport existant.
 
-Dans le cadre de nos travaux, nous avons principalement réalisé le câblage et le raccordement électrique des tableaux et armoires de commande, ainsi que le raccordement des éléments de mesure, de contrôle et de commande et des différents capteurs du système technologique.
+Dans le cadre de nos travaux, nous avons principalement réalisé le câblage et le raccordement électrique des tableaux de distribution et armoires de commande, ainsi que le raccordement des éléments de mesure, de surveillance et de commande et des différents capteurs du système.
 
-Les travaux se sont déroulés dans l’environnement d’une vaste infrastructure énergétique imposant des exigences élevées en matière de précision d’exécution, de documentation et de raccordement correct des différents systèmes technologiques et de commande.`
+Les travaux se sont déroulés dans l’environnement d’une vaste infrastructure énergétique imposant des exigences élevées en matière de précision d’exécution, de documentation et de raccordement correct des différents équipements et systèmes de commande.`
     },
 
 
@@ -543,16 +546,16 @@ Les travaux se sont déroulés dans l’environnement d’une vaste infrastructu
         "FES Elektrotechnik GmbH",
 
       kratkyPopis:
-        "Installations électriques industrielles dans un site technologique utilisant des chemins de câbles et éléments de support spéciaux en matière plastique, adaptés aux conditions particulières de l’environnement.",
+        "Installations électriques industrielles dans une installation de process utilisant des chemins de câbles et des éléments de support spéciaux en matière plastique, adaptés aux conditions particulières de l’environnement.",
 
       popis:
-`Dans le cadre du projet ANDRITZ à Linz, nous avons réalisé des travaux d’installation électrique dans un site technologique où les caractéristiques de l’environnement et des fluides technologiques utilisés nécessitaient une solution différente des chemins de câbles habituellement employés dans les installations industrielles.
+`Dans le cadre du projet ANDRITZ à Linz, nous avons réalisé des travaux d’installation électrique dans une installation industrielle où les caractéristiques de l’environnement et des fluides de process utilisés nécessitaient une solution différente des chemins de câbles habituellement employés dans les installations industrielles.
 
-À la place des chemins de câbles métalliques classiques, de grands caniveaux en matière plastique et des éléments porteurs en plastique ont été utilisés. À partir du système fourni, nous avons réalisé l’ensemble du cheminement des câbles en fonction des exigences des différentes parties de la technologie – notamment l’ajustement et la découpe des caniveaux, le montage des consoles et supports en plastique ainsi que la pose ultérieure du câblage.
+À la place des chemins de câbles métalliques classiques, de grands caniveaux en matière plastique et des éléments porteurs en plastique ont été utilisés. À partir du système fourni, nous avons réalisé l’ensemble du cheminement des câbles en fonction des exigences des différentes parties de l’installation – notamment l’ajustement et la découpe des caniveaux, le montage des consoles et supports en plastique ainsi que la pose ultérieure du câblage.
 
-Nos travaux comprenaient également le câblage et le raccordement électrique des équipements technologiques, principalement des moteurs électriques, pompes, capteurs ainsi que d’autres éléments électriques et de commande utilisés pour le transport et le traitement de fluides technologiques liquides.
+Nos travaux comprenaient également le câblage et le raccordement électrique des équipements, principalement des moteurs électriques, pompes, capteurs ainsi que d’autres composants électriques et de commande utilisés pour le transport et le traitement de fluides de process.
 
-Ce projet était particulièrement intéressant en raison des exigences spécifiques concernant les matériaux et le mode de réalisation de l’installation électrique dans un environnement industriel particulier où l’utilisation de solutions métalliques standard pour les chemins de câbles n’était pas appropriée.`
+Ce projet était particulièrement intéressant en raison des exigences spécifiques concernant les matériaux et le mode de réalisation de l’installation électrique dans un environnement industriel particulier où l’utilisation de chemins de câbles métalliques conventionnels n’était pas appropriée.`
     },
 
 
@@ -568,18 +571,18 @@ Ce projet était particulièrement intéressant en raison des exigences spécifi
         "FES Elektrotechnik GmbH",
 
       kratkyPopis:
-        "Installations électriques industrielles dans une usine de transformation du bois, comprenant les principales installations d’alimentation ainsi que la partie électrique du système central d’aspiration et de stockage des déchets de bois.",
+        "Installations électriques industrielles dans une usine de transformation du bois, comprenant l’alimentation électrique principale ainsi que la partie électrique du système central d’aspiration et de stockage des déchets de bois.",
 
       popis:
-`Dans le cadre du projet M&M Holz à Leoben, nous avons réalisé des travaux d’installation électrique dans une vaste usine de transformation du bois. La partie principale de nos travaux concernait la réalisation de l’alimentation électrique depuis le tableau principal jusqu’aux différentes parties de la technologie de production.
+`Dans le cadre du projet M&M Holz à Leoben, nous avons réalisé des travaux d’installation électrique dans une vaste usine de transformation du bois. La partie principale de nos travaux concernait la réalisation de l’alimentation électrique depuis le tableau principal jusqu’aux différentes parties des équipements de production.
 
-Conformément à la documentation du projet, nous préparions et posions les câbles d’alimentation vers les différents postes de production, convoyeurs, tableaux secondaires et équipements technologiques, puis nous réalisions leur raccordement électrique.
+Conformément à la documentation du projet, nous avons préparé et posé les câbles d’alimentation vers les différents postes de production, convoyeurs, tableaux secondaires et équipements, puis réalisé leurs raccordements électriques.
 
-Une autre partie distincte du projet concernait l’installation électrique de la technologie de deux silos de stockage ainsi que du système central d’aspiration des déchets de bois. Ce système assurait l’aspiration de la sciure et d’autres déchets de bois générés lors de la transformation du bois ainsi que leur transport ultérieur vers les silos de stockage.
+Une autre partie distincte du projet concernait l’installation électrique de deux silos de stockage ainsi que du système central d’aspiration des déchets de bois. Ce système assurait l’aspiration de la sciure et d’autres déchets de bois générés lors de la transformation du bois ainsi que leur transport vers les silos de stockage.
 
-Dans le cadre de cette technologie, nous avons réalisé le câblage et le raccordement électrique des grands moteurs électriques du système d’aspiration, des capteurs ainsi que d’autres éléments électriques et de commande liés au fonctionnement du système d’aspiration et des silos de stockage.
+Dans le cadre de cette installation, nous avons réalisé le câblage et le raccordement électrique des grands moteurs du système d’aspiration, des capteurs ainsi que d’autres composants électriques et de commande liés au fonctionnement du système d’aspiration et des silos de stockage.
 
-Le projet comprenait donc à la fois l’alimentation électrique de puissance des technologies de production et l’installation électrique d’un système technologique indépendant d’aspiration centralisée dans une grande usine de transformation du bois.`
+Le projet comprenait donc à la fois l’alimentation électrique des équipements de production et l’installation électrique d’un système indépendant d’aspiration centralisée dans une grande usine de transformation du bois.`
     },
 
 
@@ -600,11 +603,11 @@ Le projet comprenait donc à la fois l’alimentation électrique de puissance d
       popis:
 `Dans le cadre du projet de la nouvelle Grund- und Mittelschule à Freising, nous avons réalisé d’importants travaux d’installation électrique dans deux bâtiments scolaires ainsi que dans les zones extérieures attenantes au complexe.
 
-Les travaux comprenaient les installations électriques des différentes salles de classe, des bureaux et espaces communs, de la cuisine ainsi que d’autres parties de l’école. Nous avons réalisé l’éclairage, les installations de prises, le système de détection incendie, l’éclairage de secours et d’évacuation, le câblage ainsi que le raccordement des différents éléments de commande.
+Les travaux comprenaient les installations électriques des différentes salles de classe, des bureaux et espaces communs, de la cuisine ainsi que d’autres parties de l’école. Nous avons réalisé l’éclairage, les circuits de prises, le système de détection incendie, l’éclairage de secours et d’évacuation, le câblage ainsi que le raccordement des différents éléments de commande.
 
 Les différentes salles de classe étaient équipées de leurs propres tableaux électriques secondaires, à partir desquels les équipements électriques de chaque pièce étaient alimentés et commandés. Les travaux comprenaient également les éléments de commande des stores et d’autres fonctions des différentes pièces.
 
-Nous sommes également intervenus à l’extérieur des bâtiments. Sur le site, nous avons réalisé des installations électriques extérieures, posé le câblage entre les différents regards et monté puis raccordé électriquement de grands luminaires sur mâts assurant l’éclairage extérieur du complexe scolaire.
+Nous sommes également intervenus à l’extérieur des bâtiments. Sur le site, nous avons réalisé des installations électriques extérieures, posé le câblage entre les différents regards et monté puis raccordé de grands luminaires sur mâts assurant l’éclairage extérieur du complexe scolaire.
 
 Le projet couvrait ainsi les installations électriques depuis les différentes salles de classe et leurs tableaux jusqu’aux systèmes de sécurité et à l’éclairage extérieur de l’ensemble du complexe scolaire.`
     },
@@ -622,16 +625,16 @@ Le projet couvrait ainsi les installations électriques depuis les différentes 
         "Bachner Elektro GmbH",
 
       kratkyPopis:
-        "Importants travaux d’installation électrique dans les halls de production, le bâtiment administratif ainsi que sur la technologie de grandes presses industrielles du site BMW de Krauthausen.",
+        "Importants travaux d’installation électrique dans les halls de production, le bâtiment administratif ainsi que sur les équipements de grandes presses industrielles du site BMW de Krauthausen.",
 
       popis:
-`Dans le cadre du projet BMW Krauthausen, nous avons réalisé des travaux d’installation électrique dans plusieurs parties du nouveau site de production. Le projet comprenait les halls de production, les locaux administratifs ainsi qu’une technologie distincte composée de deux grandes presses industrielles.
+`Dans le cadre du projet BMW Krauthausen, nous avons réalisé des travaux d’installation électrique dans plusieurs parties du nouveau site de production. Le projet comprenait les halls de production, les locaux administratifs ainsi que deux grandes presses industrielles constituant une partie distincte du projet.
 
-Dans les halls de production, nous avons réalisé l’éclairage des halls, les installations de prises, les prises CEE 400 V, le câblage ainsi que le montage et le raccordement de tableaux électriques secondaires destinés aux différentes parties de la production et aux équipements technologiques.
+Dans les halls de production, nous avons réalisé l’éclairage, les circuits de prises, les prises CEE 400 V, le câblage ainsi que le montage et le raccordement de tableaux électriques secondaires destinés aux différentes parties de la production et aux équipements.
 
-Dans la partie administrative, nous avons réalisé les installations électriques des bureaux et espaces communs, notamment les prises, l’alimentation et la commande des stores, thermostats et autres éléments de commande du bâtiment. Les travaux comprenaient également les installations électriques des kitchenettes et espaces communs ainsi que l’infrastructure de données, notamment le câblage, les tableaux de communication et les baies rack.
+Dans la partie administrative, nous avons réalisé les installations électriques des bureaux et espaces communs, notamment les circuits de prises, l’alimentation et la commande des stores, thermostats et autres éléments de commande du bâtiment. Les travaux comprenaient également les installations électriques des kitchenettes et espaces communs ainsi que l’infrastructure de données, notamment le câblage, les armoires de communication et les baies informatiques.
 
-Une partie distincte du projet concernait deux grandes presses industrielles. Conformément à la documentation technique, nous avons réalisé pour cette technologie les chemins de câbles, le câblage ainsi que le raccordement électrique des différentes parties des presses et de leurs équipements. Les presses étaient destinées à la production de pièces embouties de carrosserie pour des véhicules Rolls-Royce.`
+Une partie distincte du projet concernait deux grandes presses industrielles. Conformément à la documentation technique, nous avons réalisé les chemins de câbles, le câblage ainsi que le raccordement électrique des différentes parties des presses et de leurs équipements. Les presses étaient destinées à la production de pièces de carrosserie embouties pour des véhicules Rolls-Royce.`
     },
 
 
@@ -647,16 +650,16 @@ Une partie distincte du projet concernait deux grandes presses industrielles. Co
         "Kurt Schumacher IS GmbH",
 
       kratkyPopis:
-        "Travaux d’installation électrique sur une vaste technologie mobile de convoyage destinée au chargement de minerai de fer sur des navires de fret dans le port de Rotterdam.",
+        "Travaux d’installation électrique sur un vaste système mobile de convoyage destiné au chargement de minerai de fer sur des navires de fret dans le port de Rotterdam.",
 
       popis:
-`Dans le cadre du projet EECV Europoort dans le port de Rotterdam, nous avons réalisé des travaux d’installation électrique sur une partie d’une vaste technologie destinée au transport et au chargement de minerai de fer sur de grands navires de fret.
+`Dans le cadre du projet EECV Europoort dans le port de Rotterdam, nous avons réalisé des travaux d’installation électrique sur une partie d’un vaste système destiné au transport et au chargement de minerai de fer sur de grands navires de fret.
 
-L’un des principaux éléments était une technologie mobile de convoyage de matériaux en vrac, se déplaçant sur rails le long du quai sur une distance d’environ 500 à 600 mètres. L’ensemble du système pouvait ainsi être déplacé en fonction de la position du navire amarré afin d’assurer le chargement du minerai à l’endroit requis.
+L’un des principaux éléments était un système mobile de convoyage de matériaux en vrac, se déplaçant sur rails le long du quai sur une distance d’environ 500 à 600 mètres. L’ensemble du système pouvait ainsi être déplacé en fonction de la position du navire amarré afin d’assurer le chargement du minerai à l’endroit requis.
 
-Dans le cadre de nos travaux, nous avons réalisé les chemins de câbles, l’alimentation électrique et le câblage ainsi que le raccordement électrique des différentes parties de la technologie de convoyage et des tableaux et armoires de commande correspondants.
+Dans le cadre de nos travaux, nous avons réalisé les chemins de câbles, les alimentations électriques et le câblage ainsi que le raccordement électrique des différentes parties du système de convoyage et des tableaux de distribution et armoires de commande correspondants.
 
-Le projet comprenait une installation électrique dans un environnement d’industrie lourde et de technologie portuaire de grande dimension, nécessitant la réalisation de la partie électrique d’un vaste système mobile de convoyage.`
+Le projet comprenait une installation électrique dans un environnement d’industrie lourde et d’équipements portuaires de grande dimension, nécessitant la réalisation de la partie électrique d’un vaste système mobile de convoyage.`
     },
 
 
@@ -672,14 +675,14 @@ Le projet comprenait une installation électrique dans un environnement d’indu
         "Christof Industries GmbH",
 
       kratkyPopis:
-        "Travaux d’installation électrique et raccordement de la technologie d’une ligne de peinture dans l’usine automobile ŠKODA AUTO de Mladá Boleslav.",
+        "Travaux d’installation électrique et raccordement des équipements d’une ligne de peinture dans l’usine automobile ŠKODA AUTO de Mladá Boleslav.",
 
       popis:
-`Dans le cadre du projet de ligne de peinture de l’usine ŠKODA AUTO à Mladá Boleslav, nous avons réalisé des travaux d’installation électrique sur plusieurs parties de la technologie de production.
+`Dans le cadre du projet de ligne de peinture de l’usine ŠKODA AUTO à Mladá Boleslav, nous avons réalisé des travaux d’installation électrique sur plusieurs parties des équipements de production.
 
-Nos travaux comprenaient le raccordement de vastes ensembles de tableaux électriques destinés à l’alimentation et à la commande des différentes parties de la ligne, ainsi que le raccordement électrique de la technologie de convoyage assurant le transport des carrosseries automobiles entre les différentes étapes du processus de production et de peinture.
+Nos travaux comprenaient le raccordement de vastes ensembles d’armoires électriques destinés à l’alimentation et à la commande des différentes parties de la ligne, ainsi que le raccordement électrique des convoyeurs assurant le transport des carrosseries automobiles entre les différentes étapes du processus de production et de peinture.
 
-Nous avons réalisé le câblage et le raccordement des moteurs, capteurs, barrières immatérielles ainsi que d’autres éléments de contrôle et de sécurité. Ces systèmes assuraient notamment le contrôle du mouvement et du positionnement correct des convoyeurs et des carrosseries et faisaient partie des fonctions de sécurité de la technologie, par exemple pendant le fonctionnement des robots de peinture.
+Nous avons réalisé le câblage et le raccordement des moteurs, capteurs, cellules photoélectriques ainsi que d’autres éléments de surveillance et de sécurité. Ces systèmes assuraient notamment le contrôle du mouvement et du positionnement correct des convoyeurs et des carrosseries et faisaient partie des fonctions de sécurité des équipements, par exemple pendant le fonctionnement des robots de peinture.
 
 Le projet comprenait également l’installation électrique des postes de contrôle destinés à l’inspection visuelle de la qualité de la peinture des carrosseries, notamment leur éclairage spécialisé et leurs éléments de signalisation.`
     }
@@ -704,13 +707,13 @@ Le projet comprenait également l’installation électrique des postes de contr
     ],
 
     popis:
-`Outre les projets mentionnés, nous avons également participé à d’autres réalisations industrielles et de construction pour lesquelles nous n’étions pas le principal exécutant de l’installation électrique, mais où nous avons contribué de manière significative aux travaux de finition, à l’extension des installations électriques existantes et à la résolution de problèmes techniques.
+`Outre les projets mentionnés, nous avons également participé à d’autres réalisations industrielles et de construction pour lesquelles nous n’étions pas l’entreprise principale chargée de l’installation électrique, mais où nous avons contribué de manière significative aux travaux de finition, à l’extension des installations électriques existantes et à la résolution de problèmes techniques.
 
 Parmi ces projets figurent notamment Jungheinrich Moosburg, GALILEO München, Porsche Leipzig et Wellpappe Alzenau.
 
-Selon le projet concerné, nos travaux comprenaient la finition et le complément des installations électriques, l’éclairage et l’éclairage de secours, les installations de prises et de puissance, la partie électrique des systèmes de sécurité, l’ajout de câblage de données et d’alimentation, le diagnostic des parties non fonctionnelles des installations ainsi que la correction des erreurs et défauts constatés.
+Selon le projet concerné, nos travaux comprenaient la finition et l’extension des installations électriques, l’éclairage et l’éclairage de secours, les circuits de prises et de puissance, la partie électrique des systèmes de sécurité, l’ajout de câblage de données et d’alimentation, le diagnostic des parties non fonctionnelles des installations ainsi que la correction des défauts constatés.
 
-Ces réalisations illustrent également notre capacité à reprendre une installation électrique déjà commencée, à nous familiariser rapidement avec l’état existant et la documentation technique, puis à contribuer à l’achèvement du projet ou à la résolution des problèmes rencontrés.`
+Ces réalisations illustrent également notre capacité à reprendre une installation électrique déjà commencée, à nous familiariser rapidement avec son état existant et la documentation technique, puis à contribuer à l’achèvement du projet ou à la résolution des problèmes rencontrés.`
   }
 
 };
