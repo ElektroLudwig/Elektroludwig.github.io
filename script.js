@@ -13,7 +13,6 @@ const languagePacks = window.elektroLudwigLanguages || {};
 
 /* ==================================================
    PODPOROVANÉ JAZYKY
-   Zoznam sa vytvorí automaticky z načítaných balíkov.
 ================================================== */
 
 const supportedLanguages = {};
@@ -197,7 +196,7 @@ function applyStaticTranslations() {
     if (icon) {
       icon.className = selected
         ? "fas fa-check"
-        : "fas fa-language";
+        : "";
     }
   });
 }
@@ -205,7 +204,6 @@ function applyStaticTranslations() {
 
 /* ==================================================
    PREKLAD PROJEKTOV BEZ ZATVORENIA DETAILU
-   A BEZ OPÄTOVNÉHO NAČÍTANIA GALÉRIÍ
 ================================================== */
 
 function refreshProjectsLanguage() {
@@ -241,9 +239,8 @@ function refreshProjectsLanguage() {
           escapeProjectText(project.miesto);
       }
 
-      const detailLocation = wrapper.querySelector(
-        ".project-detail-location"
-      );
+      const detailLocation =
+        wrapper.querySelector(".project-detail-location");
 
       if (detailLocation) {
         detailLocation.innerHTML =
@@ -531,7 +528,7 @@ function initializeLanguageSwitcher() {
             lang="${htmlLang}"
           >
             <i
-              class="fas fa-language"
+              class=""
               aria-hidden="true"
             ></i>
             <span
@@ -1269,9 +1266,6 @@ function renderAdditionalRealizations() {
 
 /* ==================================================
    AUTOMATICKÁ GALÉRIA
-
-   Skúša fotografie 01.jpeg až 50.jpeg.
-   Existujúce zobrazí, neexistujúce odstráni.
 ================================================== */
 
 function createAutomaticGallery(
