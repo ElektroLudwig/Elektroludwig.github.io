@@ -22,7 +22,7 @@ window.elektroLudwigLanguages.sk = {
 
   ui: {
 
-    text1: "Elektroludwig | Elektroinštalácie",
+    text1: "Elektro Ludwig | Elektroinštalácie",
 
     attr2: "E-mail",
     attr3: "Telefón",
@@ -41,7 +41,7 @@ window.elektroLudwigLanguages.sk = {
       '<i class="fas fa-industry"></i> Výrobné a priemyselné haly',
 
     attr10:
-      "Elektro Ludwig - Viac než len elektrina",
+      "Elektro Ludwig – Viac než len elektrina",
 
     heroSlogan:
       "Viac než len elektrina",
@@ -77,22 +77,22 @@ window.elektroLudwigLanguages.sk = {
       "Niečo <span>o nás</span>",
 
     text13:
-      "<strong>Elektro Ludwig s.r.o.</strong> je slovenská elektroinštalačná spoločnosť pôsobiaca najmä na projektoch doma aj v zahraničí. Hoci spoločnosť v dnešnej právnej forme funguje od svojho založenia ako s.r.o., naše skúsenosti siahajú podstatne ďalej.",
+      "<strong>Elektro Ludwig s. r. o.</strong> je slovenská elektroinštalačná spoločnosť pôsobiaca na projektoch doma aj v zahraničí. Hoci spoločnosť v dnešnej právnej forme funguje od svojho založenia ako s. r. o., naše skúsenosti siahajú podstatne ďalej.",
 
     text14:
-      "Ešte pred vznikom spoločnosti Elektro Ludwig s.r.o. sme realizovali elektroinštalačné práce pod živnosťou <strong>Ľudovíta Hudáka</strong>, ktorý je dnes konateľom spoločnosti. Naša história preto nezačína dátumom zápisu s.r.o. do obchodného registra, ale rokmi praktických skúseností priamo na stavbách a pri realizácii rozsiahlych elektroinštalačných projektov.",
+      "Ešte pred vznikom spoločnosti Elektro Ludwig s. r. o. sme realizovali elektroinštalačné práce pod živnosťou <strong>Ľudovíta Hudáka</strong>, ktorý je dnes konateľom spoločnosti. Naša história preto nezačína dátumom zápisu s. r. o. do obchodného registra, ale rokmi praktických skúseností priamo na stavbách a pri realizácii rozsiahlych elektroinštalačných projektov.",
 
     text15:
-      "Za ten čas sme pracovali na rôznych typoch objektov – od <strong>škôl a administratívnych budov, cez výrobné a priemyselné haly až po automatizované výrobné linky a logistické centrá</strong>.",
+      "Za ten čas sme pracovali na rôznych typoch objektov – od <strong>škôl a administratívnych budov cez výrobné a priemyselné haly až po automatizované výrobné linky a logistické centrá</strong>.",
 
     text16:
-      "Naše skúsenosti zahŕňajú kompletné elektroinštalácie budov vrátane silnoprúdových a slaboprúdových rozvodov, osvetlenia, núdzového osvetlenia, zabezpečovacích systémov, rozvádzačov, napájania jednotlivých technológií, vonkajšieho osvetlenia, parkovacích plôch a ďalších systémov potrebných pre bezpečné a spoľahlivé fungovanie objektu.",
+      "Naše skúsenosti zahŕňajú kompletné elektroinštalácie budov vrátane silnoprúdových a slaboprúdových rozvodov, osvetlenia, núdzového osvetlenia, zabezpečovacích systémov, rozvádzačov, napájania jednotlivých technológií, vonkajšieho osvetlenia, parkovacích plôch a ďalších systémov potrebných na bezpečné a spoľahlivé fungovanie objektu.",
 
     text17:
       "Pri priemyselných projektoch realizujeme elektroinštalácie výrobných hál, prívody a napájanie strojov a technologických zariadení, káblové trasy, rozvádzače, ovládacie a signalizačné prvky či kompletné zapojenie jednotlivých technológií.",
 
     text18:
-      "Samostatnou oblasťou našich skúseností je <strong>priemyselná automatizácia</strong>. Podieľali sme sa na realizácii automatizovaných výrobných a logistických systémov, kde sme zabezpečovali kompletnú elektroinštaláciu potrebnú pre chod automatizácie – od káblových trás a kabeláže až po pripojenie senzorov, motorov, rozvádzačov a jednotlivých prvkov technológie.",
+      "Samostatnou oblasťou našich skúseností je <strong>priemyselná automatizácia</strong>. Podieľali sme sa na realizácii automatizovaných výrobných a logistických systémov, kde sme zabezpečovali kompletnú elektroinštaláciu potrebnú na chod automatizácie – od káblových trás a kabeláže až po pripojenie senzorov, motorov, rozvádzačov a jednotlivých prvkov technológie.",
 
     text19:
       "Vďaka skúsenostiam z rôznych typov stavieb dokážeme zabezpečiť práce od bežnej elektroinštalácie až po rozsiahle priemyselné a automatizačné projekty.",
@@ -216,7 +216,7 @@ window.elektroLudwigLanguages.sk = {
       "Elektroinštalácie výrobných a logistických hál",
 
     text72:
-      "Pri rozsiahlych halových projektoch realizujeme elektrickú infraštruktúru potrebnú pre fungovanie celého objektu. Súčasťou prác môžu byť hlavné káblové trasy, rozvody jednotlivých technológií, osvetlenie aj napájanie výrobných alebo chladiacich zariadení.",
+      "Pri rozsiahlych halových projektoch realizujeme elektrickú infraštruktúru potrebnú na fungovanie celého objektu. Súčasťou prác môžu byť hlavné káblové trasy, rozvody jednotlivých technológií, osvetlenie aj napájanie výrobných alebo chladiacich zariadení.",
 
     text73: "Hlavné káblové trasy",
     text74: "Vedľajšie káblové trasy",
@@ -373,11 +373,14 @@ window.elektroLudwigLanguages.sk = {
     additionalTitle:
       "Ďalšie realizácie a spolupráce",
 
-    formPending:
-      "Formulár zatiaľ neodosiela správy. Kontaktujte nás, prosím, e-mailom alebo telefonicky.",
+    formSending:
+      "Odosielam správu...",
 
-    formNotice:
-      "Odosielanie cez formulár zatiaľ nie je aktívne. Použite, prosím, e-mail alebo telefón uvedený vyššie.",
+    formSuccess:
+      "Ďakujeme. Vaša správa bola úspešne odoslaná.<br>Ozveme sa Vám v čo najkratšom možnom čase.",
+
+    formError:
+      "Správu sa nepodarilo odoslať. Skúste to, prosím, znova alebo nás kontaktujte e-mailom či telefonicky.",
 
     requiredField:
       "Vyplňte, prosím, toto povinné pole.",
@@ -469,7 +472,7 @@ Na začiatku projektu sme realizovali elektrické odpojenie pôvodnej technológ
 
 Po mechanickej montáži novej technológie sme následne realizovali novú kabeláž a elektrické zapojenie jednotlivých zariadení podľa projektovej dokumentácie. Súčasťou bolo využitie vybraných existujúcich vedení, doplnenie nových káblov a pripojenie nových technologických, riadiacich a bezpečnostných prvkov.
 
-Projekt tak zahŕňal celý proces z pohľadu elektroinštalácie – od odstavenia a odpojenia pôvodných zariadení, cez úpravu existujúcich rozvodov až po elektrické sprevádzkovanie novej výrobnej technológie.`
+Projekt tak zahŕňal celý proces z pohľadu elektroinštalácie – od odstavenia a odpojenia pôvodných zariadení cez úpravu existujúcich rozvodov až po elektrické sprevádzkovanie novej výrobnej technológie.`
     },
 
 
@@ -559,7 +562,7 @@ Projekt bol zaujímavý najmä požiadavkami na materiály a spôsob realizácie
     "mm-holz-leoben": {
 
       nazov:
-        "M&M Holz Leoben",
+        "MM Holz Leoben",
 
       miesto:
         "Leoben, Rakúsko",
@@ -571,7 +574,7 @@ Projekt bol zaujímavý najmä požiadavkami na materiály a spôsob realizácie
         "Priemyselné elektroinštalácie v drevospracujúcom závode vrátane hlavných napájacích rozvodov a elektrickej časti technológie centrálneho odsávania a skladovania drevného odpadu.",
 
       popis:
-`Na projekte M&M Holz v Leobene sme realizovali elektroinštalačné práce v rozsiahlej drevospracujúcej prevádzke. Hlavnou časťou našich prác bola realizácia silových napájacích rozvodov z hlavnej elektrickej rozvodne k jednotlivým častiam výrobnej technológie.
+`Na projekte MM Holz v Leobene sme realizovali elektroinštalačné práce v rozsiahlej drevospracujúcej prevádzke. Hlavnou časťou našich prác bola realizácia silových napájacích rozvodov z hlavnej elektrickej rozvodne k jednotlivým častiam výrobnej technológie.
 
 Podľa projektovej dokumentácie sme pripravovali a ťahali silové káble k jednotlivým výrobným pozíciám, dopravníkom, podružným rozvádzačom a technologickým zariadeniam a realizovali ich elektrické pripojenie.
 
@@ -627,7 +630,7 @@ Projekt tak zahŕňal elektroinštalácie prakticky od jednotlivých učební a 
       popis:
 `Na projekte BMW Krauthausen sme realizovali elektroinštalačné práce vo viacerých častiach nového výrobného areálu. Rozsah projektu zahŕňal výrobné haly, administratívne priestory a samostatnú technológiu dvoch veľkých priemyselných lisov.
 
-Vo výrobných halách sme realizovali halové osvetlenie, zásuvkové rozvody, CEE 400 V zásuvky, kabeláž a montáž a zapájanie podružných rozvádzačov určených pre jednotlivé časti výroby a technologické zariadenia.
+Vo výrobných halách sme realizovali halové osvetlenie, zásuvkové rozvody, CEE 400 V zásuvky, kabeláž, montáž a zapájanie podružných rozvádzačov určených pre jednotlivé časti výroby a technologické zariadenia.
 
 V administratívnej časti sme realizovali elektroinštaláciu kancelárií a spoločných priestorov vrátane zásuvkových rozvodov, napájania a ovládania žalúzií, termostatov a ďalších ovládacích prvkov budovy. Súčasťou boli tiež elektroinštalácie kuchyniek a spoločných priestorov a dátová infraštruktúra vrátane kabeláže, dátových rozvádzačov a rackov.
 
@@ -681,7 +684,7 @@ Súčasťou našich prác bolo zapájanie rozsiahlych rozvádzačových zostáv 
 
 Realizovali sme kabeláž a zapájanie motorov, snímačov, svetelných brán a ďalších kontrolných a bezpečnostných prvkov. Tieto systémy zabezpečovali okrem iného kontrolu pohybu a správnej polohy dopravníkov a karosérií a boli súčasťou bezpečnostných funkcií technológie, napríklad pri prevádzke lakovacích robotov.
 
-Súčasťou projektu bola aj elektroinštalácia kontrolných pracovísk určených na vizuálnu kontrolu kvality laku karosérií, vrátane ich špecifického osvetlenia a signalizačných prvkov.`
+Súčasťou projektu bola aj elektroinštalácia kontrolných pracovísk určených na vizuálnu kontrolu kvality laku karosérií vrátane ich špecifického osvetlenia a signalizačných prvkov.`
     }
 
   },
