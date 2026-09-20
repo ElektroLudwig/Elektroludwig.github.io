@@ -22,7 +22,7 @@ window.elektroLudwigLanguages.pl = {
 
   ui: {
 
-    text1: "Elektroludwig | Instalacje elektryczne",
+    text1: "Elektro Ludwig | Instalacje elektryczne",
 
     attr2: "E-mail",
     attr3: "Telefon",
@@ -41,7 +41,7 @@ window.elektroLudwigLanguages.pl = {
       '<i class="fas fa-industry"></i> Hale produkcyjne i przemysłowe',
 
     attr10:
-      "Elektro Ludwig – Więcej niż elektryczność",
+      "Elektro Ludwig – Więcej niż tylko elektryczność",
 
     heroSlogan:
       "Więcej niż tylko elektryczność",
@@ -50,7 +50,7 @@ window.elektroLudwigLanguages.pl = {
       "DOŚWIADCZENIE",
 
     heroExperienceText:
-      "Lata doświadczenia w branży",
+      "Wieloletnie doświadczenie w branży",
 
     heroReliabilityTitle:
       "NIEZAWODNOŚĆ",
@@ -62,13 +62,13 @@ window.elektroLudwigLanguages.pl = {
       "JAKOŚĆ",
 
     heroQualityText:
-      "Precyzyjna realizacja",
+      "Precyzyjne wykonanie",
 
     heroFlexibilityTitle:
       "ELASTYCZNOŚĆ",
 
     heroFlexibilityText:
-      "Rozwiązania na miarę",
+      "Rozwiązania dopasowane do potrzeb",
 
     text11:
       "Elektro Ludwig",
@@ -77,22 +77,22 @@ window.elektroLudwigLanguages.pl = {
       "O <span>nas</span>",
 
     text13:
-      "<strong>Elektro Ludwig s.r.o.</strong> jest słowacką firmą elektroinstalacyjną realizującą projekty zarówno w kraju, jak i za granicą. Choć spółka w obecnej formie prawnej działa od momentu założenia jako s.r.o., nasze doświadczenie sięga znacznie dalej.",
+      "<strong>Elektro Ludwig s. r. o.</strong> jest słowacką firmą elektroinstalacyjną realizującą projekty zarówno na Słowacji, jak i za granicą. Choć spółka w obecnej formie prawnej działa od momentu jej założenia jako s. r. o., nasze doświadczenie sięga znacznie dalej.",
 
     text14:
-      "Jeszcze przed powstaniem spółki Elektro Ludwig s.r.o. realizowaliśmy prace elektroinstalacyjne w ramach działalności gospodarczej <strong>Ľudovíta Hudáka</strong>, który obecnie jest prezesem firmy. Dlatego nasza historia nie zaczyna się wraz z datą wpisania spółki s.r.o. do rejestru handlowego, lecz obejmuje wiele lat praktycznego doświadczenia zdobywanego bezpośrednio na budowach oraz przy realizacji rozległych projektów elektroinstalacyjnych.",
+      "Jeszcze przed powstaniem spółki Elektro Ludwig s. r. o. realizowaliśmy prace elektroinstalacyjne w ramach działalności gospodarczej <strong>Ľudovíta Hudáka</strong>, który obecnie jest dyrektorem zarządzającym spółki. Dlatego nasza historia nie zaczyna się wraz z datą wpisania spółki do rejestru handlowego, lecz obejmuje wiele lat praktycznego doświadczenia zdobywanego bezpośrednio na budowach oraz przy realizacji rozległych projektów elektroinstalacyjnych.",
 
     text15:
       "W tym czasie pracowaliśmy przy różnego rodzaju obiektach – od <strong>szkół i budynków administracyjnych, przez hale produkcyjne i przemysłowe, aż po zautomatyzowane linie produkcyjne i centra logistyczne</strong>.",
 
     text16:
-      "Nasze doświadczenie obejmuje kompleksowe instalacje elektryczne w budynkach, w tym instalacje silnoprądowe i niskoprądowe, oświetlenie, oświetlenie awaryjne, systemy bezpieczeństwa, rozdzielnice, zasilanie poszczególnych technologii, oświetlenie zewnętrzne, instalacje na parkingach oraz inne systemy niezbędne do bezpiecznego i niezawodnego funkcjonowania obiektu.",
+      "Nasze doświadczenie obejmuje kompleksowe instalacje elektryczne w budynkach, w tym instalacje silnoprądowe i niskoprądowe, oświetlenie, oświetlenie awaryjne, systemy bezpieczeństwa, rozdzielnice, zasilanie poszczególnych technologii, oświetlenie zewnętrzne i parkingowe oraz inne systemy niezbędne do bezpiecznego i niezawodnego funkcjonowania obiektu.",
 
     text17:
-      "W projektach przemysłowych wykonujemy instalacje elektryczne hal produkcyjnych, doprowadzenie i zasilanie maszyn oraz urządzeń technologicznych, trasy kablowe, rozdzielnice, elementy sterujące i sygnalizacyjne, a także kompletne podłączenie poszczególnych technologii.",
+      "W projektach przemysłowych wykonujemy instalacje elektryczne w halach produkcyjnych, doprowadzenie zasilania do maszyn i urządzeń technologicznych, trasy kablowe, rozdzielnice, elementy sterujące i sygnalizacyjne, a także kompletne podłączenie elektryczne poszczególnych technologii.",
 
     text18:
-      "Odrębnym obszarem naszego doświadczenia jest <strong>automatyka przemysłowa</strong>. Braliśmy udział w realizacji zautomatyzowanych systemów produkcyjnych i logistycznych, gdzie wykonywaliśmy kompleksowe instalacje elektryczne niezbędne do działania automatyki – od tras kablowych i okablowania po podłączanie czujników, silników, rozdzielnic oraz poszczególnych elementów technologii.",
+      "Odrębnym obszarem naszego doświadczenia jest <strong>automatyka przemysłowa</strong>. Braliśmy udział w realizacji zautomatyzowanych systemów produkcyjnych i logistycznych, wykonując instalacje elektryczne niezbędne do działania automatyki – od tras kablowych i okablowania po podłączanie czujników, silników, szaf sterowniczych oraz poszczególnych elementów technologii.",
 
     text19:
       "Dzięki doświadczeniu zdobytemu przy różnego rodzaju inwestycjach możemy realizować prace od standardowych instalacji elektrycznych aż po rozległe projekty przemysłowe i automatyzacyjne.",
@@ -116,7 +116,7 @@ window.elektroLudwigLanguages.pl = {
       "Instalacje elektryczne",
 
     text26:
-      "Realizujemy kompleksowe instalacje elektryczne w budynkach i obiektach – od tras kablowych i rozprowadzenia instalacji po oświetlenie, rozdzielnice, obwody gniazdowe i technologiczne.",
+      "Realizujemy kompleksowe instalacje elektryczne w budynkach i obiektach – od tras kablowych i rozprowadzenia instalacji po oświetlenie, rozdzielnice, obwody gniazdowe i zasilanie technologii.",
 
     text27:
       'Więcej informacji <i class="fas fa-arrow-right"></i>',
@@ -128,7 +128,7 @@ window.elektroLudwigLanguages.pl = {
       "Przemysł i automatyka",
 
     text30:
-      "Realizujemy instalacje elektryczne technologii przemysłowych, urządzeń produkcyjnych oraz systemów zautomatyzowanych.",
+      "Realizujemy instalacje elektryczne dla technologii przemysłowych, urządzeń produkcyjnych oraz systemów zautomatyzowanych.",
 
     text31:
       'Więcej informacji <i class="fas fa-arrow-right"></i>',
@@ -152,7 +152,7 @@ window.elektroLudwigLanguages.pl = {
       "Od okablowania po <span>technologię</span>",
 
     text38:
-      "Nasza praca nie kończy się na samym ułożeniu przewodów. Uczestniczymy w realizacji instalacji elektrycznych od tras kablowych i rozprowadzenia instalacji aż po podłączenie poszczególnych urządzeń i technologii.",
+      "Nasza praca nie kończy się na samym układaniu przewodów. Realizujemy instalacje elektryczne od tras kablowych i rozprowadzenia instalacji aż po podłączenie poszczególnych urządzeń i technologii.",
 
     attr39:
       "Kompleksowe instalacje elektryczne",
@@ -175,7 +175,7 @@ window.elektroLudwigLanguages.pl = {
     text49: "Obwody gniazdowe",
     text50: "Oświetlenie zewnętrzne",
     text51: "Systemy bezpieczeństwa",
-    text52: "Zasilanie technologiczne",
+    text52: "Zasilanie technologii",
 
     text53:
       'Skontaktuj się z nami <i class="fas fa-arrow-right"></i>',
@@ -198,7 +198,7 @@ window.elektroLudwigLanguages.pl = {
     text61: "Silniki i napędy",
     text62: "Elementy sterujące",
     text63: "Elementy sygnalizacyjne",
-    text64: "Rozdzielnice technologiczne",
+    text64: "Szafy sterownicze",
     text65: "Trasy kablowe",
     text66: "Systemy logistyczne",
     text67: "Podłączanie technologii",
@@ -260,10 +260,10 @@ window.elektroLudwigLanguages.pl = {
       "Siedziba firmy",
 
     text93:
-      "IČO",
+      "Numer identyfikacyjny firmy (IČO)",
 
     text94:
-      "Prezes firmy",
+      "Dyrektor zarządzający",
 
     text95:
       "Mistrz elektryk",
@@ -272,13 +272,13 @@ window.elektroLudwigLanguages.pl = {
       "Dział ekonomiczny",
 
     text97:
-      "Masz pytanie lub jesteś zainteresowany współpracą?",
+      "Mają Państwo pytanie lub są zainteresowani współpracą?",
 
     text98:
-      "Napisz <span>do nas</span>",
+      "Napiszcie <span>do nas</span>",
 
     text99:
-      "Prześlij nam podstawowe informacje dotyczące Twojego projektu lub zapytania. Skontaktujemy się z Tobą tak szybko, jak to możliwe.",
+      "Prosimy przesłać nam podstawowe informacje dotyczące Państwa projektu lub zapytania. Skontaktujemy się z Państwem tak szybko, jak to możliwe.",
 
     attr100:
       "Firma",
@@ -305,10 +305,10 @@ window.elektroLudwigLanguages.pl = {
       "Inne",
 
     attr108:
-      "Twoja wiadomość *",
+      "Państwa wiadomość *",
 
     text109:
-      "Wyrażam zgodę na przetwarzanie podanych danych osobowych w celu obsługi mojego zapytania. *",
+      "Wyrażam zgodę na przetwarzanie podanych danych osobowych w celu udzielenia odpowiedzi na moje zapytanie. *",
 
     text110:
       "* Pola wymagane",
@@ -323,7 +323,7 @@ window.elektroLudwigLanguages.pl = {
       "E-mail",
 
     country:
-      "Republika Słowacka",
+      "Słowacja",
 
     home:
       "Strona główna",
@@ -359,7 +359,7 @@ window.elektroLudwigLanguages.pl = {
       "zdjęcie",
 
     moreExperience:
-      "Więcej doświadczeń",
+      "Pozostałe doświadczenie",
 
     closePhoto:
       "Zamknij zdjęcie",
@@ -373,11 +373,14 @@ window.elektroLudwigLanguages.pl = {
     additionalTitle:
       "Pozostałe realizacje i współprace",
 
-    formPending:
-      "Formularz nie wysyła jeszcze wiadomości. Prosimy o kontakt mailowy lub telefoniczny.",
+    formSending:
+      "Wysyłanie wiadomości...",
 
-    formNotice:
-      "Wysyłanie wiadomości za pomocą formularza nie jest jeszcze aktywne. Prosimy skorzystać z podanego wyżej adresu e-mail lub numeru telefonu.",
+    formSuccess:
+      "Dziękujemy. Państwa wiadomość została pomyślnie wysłana.<br>Skontaktujemy się z Państwem tak szybko, jak to możliwe.",
+
+    formError:
+      "Nie udało się wysłać wiadomości. Prosimy spróbować ponownie lub skontaktować się z nami e-mailem albo telefonicznie.",
 
     requiredField:
       "Proszę wypełnić to wymagane pole.",
@@ -413,7 +416,7 @@ window.elektroLudwigLanguages.pl = {
       popis:
 `Przy projekcie Transgourmet Leipheim uczestniczymy w realizacji instalacji elektrycznych i automatyki w rozległym obiekcie logistycznym i chłodniczym. Na budowie wykonujemy prace dla firm TGW i Hauser.
 
-Zakres naszych prac obejmuje montaż tras kablowych, przygotowanie i prowadzenie okablowania silnoprądowego i niskoprądowego, montaż i podłączanie rozdzielnic, prowadzenie i podłączanie termostatów, a także instalacje elektryczne związane z automatyką oraz poszczególnymi urządzeniami technologicznymi.
+Zakres naszych prac obejmuje montaż tras kablowych, przygotowanie i prowadzenie okablowania silnoprądowego i niskoprądowego, montaż i podłączanie rozdzielnic, prowadzenie i podłączanie przewodów termostatów, a także instalacje elektryczne związane z automatyką oraz poszczególnymi urządzeniami technologicznymi.
 
 Prace realizujemy w różnych częściach obiektu, w tym w halach logistycznych, pomieszczeniach chłodniczych i mroźniczych oraz w częściach technologicznych zakładu. Zakres prac jest na bieżąco dostosowywany do poszczególnych etapów budowy oraz wymagań kolejnych technologii.
 
@@ -433,7 +436,7 @@ Projekt Transgourmet Leipheim jest kompleksową realizacją łączącą instalac
         "Christof Industries GmbH",
 
       kratkyPopis:
-        "Prace elektroinstalacyjne na terenie stacji elektroenergetycznej 50Hertz, obejmujące podłączanie rozdzielnic, głównych przewodów zasilających oraz powiązanych instalacji elektrycznych.",
+        "Prace elektroinstalacyjne na terenie stacji elektroenergetycznej 50Hertz, obejmujące podłączanie rozdzielnic, głównych kabli zasilających oraz powiązanych instalacji elektrycznych.",
 
       popis:
 `Przy projekcie UW Ragow firmy 50Hertz realizowaliśmy prace elektroinstalacyjne w zapleczu technologicznym stacji elektroenergetycznej.
@@ -479,18 +482,18 @@ Projekt obejmował więc cały proces z punktu widzenia instalacji elektrycznej 
         "Systemy logistyczne i automatyzacyjne TGW",
 
       miesto:
-        "Republika Czeska / Niemcy",
+        "Czechy / Niemcy",
 
       realizaciaPre:
         "TGW Logistics",
 
       kratkyPopis:
-        "Instalacje elektryczne i elektryczne podłączanie zautomatyzowanych systemów logistycznych, technologii przenośnikowej oraz automatycznych urządzeń magazynowych przy kilku projektach TGW.",
+        "Instalacje elektryczne i podłączanie zautomatyzowanych systemów logistycznych, technologii przenośnikowej oraz automatycznych systemów magazynowych przy kilku projektach TGW.",
 
       popis:
-`Przy kilku projektach logistycznych realizowaliśmy elektryczną część rozległych zautomatyzowanych systemów przenośnikowych i magazynowych. Mechaniczny montaż samej technologii wykonywały inne firmy realizacyjne, natomiast naszym zadaniem były instalacje elektryczne, okablowanie oraz elektryczne podłączenie poszczególnych urządzeń.
+`Przy kilku projektach logistycznych realizowaliśmy elektryczną część rozległych zautomatyzowanych systemów przenośnikowych i magazynowych. Mechaniczny montaż samej technologii wykonywały inne firmy, natomiast naszym zadaniem były instalacje elektryczne, okablowanie oraz elektryczne podłączenie poszczególnych urządzeń.
 
-Prace obejmowały przede wszystkim podłączanie przenośników, silników elektrycznych, czujników, barier świetlnych, elementów sterujących i rozdzielnic, a także połączenie i komunikację poszczególnych części automatyki za pośrednictwem PROFINET.
+Prace obejmowały przede wszystkim podłączanie przenośników, silników elektrycznych, czujników, barier świetlnych, elementów sterujących i szaf sterowniczych, a także połączenie i komunikację poszczególnych części automatyki za pośrednictwem PROFINET.
 
 Amazon Kojetín – 2022
 W nowym centrum logistycznym Amazon realizowaliśmy elektryczną część przydzielonych nam odcinków technologii przenośnikowej i automatyki. Częścią projektu był również zautomatyzowany robotyczny system magazynowy, w którym jednostki robotyczne transportowały składowane jednostki do stanowisk roboczych.
@@ -502,7 +505,7 @@ H&M – 2025
 Oprócz technologii przenośnikowej częścią projektu była rozległa zautomatyzowana część magazynowa z układnicami regałowymi, które zapewniały automatyczne składowanie i pobieranie jednostek magazynowych z poszczególnych pozycji.
 
 AUTODOC Logistics, Cheb – 2025–2026
-Przy projekcie AUTODOC kontynuowaliśmy realizację podobnego rodzaju zautomatyzowanej technologii logistycznej, obejmującej systemy przenośnikowe oraz automatyczną technikę magazynową z układnicami regałowymi.`
+Przy projekcie AUTODOC kontynuowaliśmy realizację podobnego rodzaju zautomatyzowanej technologii logistycznej, obejmującej systemy przenośnikowe oraz automatyczne systemy magazynowe z układnicami regałowymi.`
     },
 
 
@@ -518,12 +521,12 @@ Przy projekcie AUTODOC kontynuowaliśmy realizację podobnego rodzaju zautomatyz
         "Christof Industries GmbH",
 
       kratkyPopis:
-        "Prace elektroinstalacyjne przy systemach technologicznych i sterujących stacji konwerterowej SuedLink w Leingarten, będącej częścią jednej z najważniejszych infrastruktur energetycznych w Niemczech.",
+        "Prace elektroinstalacyjne przy systemach technologicznych i sterujących stacji konwerterowej SuedLink w Leingarten, będącej częścią jednej z najważniejszych inwestycji infrastruktury energetycznej w Niemczech.",
 
       popis:
 `Przy projekcie TransnetBW / SuedLink w Leingarten realizowaliśmy prace elektroinstalacyjne w obiektach technologicznych stacji konwerterowej, która stanowi część wysokonapięciowego systemu przesyłu prądu stałego SuedLink.
 
-SuedLink służy do przesyłania dużych ilości energii elektrycznej pomiędzy północą a południem Niemiec. Zadaniem stacji konwerterowej jest zapewnienie konwersji pomiędzy prądem stałym i przemiennym, aby przesyłana energia elektryczna mogła zostać następnie zintegrowana z istniejącą siecią przesyłową.
+SuedLink służy do przesyłania dużych ilości energii elektrycznej pomiędzy północą a południem Niemiec. Zadaniem stacji konwerterowej jest konwersja pomiędzy prądem stałym i przemiennym, dzięki czemu przesyłana energia elektryczna może zostać wprowadzona do istniejącej sieci przesyłowej.
 
 W ramach naszych prac realizowaliśmy przede wszystkim okablowanie oraz elektryczne podłączanie rozdzielnic i szaf sterowniczych, a także podłączanie elementów pomiarowych, kontrolnych i sterujących oraz poszczególnych czujników systemu technologicznego.
 
@@ -543,23 +546,23 @@ Prace odbywały się w środowisku rozległej infrastruktury energetycznej o wys
         "FES Elektrotechnik GmbH",
 
       kratkyPopis:
-        "Przemysłowe instalacje elektryczne w zakładzie technologicznym z zastosowaniem specjalnych plastikowych tras kablowych i elementów konstrukcyjnych odpornych na warunki środowiskowe.",
+        "Przemysłowe instalacje elektryczne w zakładzie technologicznym z zastosowaniem specjalnych tras kablowych i elementów konstrukcyjnych z tworzywa sztucznego, odpornych na warunki panujące w obiekcie.",
 
       popis:
 `Przy projekcie ANDRITZ w Linzu realizowaliśmy prace elektroinstalacyjne w zakładzie technologicznym, w którym charakter środowiska oraz stosowanych mediów technologicznych wymagał odmiennego rozwiązania tras kablowych niż w standardowych instalacjach przemysłowych.
 
-Zamiast klasycznych metalowych tras kablowych zastosowano wielkogabarytowe kanały kablowe z tworzywa sztucznego oraz plastikowe elementy nośne. Z dostarczonego systemu, zgodnie z wymaganiami poszczególnych części technologii, wykonaliśmy kompletne prowadzenie tras kablowych – w tym dopasowanie i cięcie kanałów, montaż plastikowych konsol i podpór oraz późniejsze ułożenie okablowania.
+Zamiast klasycznych metalowych tras kablowych zastosowano wielkogabarytowe kanały kablowe z tworzywa sztucznego oraz elementy nośne z tworzywa sztucznego. Z dostarczonego systemu, zgodnie z wymaganiami poszczególnych części technologii, wykonaliśmy kompletne trasy kablowe – w tym dopasowanie i cięcie kanałów, montaż konsol i podpór z tworzywa sztucznego oraz późniejsze ułożenie okablowania.
 
 Zakres naszych prac obejmował również okablowanie oraz elektryczne podłączanie urządzeń technologicznych, przede wszystkim silników elektrycznych, pomp, czujników oraz innych elementów elektrycznych i sterujących wykorzystywanych przy transporcie i przetwarzaniu ciekłych mediów technologicznych.
 
-Projekt był szczególnie interesujący ze względu na wymagania dotyczące materiałów i sposobu wykonania instalacji elektrycznej w specyficznym środowisku przemysłowym, w którym nie było odpowiednie stosowanie standardowych metalowych rozwiązań tras kablowych.`
+Projekt był szczególnie interesujący ze względu na wymagania dotyczące materiałów i sposobu wykonania instalacji elektrycznej w specyficznym środowisku przemysłowym, w którym standardowe metalowe trasy kablowe nie były odpowiednim rozwiązaniem.`
     },
 
 
     "mm-holz-leoben": {
 
       nazov:
-        "M&M Holz Leoben",
+        "MM Holz Leoben",
 
       miesto:
         "Leoben, Austria",
@@ -571,7 +574,7 @@ Projekt był szczególnie interesujący ze względu na wymagania dotyczące mate
         "Przemysłowe instalacje elektryczne w zakładzie obróbki drewna, obejmujące główne instalacje zasilające oraz elektryczną część technologii centralnego odciągu i magazynowania odpadów drzewnych.",
 
       popis:
-`Przy projekcie M&M Holz w Leoben realizowaliśmy prace elektroinstalacyjne w rozległym zakładzie obróbki drewna. Główną częścią naszych prac była realizacja instalacji zasilania od głównej rozdzielni elektrycznej do poszczególnych części technologii produkcyjnej.
+`Przy projekcie MM Holz w Leoben realizowaliśmy prace elektroinstalacyjne w rozległym zakładzie obróbki drewna. Główną częścią naszych prac była realizacja instalacji zasilania od głównej rozdzielni elektrycznej do poszczególnych części technologii produkcyjnej.
 
 Zgodnie z dokumentacją projektową przygotowywaliśmy i prowadziliśmy kable zasilające do poszczególnych stanowisk produkcyjnych, przenośników, rozdzielnic podrzędnych oraz urządzeń technologicznych, a następnie wykonywaliśmy ich elektryczne podłączenie.
 
@@ -629,7 +632,7 @@ Projekt obejmował więc instalacje elektryczne praktycznie od poszczególnych s
 
 W halach produkcyjnych wykonywaliśmy oświetlenie halowe, instalacje gniazdowe, gniazda CEE 400 V, okablowanie oraz montaż i podłączanie rozdzielnic podrzędnych przeznaczonych dla poszczególnych części produkcji i urządzeń technologicznych.
 
-W części administracyjnej realizowaliśmy instalacje elektryczne w biurach i pomieszczeniach wspólnych, w tym instalacje gniazdowe, zasilanie i sterowanie żaluzjami, termostatami oraz innymi elementami sterującymi budynku. Zakres obejmował również instalacje elektryczne aneksów kuchennych i przestrzeni wspólnych oraz infrastrukturę danych, w tym okablowanie, rozdzielnice teleinformatyczne i szafy rack.
+W części administracyjnej realizowaliśmy instalacje elektryczne w biurach i pomieszczeniach wspólnych, w tym instalacje gniazdowe, zasilanie i sterowanie żaluzjami, termostatami oraz innymi elementami sterującymi budynku. Zakres obejmował również instalacje elektryczne aneksów kuchennych i przestrzeni wspólnych oraz infrastrukturę teleinformatyczną, w tym okablowanie, rozdzielnice teleinformatyczne i szafy rack.
 
 Odrębną częścią projektu były dwie duże prasy przemysłowe. Zgodnie z dokumentacją techniczną realizowaliśmy przy tej technologii trasy kablowe, okablowanie oraz elektryczne podłączenie poszczególnych części pras i ich wyposażenia. Prasy były przeznaczone do produkcji tłoczonych elementów karoserii pojazdów Rolls-Royce.`
     },
@@ -647,16 +650,16 @@ Odrębną częścią projektu były dwie duże prasy przemysłowe. Zgodnie z dok
         "Kurt Schumacher IS GmbH",
 
       kratkyPopis:
-        "Prace elektroinstalacyjne przy rozległej mobilnej technologii przenośnikowej przeznaczonej do załadunku rudy żelaza na statki towarowe w porcie w Rotterdamie.",
+        "Prace elektroinstalacyjne przy rozległym mobilnym systemie przenośnikowym przeznaczonym do załadunku rudy żelaza na statki towarowe w porcie w Rotterdamie.",
 
       popis:
-`Przy projekcie EECV Europoort w porcie w Rotterdamie realizowaliśmy prace elektroinstalacyjne przy części rozległej technologii przeznaczonej do transportu i załadunku rudy żelaza na duże statki towarowe.
+`Przy projekcie EECV Europoort w porcie w Rotterdamie realizowaliśmy prace elektroinstalacyjne przy części rozległego systemu przeznaczonego do transportu i załadunku rudy żelaza na duże statki towarowe.
 
-Jednym z głównych elementów była mobilna technologia przenośnikowa do materiałów sypkich, która poruszała się po szynach wzdłuż nabrzeża na odległość około 500–600 metrów. Dzięki temu cały system można było przesuwać odpowiednio do położenia zacumowanego statku i zapewnić załadunek rudy w wymaganym miejscu.
+Jednym z głównych elementów był mobilny system przenośnikowy do materiałów sypkich, który poruszał się po szynach wzdłuż nabrzeża na odległość około 500–600 metrów. Dzięki temu cały system można było przesuwać odpowiednio do położenia zacumowanego statku i zapewnić załadunek rudy w wymaganym miejscu.
 
 W ramach naszych prac realizowaliśmy trasy kablowe, zasilanie elektryczne i okablowanie, a także elektryczne podłączanie poszczególnych części technologii przenośnikowej, odpowiednich rozdzielnic i szaf sterowniczych.
 
-Projekt obejmował instalację elektryczną w środowisku przemysłu ciężkiego i wielkogabarytowej technologii portowej, gdzie konieczne było wykonanie elektrycznej części rozległego ruchomego systemu przenośnikowego.`
+Projekt obejmował instalację elektryczną w środowisku przemysłu ciężkiego i wielkogabarytowej technologii portowej, gdzie realizowaliśmy elektryczną część rozległego ruchomego systemu przenośnikowego.`
     },
 
 
@@ -666,7 +669,7 @@ Projekt obejmował instalację elektryczną w środowisku przemysłu ciężkiego
         "ŠKODA Mladá Boleslav",
 
       miesto:
-        "Mladá Boleslav, Republika Czeska",
+        "Mladá Boleslav, Czechy",
 
       realizaciaPre:
         "Christof Industries GmbH",
@@ -677,7 +680,7 @@ Projekt obejmował instalację elektryczną w środowisku przemysłu ciężkiego
       popis:
 `Przy projekcie linii lakierniczej w zakładzie ŠKODA AUTO w Mladej Boleslavi realizowaliśmy prace elektroinstalacyjne przy kilku częściach technologii produkcyjnej.
 
-Zakres naszych prac obejmował podłączanie rozległych zestawów rozdzielnic przeznaczonych do zasilania i sterowania poszczególnymi częściami linii, a także elektryczne podłączanie technologii przenośnikowej zapewniającej transport karoserii samochodowych pomiędzy poszczególnymi etapami procesu produkcyjnego i lakierniczego.
+Zakres naszych prac obejmował podłączanie rozbudowanych zestawów szaf sterowniczych przeznaczonych do zasilania i sterowania poszczególnymi częściami linii, a także elektryczne podłączanie technologii przenośnikowej zapewniającej transport karoserii samochodowych pomiędzy poszczególnymi etapami procesu produkcyjnego i lakierniczego.
 
 Realizowaliśmy okablowanie i podłączanie silników, czujników, barier świetlnych oraz innych elementów kontrolnych i bezpieczeństwa. Systemy te zapewniały między innymi kontrolę ruchu i prawidłowego położenia przenośników oraz karoserii i stanowiły część funkcji bezpieczeństwa technologii, na przykład podczas pracy robotów lakierniczych.
 
@@ -710,7 +713,7 @@ Do takich projektów należą między innymi Jungheinrich Moosburg, GALILEO Mün
 
 W zależności od konkretnego projektu zakres naszych prac obejmował wykańczanie i uzupełnianie instalacji elektrycznych, oświetlenie i oświetlenie awaryjne, instalacje gniazdowe i silnoprądowe, elektryczną część systemów bezpieczeństwa, uzupełnianie okablowania danych i zasilania, diagnostykę niedziałających części instalacji oraz usuwanie stwierdzonych błędów i usterek.
 
-Realizacje te są również przykładem naszej zdolności do przejęcia już rozpoczętej instalacji elektrycznej, szybkiego zorientowania się w istniejącym stanie oraz dokumentacji technicznej, a następnie wsparcia w ukończeniu projektu lub rozwiązaniu powstałych problemów.`
+Realizacje te są również przykładem naszej zdolności do przejęcia już rozpoczętej instalacji elektrycznej, szybkiego zapoznania się z jej istniejącym stanem oraz dokumentacją techniczną, a następnie wsparcia w ukończeniu projektu lub rozwiązaniu powstałych problemów.`
   }
 
 };
