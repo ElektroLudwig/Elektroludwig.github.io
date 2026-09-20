@@ -1882,7 +1882,7 @@ renderProjects();
 
 /* ==================================================
    KONTAKTNÝ FORMULÁR
-   ZATIAĽ BEZ SERVEROVÉHO ODOSIELANIA
+   ODOSIELANIE CEZ WEB3FORMS
 ================================================== */
 
 const inquiryForm =
@@ -1901,15 +1901,96 @@ if (
 ) {
   inquiryForm.addEventListener(
     "submit",
-    function(event) {
+    async function(event) {
       event.preventDefault();
 
+      if (!inquiryForm.checkValidity()) {
+        inquiryForm.reportValidity();
+        return;
+      }
+
+      const submitButton =
+        inquiryForm.querySelector(
+          'button[type="submit"]'
+        );
+
+      if (submitButton) {
+        submitButton.disabled = true;
+      }
+
       formMessage.textContent =
-        t("formPending");
+        t("formSending");
+
+      formMessage.classList.remove(
+        "success",
+        "error"
+      );
 
       formMessage.classList.add(
         "visible"
       );
+
+      try {
+        const formData =
+          new FormData(inquiryForm);
+
+        const response =
+          await fetch(
+            "https://api.web3forms.com/submit",
+            {
+              method: "POST",
+              body: formData
+            }
+          );
+
+        const result =
+          await response.json();
+
+        if (
+          response.ok &&
+          result.success
+        ) {
+          formMessage.innerHTML =
+            t("formSuccess");
+
+          formMessage.classList.add(
+            "success"
+          );
+
+          inquiryForm.reset();
+
+          inquiryForm
+            .querySelectorAll(
+              "input, select, textarea"
+            )
+            .forEach(element => {
+              element.setCustomValidity("");
+              delete element.dataset
+                .validationShown;
+            });
+        } else {
+          throw new Error(
+            result.message ||
+              "Web3Forms submission failed."
+          );
+        }
+      } catch (error) {
+        console.error(
+          "Web3Forms:",
+          error
+        );
+
+        formMessage.innerHTML =
+          t("formError");
+
+        formMessage.classList.add(
+          "error"
+        );
+      } finally {
+        if (submitButton) {
+          submitButton.disabled = false;
+        }
+      }
     }
   );
 }
